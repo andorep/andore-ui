@@ -1,0 +1,1 @@
+export const AlertDialogPortalBaseClassName = "alert-dialog-portal-root";

@@ -1,0 +1,1 @@
+export const AlertDialogCancelBaseClassName = "alert-dialog-cancel-root";

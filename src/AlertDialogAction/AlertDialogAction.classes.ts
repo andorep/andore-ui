@@ -1,0 +1,1 @@
+export const AlertDialogActionBaseClassName = "alert-dialog-action-root";
