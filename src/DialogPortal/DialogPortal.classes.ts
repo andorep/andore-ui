@@ -1,0 +1,1 @@
+export const DialogPortalBaseClassName = "dialog-portal-root";

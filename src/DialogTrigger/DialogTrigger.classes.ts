@@ -1,0 +1,1 @@
+export const DialogTriggerBaseClassName = "dialog-trigger-root";

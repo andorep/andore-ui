@@ -1,0 +1,1 @@
+export const IconButtonBaseClassName = "icon-button-root";

@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { AlertDialogContentSizes } from "@/AlertDialogContent/AlertDialogContent.types.ts";
+import { AlertDialogContentSizes } from "./AlertDialogContent.types.ts";
 
 export const AlertDialogContentBaseClassName =
   "group alert-dialog-content-root data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] focus:outline-none";
