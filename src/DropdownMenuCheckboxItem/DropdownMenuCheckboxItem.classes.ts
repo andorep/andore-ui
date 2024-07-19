@@ -1,0 +1,1 @@
+export const DropdownMenuCheckboxItemBaseClassName = "dropdown-menu-checkbox-item-root";
