@@ -1,0 +1,1 @@
+export const DropdownMenuSubTriggerBaseClassName = "dropdown-menu-sub-trigger-root";

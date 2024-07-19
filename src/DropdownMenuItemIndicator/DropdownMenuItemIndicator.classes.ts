@@ -1,0 +1,1 @@
+export const DropdownMenuItemIndicatorBaseClassName = "dropdown-menu-item-indicator-root";

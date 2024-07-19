@@ -1,0 +1,1 @@
+export const DropdownMenuBaseClassName = "dropdown-menu-root";

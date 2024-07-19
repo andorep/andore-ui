@@ -1,0 +1,1 @@
+export const DropdownMenuPortalBaseClassName = "dropdown-menu-portal-root";
