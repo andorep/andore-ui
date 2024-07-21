@@ -147,9 +147,11 @@ export const theme: Theme = {
         gray: colors.gray,
         white: colors.white,
         black: colors.black,
-        divider: {
-            DEFAULT: colors.gray[700],
-            dark: colors.stone[300],
+        outline: {
+            DEFAULT: colors.gray[200],
+            variant: colors.gray[400],
+            dark: colors.gray[700],
+            "dark-variant": colors.gray[500],
         },
         surface: {
             dim: colors.gray[50],

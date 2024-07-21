@@ -16,9 +16,11 @@ export interface Color {
 export interface BaseColors {
   primary: Color;
   secondary: Color;
-  divider: {
+  outline: {
     DEFAULT: string;
+    variant: string;
     dark: string;
+    "dark-variant": string;
   };
   surface: {
     scrim?: string;

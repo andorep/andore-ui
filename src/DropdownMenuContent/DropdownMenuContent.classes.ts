@@ -5,8 +5,10 @@ export const DropdownMenuContentAnimationClassName = "will-change-[opacity,trans
 
 export const DropdownMenuContentBaseClassName = twMerge(
     DropdownMenuContentAnimationClassName,
-    "dropdown-menu-content-root min-w-[200px] max-w-[340px] w-full",
+    "dropdown-menu-content-root group min-w-[200px] max-w-[340px] w-full",
 );
 export const DropdownMenuSurfaceClassName = "w-full h-full flex flex-col bg-surface-container-lowest rounded-md shadow focus:outline-none dark:bg-surface-dark-container-lowest dark:shadow-dark-md";
 
 export const DropdownMenuTintClassName = "w-full h-full flex py-2 flex-col rounded-[inherit] bg-primary/[0.07] dark:bg-primary/[0.07]";
+
+export const DropdownMenuContentCondensedClassName = "dropdown-menu-content-condensed-root";

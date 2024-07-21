@@ -1,18 +1,18 @@
 import React from 'react';
-import { twMerge } from 'tailwind-merge';
 import {DropdownMenu as RadixDropdownMenu} from "@radix-ui/react-dropdown-menu";
-import { DropdownMenuProps } from './DropdownMenu.types';
-import { DropdownMenuBaseClassName } from './DropdownMenu.classes';
+import { DropdownMenuProps} from './DropdownMenu.types';
+import {DropdownMenuThemeContext} from "@/DropdownMenu/useDropdownMenuTheme.tsx";
 
-const DropdownMenu = React.forwardRef<HTMLDivElement, DropdownMenuProps>((props, forwardedRef) => {
-   const { className, ...rest } = props;
-   const classes = twMerge(DropdownMenuBaseClassName, className);
+
+
+const DropdownMenu = React.forwardRef<HTMLDivElement, DropdownMenuProps>((props) => {
+    const {condensed = false, ...rest} = props;
     return (
-    <RadixDropdownMenu
-        {...rest}
-        ref={forwardedRef}
-        className={classes}
-    />
+        <DropdownMenuThemeContext.Provider value={{condensed}}>
+            <RadixDropdownMenu
+                {...rest}
+            />
+        </DropdownMenuThemeContext.Provider>
     );
 });
 

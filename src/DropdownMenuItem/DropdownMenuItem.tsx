@@ -4,8 +4,6 @@ import {DropdownMenuItem as RadixDropdownMenuItem} from "@radix-ui/react-dropdow
 import {DropdownMenuItemProps} from './DropdownMenuItem.types';
 import {
     DropdownMenuItemBaseClassName,
-    DropdownMenuItemTextClassName,
-    DropdownMenuItemTrailingIconClassName,
 } from './DropdownMenuItem.classes';
 
 const DropdownMenuItem = React.forwardRef<HTMLDivElement, DropdownMenuItemProps>((props, forwardedRef) => {
@@ -17,12 +15,7 @@ const DropdownMenuItem = React.forwardRef<HTMLDivElement, DropdownMenuItemProps>
             ref={forwardedRef}
             className={classes}
         >
-            <span className={DropdownMenuItemTextClassName}>{children}</span>
-            {trailing && (
-                <span className={DropdownMenuItemTrailingIconClassName}>
-                    {trailing}
-                </span>
-            )}
+            {children}
         </RadixDropdownMenuItem>
     );
 });

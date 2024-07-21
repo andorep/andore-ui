@@ -9,7 +9,7 @@ export const AccordionItemStandardClassName = "accordion-item-root";
 
 
 // only add border to the top of the accordion item if it is not the first item
-export const AccordionItemDividedClassName = " first:border-t-0 border-t border-divider dark:border-divider-dark-divider";
+export const AccordionItemDividedClassName = " first:border-t-0 border-t border-outline dark:border-outline-dark-outline";
 
 export const VariantClassNameMap: Record<AccordionVariant, string> = {
   standard: AccordionItemStandardClassName,
