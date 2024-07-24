@@ -108,6 +108,7 @@ export const theme: Theme = {
         slideLeftAndFade: `slideLeftAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
         slideUpAndFade: `slideUpAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
         slideRightAndFade: `slideRightAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
+        progressIndeterminate: `progressIndeterminate ${motion.duration.extraLong4} ${motion.easing.emphasizedAccelerate.timingFunction} infinite`,
     },
     keyframes: {
         overlayShow: {
@@ -142,6 +143,10 @@ export const theme: Theme = {
             from: {opacity: '0', transform: 'translateX(-2px)'},
             to: {opacity: '1', transform: 'translateX(0)'},
         },
+        progressIndeterminate: {
+            "0%": {transform: "translateX(-100%)"},
+            "100%": {transform: "translateX(150%)"},
+        }
     },
     colors: {
         gray: colors.gray,
