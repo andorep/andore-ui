@@ -12,7 +12,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
  */
 function createComponent(parentComponent, componentName) {
   // Define the directory path for the new component
-  const componentDir = path.join(__dirname, "../src", componentName);
+  const componentDir = path.join(__dirname, "../packages", componentName);
 
   // Create the directory if it doesn't exist
   if (!fs.existsSync(componentDir)) {

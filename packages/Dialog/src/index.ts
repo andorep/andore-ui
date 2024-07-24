@@ -1,0 +1,18 @@
+export * from './Dialog';
+export {default as Dialog} from './Dialog';
+export * from './DialogClose';
+export {default as DialogClose} from './DialogClose';
+export * from './DialogCloseButton';
+export {default as DialogCloseButton} from './DialogCloseButton';
+export * from './DialogContent';
+export {default as DialogContent} from './DialogContent';
+export * from './DialogDescription';
+export {default as DialogDescription} from './DialogDescription';
+export * from './DialogOverlay';
+export {default as DialogOverlay} from './DialogOverlay';
+export * from './DialogPortal';
+export {default as DialogPortal} from './DialogPortal';
+export * from './DialogTitle';
+export {default as DialogTitle} from './DialogTitle';
+export * from './DialogTrigger';
+export {default as DialogTrigger} from './DialogTrigger';

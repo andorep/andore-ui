@@ -7,6 +7,7 @@ export default defineConfig({
     resolve: {
         alias: {
             "@material-tailwind-ui/accordion": "packages/Accordion/src",
+            "@material-tailwind-ui/theme-plugin": "packages/plugin/src",
         }
     }
 })
