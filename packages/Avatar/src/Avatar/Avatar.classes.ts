@@ -1,4 +1,4 @@
-import { AvatarColor } from "@/Avatar/Avatar.types";
+import { AvatarColor } from "./Avatar.types";
 import { twMerge } from "tailwind-merge";
 
 export const AvatarBaseClassName =

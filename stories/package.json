@@ -17,6 +17,10 @@
     "@material-tailwind-ui/avatar": "workspace:*",
     "@material-tailwind-ui/checkbox": "workspace:*",
     "@material-tailwind-ui/dialog": "workspace:*",
+    "@material-tailwind-ui/label": "workspace:*",
+    "@material-tailwind-ui/input": "workspace:*",
+    "@material-tailwind-ui/button": "workspace:*",
+    "@material-tailwind-ui/icon-button": "workspace:*",
     "@material-tailwind-ui/dropdown-menu": "workspace:*",
     "@material-tailwind-ui/linear-progress": "workspace:*",
     "@material-tailwind-ui/theme-plugin": "workspace:*"

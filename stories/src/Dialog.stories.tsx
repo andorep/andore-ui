@@ -1,16 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Dialog from "@/Dialog";
-import DialogTrigger from "@/DialogTrigger";
-import DialogPortal from "@/DialogPortal";
-import DialogOverlay from "@/DialogOverlay";
-import DialogContent from "@/DialogContent";
-import DialogTitle from "@/DialogTitle";
-import DialogDescription from "@/DialogDescription";
-import DialogClose from "@/DialogClose";
-import Button from "@/Button";
-import DialogCloseButton from "@/DialogCloseButton";
-import Label from "@/Label";
-import Input from "@/Input";
+import {
+    Dialog,
+    DialogTrigger,
+    DialogPortal,
+    DialogOverlay,
+    DialogContent,
+    DialogTitle,
+    DialogDescription,
+    DialogClose,
+    DialogCloseButton,
+} from "@material-tailwind-ui/dialog";
+import {Button} from "@material-tailwind-ui/button";
+import {Label} from "@material-tailwind-ui/label";
+import {Input} from "@material-tailwind-ui/input";
 
 const meta: Meta<typeof Dialog> = {
   component: Dialog,

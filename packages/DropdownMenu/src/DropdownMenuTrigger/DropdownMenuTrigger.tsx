@@ -4,7 +4,7 @@ import {DropdownMenuTrigger as RadixDropdownMenuTrigger} from "@radix-ui/react-d
 import { DropdownMenuTriggerProps } from './DropdownMenuTrigger.types';
 import { DropdownMenuTriggerBaseClassName } from './DropdownMenuTrigger.classes';
 
-const DropdownMenuTrigger = React.forwardRef<HTMLDivElement, DropdownMenuTriggerProps>((props, forwardedRef) => {
+const DropdownMenuTrigger = React.forwardRef<HTMLButtonElement, DropdownMenuTriggerProps>((props, forwardedRef) => {
    const { className, ...rest } = props;
    const classes = twMerge(DropdownMenuTriggerBaseClassName, className);
     return (

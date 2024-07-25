@@ -849,6 +849,9 @@ importers:
       vite:
         specifier: ^5.3.3
         version: 5.3.3(@types/node@20.14.10)(terser@5.31.1)
+      vite-plugin-dts:
+        specifier: ^3.9.1
+        version: 3.9.1(@types/node@20.14.10)(rollup@4.18.1)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.1))
 
   packages/Surface:
     dependencies:
@@ -1038,6 +1041,9 @@ importers:
       '@material-tailwind-ui/avatar':
         specifier: workspace:*
         version: link:../packages/Avatar
+      '@material-tailwind-ui/button':
+        specifier: workspace:*
+        version: link:../packages/Button
       '@material-tailwind-ui/checkbox':
         specifier: workspace:*
         version: link:../packages/Checkbox
@@ -1047,6 +1053,15 @@ importers:
       '@material-tailwind-ui/dropdown-menu':
         specifier: workspace:*
         version: link:../packages/DropdownMenu
+      '@material-tailwind-ui/icon-button':
+        specifier: workspace:*
+        version: link:../packages/IconButton
+      '@material-tailwind-ui/input':
+        specifier: workspace:*
+        version: link:../packages/Input
+      '@material-tailwind-ui/label':
+        specifier: workspace:*
+        version: link:../packages/Label
       '@material-tailwind-ui/linear-progress':
         specifier: workspace:*
         version: link:../packages/LinearProgress

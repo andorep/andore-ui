@@ -1,4 +1,4 @@
-import { CheckboxColors } from "@/Checkbox/Checkbox.types";
+import { CheckboxColors } from "./Checkbox.types";
 import { twMerge } from "tailwind-merge";
 
 export const CheckboxBaseClassName =

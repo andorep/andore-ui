@@ -1,4 +1,4 @@
-import { ButtonColor, ButtonVariant } from "@/Button/Button.types";
+import { ButtonColor, ButtonVariant } from "./Button.types";
 import { twMerge } from "tailwind-merge";
 
 export const ButtonBaseClassName =

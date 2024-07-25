@@ -1,23 +1,25 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import DropdownMenu from "@/DropdownMenu";
-import DropdownMenuTrigger from "@/DropdownMenuTrigger";
-import DropdownMenuPortal from "@/DropdownMenuPortal";
-import DropdownMenuContent from "@/DropdownMenuContent";
-import DropdownMenuItem from "@/DropdownMenuItem";
-import DropdownMenuSub from "@/DropdownMenuSub";
-import DropdownMenuSubTrigger from "@/DropdownMenuSubTrigger";
-import DropdownMenuSubContent from "@/DropdownMenuSubContent";
-import DropdownMenuSeparator from "@/DropdownMenuSeparator";
-import DropdownMenuCheckboxItem from "@/DropdownMenuCheckboxItem";
-import DropdownMenuItemIndicator from "@/DropdownMenuItemIndicator";
-import DropdownMenuLabel from "@/DropdownMenuLabel";
-import DropdownMenuRadioGroup from "@/DropdownMenuRadioGroup";
-import DropdownMenuRadioItem from "@/DropdownMenuRadioItem";
-import DropdownMenuArrow from "@/DropdownMenuArrow";
-import IconButton from "@/IconButton";
-import DropdownMenuItemTrailing from "@/DropdownMenuItemTrailing";
-import DropdownMenuItemLeading from "@/DropdownMenuItemLeading";
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuPortal,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSub,
+    DropdownMenuSubTrigger,
+    DropdownMenuSubContent,
+    DropdownMenuSeparator,
+    DropdownMenuCheckboxItem,
+    DropdownMenuItemIndicator,
+    DropdownMenuLabel,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuArrow,
+    DropdownMenuItemTrailing,
+    DropdownMenuItemLeading
+} from "@material-tailwind-ui/dropdown-menu";
+import {IconButton} from "@material-tailwind-ui/icon-button";
 
 const meta: Meta<typeof DropdownMenu> = {
     component: DropdownMenu,

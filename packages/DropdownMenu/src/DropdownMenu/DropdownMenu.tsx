@@ -1,7 +1,7 @@
 import React from 'react';
 import {DropdownMenu as RadixDropdownMenu} from "@radix-ui/react-dropdown-menu";
 import { DropdownMenuProps} from './DropdownMenu.types';
-import {DropdownMenuThemeContext} from "@/DropdownMenu/useDropdownMenuTheme";
+import {DropdownMenuThemeContext} from "./useDropdownMenuTheme";
 
 
 

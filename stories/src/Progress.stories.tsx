@@ -1,6 +1,6 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import LinearProgress from "../packages/LinearProgress";
+import {LinearProgress} from "@material-tailwind-ui/linear-progress";
 
 const sizeControl = {
     control: 'select' as const,

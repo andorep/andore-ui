@@ -30,3 +30,7 @@ export * from './DropdownMenuSubTrigger';
 export { default as DropdownMenuSubTrigger } from './DropdownMenuSubTrigger';
 export * from './DropdownMenuTrigger';
 export { default as DropdownMenuTrigger } from './DropdownMenuTrigger';
+export * from './DropdownMenuSeparator';
+export { default as DropdownMenuSeparator } from './DropdownMenuSeparator';
+export * from './DropdownMenuRadioGroup';
+export { default as DropdownMenuRadioGroup } from './DropdownMenuRadioGroup';
