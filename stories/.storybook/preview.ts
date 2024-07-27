@@ -11,6 +11,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     withThemeByDataAttribute({
       themes: {
@@ -21,6 +22,8 @@ const preview: Preview = {
       attributeName: "data-mode",
     }),
   ],
+
+  tags: ["autodocs"]
 };
 
 export default preview;

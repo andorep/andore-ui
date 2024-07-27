@@ -9,6 +9,7 @@ export default defineConfig({
         alias: {
             "@material-tailwind-ui/accordion": resolve(__dirname, "../packages/Accordion/src"),
             "@material-tailwind-ui/theme-plugin": resolve(__dirname, "../packages/plugin/src"),
+            "@material-tailwind-ui/surface": resolve(__dirname, "../packages/Surface/src"),
             "@material-tailwind-ui/alert-dialog": resolve(__dirname, "../packages/AlertDialog/src"),
             "@material-tailwind-ui/aspect-ratio": resolve(__dirname, "../packages/AspectRatio/src"),
             "@material-tailwind-ui/avatar": resolve(__dirname, "../packages/Avatar/src"),
@@ -19,7 +20,8 @@ export default defineConfig({
             "@material-tailwind-ui/button": resolve(__dirname, "../packages/Button/src"),
             "@material-tailwind-ui/icon-button": resolve(__dirname, "../packages/IconButton/src"),
             "@material-tailwind-ui/dropdown-menu": resolve(__dirname, "../packages/DropdownMenu/src"),
-            "@material-tailwind-ui/linear-progress": resolve(__dirname, "../packages/LinearProgress/src")
+            "@material-tailwind-ui/linear-progress": resolve(__dirname, "../packages/LinearProgress/src"),
+            "@material-tailwind-ui/typography": resolve(__dirname, "../packages/Typography/src")
         }
     }
 })

@@ -11,7 +11,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
  */
 function createComponent(componentName) {
   // Define the directory path for the new component
-  const componentDir = path.join(__dirname, "../stories");
+  const componentDir = path.join(__dirname, "../stories/src");
 
   // Define the content for each file
   const tsxContent = componentTemplate(componentName);
@@ -22,10 +22,14 @@ function createComponent(componentName) {
   console.log(`${componentName} story created successfully.`);
 }
 
+const toSnakeCase = (str) =>{
+  const snakeCase = str.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
+  return snakeCase.slice(1);
+}
 
 const componentTemplate = (componentName) =>
     `import type { Meta, StoryObj } from "@storybook/react";
-import ${componentName} from "@/${componentName}";
+import {${componentName}} from "@material-tailwind-ui/${toSnakeCase(componentName)}";
 
 const meta: Meta<typeof ${componentName}> = {
   component: ${componentName},

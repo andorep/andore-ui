@@ -1,2 +1,12 @@
 import React, { PropsWithChildren } from 'react';
-export interface IconButtonProps extends PropsWithChildren<React.HTMLAttributes<HTMLButtonElement>> {}
+
+export type IconButtonVariant = 'filled' | 'outlined' | 'standard';
+
+export type IconButtonColor = "primary" | "secondary" | "info" | "success" | "warning" | "error";
+
+export interface IconButtonProps extends PropsWithChildren<React.HTMLAttributes<HTMLButtonElement>> {
+    variant?: IconButtonVariant;
+    color?: IconButtonColor;
+    toggle?: boolean;
+    toggleIcon?: React.ReactNode;
+}

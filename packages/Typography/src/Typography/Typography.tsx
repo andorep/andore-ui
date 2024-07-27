@@ -1,60 +1,63 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
+import {twMerge} from "tailwind-merge";
 import {
-  TypographyProps,
-  TypographySizes,
-  TypographyVariants,
+    TypographyProps,
+    TypographySizes,
+    TypographyVariants,
 } from "./Typography.types";
-import { TypographyMapClassName } from "./Typography.classes";
+import {TypographyColorMapClassName, TypographyMapClassName} from "./Typography.classes";
 
 const variantMap: Record<
-  TypographyVariants,
-  Record<TypographySizes, React.ElementType>
+    TypographyVariants,
+    Record<TypographySizes, React.ElementType>
 > = {
-  display: {
-    lg: "h1",
-    md: "h1",
-    sm: "h1",
-  },
-  headline: {
-    lg: "h2",
-    md: "h3",
-    sm: "h4",
-  },
-  title: {
-    lg: "h5",
-    md: "h6",
-    sm: "h6",
-  },
-  body: {
-    lg: "p",
-    md: "p",
-    sm: "p",
-  },
+    display: {
+        lg: "h1",
+        md: "h1",
+        sm: "h1",
+    },
+    headline: {
+        lg: "h2",
+        md: "h3",
+        sm: "h4",
+    },
+    title: {
+        lg: "h5",
+        md: "h6",
+        sm: "h6",
+    },
+    body: {
+        lg: "p",
+        md: "p",
+        sm: "p",
+    },
 };
 
 const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
-  (props, forwardedRef) => {
-    const {
-      children,
-      className,
-      variant = "body",
-      size = "md",
-      ...rest
-    } = props;
+    (props, forwardedRef) => {
+        const {
+            children,
+            className,
+            variant = "body",
+            size = "md",
+            color,
+            ...rest
+        } = props;
 
-    const Element = variantMap[variant][size];
+        const Element = variantMap[variant][size];
 
-    const classVariant = TypographyMapClassName[variant][size];
+        const classVariant = TypographyMapClassName[variant][size];
 
-    const classes = twMerge(classVariant, className);
+        const colorVariant = color ? TypographyColorMapClassName[color] : "";
 
-    return (
-      <Element ref={forwardedRef} className={classes} {...rest}>
-        {children}
-      </Element>
-    );
-  },
+        const classes = twMerge(classVariant, colorVariant, className);
+
+        return (
+            <Element ref={forwardedRef} className={classes} {...rest}>
+                {children}
+            </Element>
+        );
+    },
 );
 
 export default Typography;

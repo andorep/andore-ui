@@ -2,7 +2,7 @@ import { ButtonColor, ButtonVariant } from "./Button.types";
 import { twMerge } from "tailwind-merge";
 
 export const ButtonBaseClassName =
-  "MTButton-root rounded-full font-medium text-base flex items-center justify-center transition-colors duration-short4 ease-standard";
+  "MTButton-root rounded-full font-medium text-base flex items-center justify-center transition-colorsShadow duration-short3 ease-emphasizedAccelerate";
 
 export const ButtonBasePaddingClassName =
   "py-2.5 px-6 has-[.MTButton-start-icon]:pl-4 has-[.MTButton-end-icon]:pr-4";
@@ -38,7 +38,7 @@ export const ButtonElevatedSpanClassName = twMerge(
   ButtonBasePaddingClassName,
   ButtonBaseSpanPaddingClassName,
   // if it has a start or end icon, we need to add padding to the span
-  "MTButton-variant-elevated-span rounded-[inherit] w-full h-full flex items-center justify-center transition-colors duration-short4 ease-standard",
+  "MTButton-variant-elevated-span rounded-[inherit] w-full h-full flex items-center justify-center",
 );
 
 export const ButtonFilledClassName = twMerge(

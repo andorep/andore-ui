@@ -1,2 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-export interface SurfaceProps extends PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {}
+
+export type SurfaceVariant = 'elevated' | 'filled' | 'outlined';
+export interface SurfaceProps extends PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {
+    variant?: SurfaceVariant;
+}

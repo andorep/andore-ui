@@ -5,37 +5,7 @@ import colors from "tailwindcss/colors";
 /** @type {import('tailwindcss').Config} */
 export const theme: Theme = {
     fontFamily: {
-        sans: ["Roboto", "sans-serif"],
-    },
-    fontSize: {
-        // label small
-        xs: "0.6875rem",
-        // Body small
-        // Label medium
-        sm: "0.75rem",
-        // Body medium
-        // Label large
-        base: "0.875rem",
-        // Body large
-        lg: "1rem",
-        // Title small
-        xl: "0.875rem",
-        // Title medium
-        "2xl": "1rem",
-        // Title large
-        "3xl": "1.375rem",
-        // Headline small
-        "4xl": "1.5rem",
-        // Headline medium
-        "5xl": "1.75rem",
-        // Headline large
-        "6xl": "2rem",
-        // Display small
-        "7xl": "2.25rem",
-        // Display medium
-        "8xl": "2.8125rem",
-        // Display large
-        "9xl": "3.5625rem",
+        sans: ["Noto Sans", "sans-serif"],
     },
     boxShadow: {
         // material design 3 shadow
@@ -197,7 +167,7 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.pink[700],
             "dark-lighter": colors.pink[600],
             "dark-container": colors.pink[500],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
         secondary: {
@@ -211,7 +181,7 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.teal[600],
             "dark-lighter": colors.teal[400],
             "dark-container": colors.teal[100],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
         info: {
@@ -225,7 +195,7 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.blue[600],
             "dark-lighter": colors.blue[400],
             "dark-container": colors.blue[100],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
         success: {
@@ -239,7 +209,7 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.green[600],
             "dark-lighter": colors.green[400],
             "dark-container": colors.green[100],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
         warning: {
@@ -253,7 +223,7 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.yellow[600],
             "dark-lighter": colors.yellow[400],
             "dark-container": colors.yellow[100],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
         error: {
@@ -267,8 +237,11 @@ export const theme: Theme = {
             "dark-DEFAULT": colors.red[600],
             "dark-lighter": colors.red[400],
             "dark-container": colors.red[100],
-            "dark-text": colors.white,
+            "dark-text": colors.stone[100],
             "dark-container-text": colors.white,
         },
     },
+    transitionProperty: {
+        'colorsShadow': 'color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow',
+    }
 };

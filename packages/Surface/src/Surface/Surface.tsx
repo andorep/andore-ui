@@ -1,15 +1,22 @@
 import React from 'react';
-import { twMerge } from 'tailwind-merge';
-import { SurfaceProps } from './Surface.types';
-import { SurfaceBaseClassName } from './Surface.classes';
+import {twMerge} from 'tailwind-merge';
+import {SurfaceProps} from './Surface.types';
+import {SurfaceBaseContentMapClassName, SurfaceBaseMapClassName} from './Surface.classes';
 
 const Surface = React.forwardRef<HTMLDivElement, SurfaceProps>((props, forwardedRef) => {
-    const { children, className, ...rest } = props;
-    const classes = twMerge(SurfaceBaseClassName, className);
+    const {children, className, variant = 'elevated', ...rest} = props;
+
+    const surfaceVariantClassName = SurfaceBaseMapClassName[variant];
+    const classesRoot = twMerge(surfaceVariantClassName, className);
+
+    const surfaceContentVariantClassName = SurfaceBaseContentMapClassName[variant];
+    const classesContent = twMerge(surfaceContentVariantClassName, className);
     return (
-      <div {...rest} ref={forwardedRef} className={classes} >
-          {children}
-      </div>
+        <div {...rest} ref={forwardedRef} className={classesRoot}>
+            <div className={classesContent}>
+                {children}
+            </div>
+        </div>
     );
 });
 
