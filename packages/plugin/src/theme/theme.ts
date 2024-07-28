@@ -67,7 +67,11 @@ export const theme: Theme = {
         extraLong4: motion.duration.extraLong4,
     },
     borderRadius: {
-        DEFAULT: "1.75rem",
+        sm: "0.25rem",
+        DEFAULT: "0.5rem",
+        md: "0.75rem",
+        lg: "1rem",
+        xl: "1.75rem",
     },
     animation: {
         "accordion-open": `accordion-open ${motion.duration.medium2} ${motion.easing.emphasized.timingFunction}`,

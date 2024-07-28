@@ -1,6 +1,7 @@
 import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
+import {toSnakeCase} from "./utils.js";
 
 // Convert URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -14,39 +15,38 @@ function createComponent(componentName) {
   const componentDir = path.join(__dirname, "../stories/src");
 
   // Define the content for each file
-  const tsxContent = componentTemplate(componentName);
+  const tsxContent = generateTemplate(componentName, "component.stories.template.tsx");
 
   // Write the .tsx file
   fs.writeFileSync(path.join(componentDir, `${componentName}.stories.tsx`), tsxContent);
 
+  // Update package.json
+  updatePackageJson(componentName);
+
   console.log(`${componentName} story created successfully.`);
 }
 
-const toSnakeCase = (str) =>{
-  const snakeCase = str.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
-  return snakeCase.slice(1);
+
+const generateTemplate = (componentName, file) => {
+  let jsonString = fs.readFileSync(path.join(__dirname, `../templates/${file}`), "utf-8");
+  // replace $COMPONENTNAME with the actual component name
+  jsonString = jsonString.replace(/\$COMPONENTNAME/g, componentName);
+  jsonString = jsonString.replace(/\$SNAKE-COMPONENT/g, toSnakeCase(componentName));
+  return jsonString;
 }
 
-const componentTemplate = (componentName) =>
-    `import type { Meta, StoryObj } from "@storybook/react";
-import {${componentName}} from "@material-tailwind-ui/${toSnakeCase(componentName)}";
 
-const meta: Meta<typeof ${componentName}> = {
-  component: ${componentName},
-};
-export default meta;
+const updatePackageJson = (componentName) => {
+  const packageJsonPath = path.join(__dirname, "../stories/package.json");
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
-type Story = StoryObj<typeof ${componentName}>;
+  // Add the new component to dependencies
+  packageJson.dependencies = packageJson.dependencies || {};
+  packageJson.dependencies[`@material-tailwind-ui/${toSnakeCase(componentName)}`] = "workspace:*";
 
-export const Default: Story = {
-  render: () => (
-    <>
-      <${componentName}>
-       Story
-      </${componentName}>
-    </>
-  ),
-};`;
+  // Write the updated package.json back to the file
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+}
 
 
 // create component from command line

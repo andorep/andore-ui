@@ -21,7 +21,8 @@ export default defineConfig({
             "@material-tailwind-ui/icon-button": resolve(__dirname, "../packages/IconButton/src"),
             "@material-tailwind-ui/dropdown-menu": resolve(__dirname, "../packages/DropdownMenu/src"),
             "@material-tailwind-ui/linear-progress": resolve(__dirname, "../packages/LinearProgress/src"),
-            "@material-tailwind-ui/typography": resolve(__dirname, "../packages/Typography/src")
+            "@material-tailwind-ui/typography": resolve(__dirname, "../packages/Typography/src"),
+            "@material-tailwind-ui/fab": resolve(__dirname, "../packages/Fab/src")
         }
     }
 })

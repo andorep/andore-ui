@@ -25,7 +25,8 @@
     "@material-tailwind-ui/typography": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "@material-tailwind-ui/fab": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
