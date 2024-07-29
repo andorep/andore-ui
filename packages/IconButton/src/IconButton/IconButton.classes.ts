@@ -2,7 +2,7 @@ import {twMerge} from "tailwind-merge";
 import {IconButtonColor, IconButtonVariant} from "./IconButton.types";
 
 export const IconButtonBaseClassName = "MTicon-button-root rounded-full transition-colorsShadow duration-short3 ease-emphasizedAccelerate";
-export const IconButtonContentClassName = "MTicon-button-content p-2 rounded-[inherit] flex items-center justify-center transition-colorsShadow duration-short3 ease-emphasizedAccelerate";
+export const IconButtonContentClassName = "MTicon-button-content p-2 box-content min-h-6 min-w-6 rounded-[inherit] flex items-center justify-center transition-colorsShadow duration-short3 ease-emphasizedAccelerate";
 
 export const IconButtonFilledClassName = twMerge(
     IconButtonContentClassName,

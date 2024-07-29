@@ -186,7 +186,7 @@ export const theme: Theme = {
             "dark-lighter": colors.teal[400],
             "dark-container": colors.teal[100],
             "dark-text": colors.stone[100],
-            "dark-container-text": colors.white,
+            "dark-container-text": colors.gray[800],
         },
         info: {
             darker: colors.blue[800],

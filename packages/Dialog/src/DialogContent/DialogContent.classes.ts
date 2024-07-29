@@ -19,7 +19,7 @@ export const DialogContentSmallClassName = twMerge(
     "dialog-content-small max-w-[300px] w-full",
 );
 
-export const DialogContentSurfaceClassName = "w-full h-full flex flex-col bg-surface-container-lowest rounded-3xl group-[.dialog-content-full]:rounded-none shadow-md focus:outline-none dark:bg-surface-dark-container-lowest dark:shadow-dark-md";
+export const DialogContentSurfaceClassName = "w-full h-full flex flex-col bg-surface-container-lowest rounded-xl group-[.dialog-content-full]:rounded-none shadow-md focus:outline-none dark:bg-surface-dark-container-lowest dark:shadow-dark-md";
 
 export const DialogContentTintClassName = "w-full h-full flex flex-col rounded-[inherit] group-[.dialog-content-full]:rounded-none p-6 bg-primary/[0.07] dark:bg-primary/[0.07]";
 

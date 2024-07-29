@@ -19,7 +19,7 @@ export const AlertDialogContentSmallClassName = twMerge(
   "alert-dialog-content-small max-w-[300px] w-full",
 );
 
-export const AlertDialogContentSurfaceClassName = "w-full h-full flex flex-col bg-surface-container-lowest rounded-3xl group-[.alert-dialog-content-full]:rounded-none shadow-md focus:outline-none dark:bg-surface-dark-container-lowest dark:shadow-dark-md";
+export const AlertDialogContentSurfaceClassName = "w-full h-full flex flex-col bg-surface-container-lowest rounded-xl group-[.alert-dialog-content-full]:rounded-none shadow-md focus:outline-none dark:bg-surface-dark-container-lowest dark:shadow-dark-md";
 
 export const AlertDialogContentTintClassName = "w-full h-full flex flex-col rounded-[inherit] group-[.alert-dialog-content-full]:rounded-none p-6 bg-primary/[0.07] dark:bg-primary/[0.07]";
 
