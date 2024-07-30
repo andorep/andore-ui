@@ -2,6 +2,7 @@ import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
 import {toSnakeCase} from "./utils.js";
+import {addAlias} from "./add-alias-to-story.js";
 
 // Convert URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -22,6 +23,9 @@ function createComponent(componentName) {
 
   // Update package.json
   updatePackageJson(componentName);
+
+  // update aliases in vite.config.ts
+  addAlias(componentName);
 
   console.log(`${componentName} story created successfully.`);
 }
@@ -46,6 +50,11 @@ const updatePackageJson = (componentName) => {
 
   // Write the updated package.json back to the file
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+
+  // Add the new component to the vite.config.ts
+    const viteConfigPath = path.join(__dirname, "../stories/vite.config.ts");
+
+
 }
 
 

@@ -10,7 +10,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "add-radix-component": "node scripts/add-radix-component.js",
-    "create-new-component": "node scripts/create-new-package.js",
+    "create-new-component": "node scripts/create-new-component.js",
+    "create-new-package": "node scripts/create-new-package.js",
     "create-story": "node scripts/create-story.js"
   },
   "dependencies": {

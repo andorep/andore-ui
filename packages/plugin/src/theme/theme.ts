@@ -1,6 +1,7 @@
 import {Theme} from "./theme.types";
 import {motion} from "./motion";
 import colors from "tailwindcss/colors";
+import {getColorFromMaterialColor} from "../utils/colors.utils";
 
 /** @type {import('tailwindcss').Config} */
 export const theme: Theme = {
@@ -127,10 +128,10 @@ export const theme: Theme = {
         white: colors.white,
         black: colors.black,
         outline: {
-            DEFAULT: colors.gray[200],
-            variant: colors.gray[400],
-            dark: colors.gray[700],
-            "dark-variant": colors.gray[500],
+            DEFAULT: getColorFromMaterialColor('neutral', 50),
+            variant: getColorFromMaterialColor('neutral', 80),
+            dark: getColorFromMaterialColor('neutral', 50),
+            "dark-variant":  getColorFromMaterialColor('neutral', 80),
         },
         surface: {
             dim: colors.gray[50],
@@ -162,30 +163,30 @@ export const theme: Theme = {
         },
         primary: {
             darker: colors.pink[800],
-            DEFAULT: colors.pink[600],
+            DEFAULT: getColorFromMaterialColor('blue', 40),
             lighter: colors.pink[400],
-            container: colors.pink[200],
-            text: colors.white,
-            "container-text": colors.gray[800],
+            text: getColorFromMaterialColor('blue', 100),
+            container:  getColorFromMaterialColor('blue', 90),
+            "container-text":  getColorFromMaterialColor('blue', 10),
             "dark-darker": colors.pink[800],
-            "dark-DEFAULT": colors.pink[700],
+            "dark-DEFAULT":  getColorFromMaterialColor('blue', 80),
             "dark-lighter": colors.pink[600],
-            "dark-container": colors.pink[500],
-            "dark-text": colors.stone[100],
-            "dark-container-text": colors.white,
+            "dark-text": getColorFromMaterialColor('blue', 20),
+            "dark-container": getColorFromMaterialColor('blue', 30),
+            "dark-container-text": getColorFromMaterialColor('blue', 90),
         },
         secondary: {
             darker: colors.orange[800],
             DEFAULT: colors.orange[600],
             lighter: colors.orange[400],
+            text: colors.white[2],
             container: colors.orange[200],
-            text: colors.white,
             "container-text": colors.gray[800],
             "dark-darker": colors.teal[800],
             "dark-DEFAULT": colors.teal[600],
             "dark-lighter": colors.teal[400],
-            "dark-container": colors.teal[100],
             "dark-text": colors.stone[100],
+            "dark-container": colors.teal[100],
             "dark-container-text": colors.gray[800],
         },
         info: {

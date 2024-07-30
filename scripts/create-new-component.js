@@ -37,6 +37,15 @@ function createComponent(rootComponentName, componentName) {
     fs.writeFileSync(path.join(srcDir, `index.ts`), indexContent);
 
 
+    // get root index template
+    let newComponentRootIndex = generateTemplate(componentName, 'index.template.ts');
+
+    // update the root index.ts file to include the new component
+    const rootIndexFile = path.join(componentDir, "src", "index.ts");
+    let rootIndexContent = fs.readFileSync(rootIndexFile, "utf-8");
+    rootIndexContent += `${newComponentRootIndex}`;
+    fs.writeFileSync(rootIndexFile, rootIndexContent);
+
     console.log(`${componentName} component created successfully.`);
 }
 
@@ -53,6 +62,10 @@ const generateTemplate = (componentName, file) => {
 // create component from command line
 const rootComponent = process.argv[2];
 const components = process.argv.slice(3);
+if (!rootComponent || components.length === 0) {
+    console.log("Usage: node create-new-component.js RootComponentName ComponentName1 ComponentName2 ...");
+    process.exit(1);
+}
 components.forEach((component) => {
     createComponent(rootComponent, component);
 });

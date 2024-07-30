@@ -1059,6 +1059,9 @@ importers:
       '@material-tailwind-ui/theme-plugin':
         specifier: workspace:*
         version: link:../packages/plugin
+      '@material-tailwind-ui/toggle-button':
+        specifier: workspace:*
+        version: link:../packages/ToggleButton
       '@material-tailwind-ui/typography':
         specifier: workspace:*
         version: link:../packages/Typography
