@@ -1,13 +1,11 @@
+import colors from "tailwindcss/colors";
+
 export interface Color {
-  darker: string;
   DEFAULT: string;
-  lighter: string;
   container?: string;
   text?: string;
   "container-text"?: string;
   "dark-DEFAULT"?: string;
-  "dark-lighter"?: string;
-  "dark-darker"?: string;
   "dark-container"?: string;
   "dark-text"?: string;
   "dark-container-text"?: string;
@@ -29,7 +27,6 @@ export interface BaseColors {
     bright?: string;
     text?: string;
     "text-variant"?: string;
-    "text-disabled"?: string;
     "container-lowest"?: string;
     "container-low"?: string;
     container?: string;
@@ -45,10 +42,8 @@ export interface BaseColors {
     "dark-container"?: string;
     "dark-container-high"?: string;
     "dark-container-highest"?: string;
-    "dark-disabled"?: string;
     "dark-text"?: string;
     "dark-text-variant"?: string;
-    "dark-text-disabled"?: string;
   };
   gray: Record<string, string>;
   white: string;
@@ -77,3 +72,8 @@ export interface BaseTheme {
 }
 
 export interface Theme extends BaseTheme {}
+
+// create type from tailwind colors
+export type TailwindColor = keyof typeof colors;
+
+export type TailwindTonal = '50' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '950';

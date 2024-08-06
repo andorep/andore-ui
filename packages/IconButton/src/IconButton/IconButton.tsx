@@ -2,9 +2,10 @@ import React from 'react';
 import {twMerge} from 'tailwind-merge';
 import {IconButtonProps} from './IconButton.types';
 import {
-    IconButtonBaseClassName,
+    IconButtonContentVariantMapClassName,
+    IconButtonContentVariantToggleClassName,
     IconButtonVariantMapClassName,
-    IconButtonVariantToggleClassName
+    IconButtonVariantToggleClassName,
 } from './IconButton.classes';
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, forwardedRef) => {
@@ -18,11 +19,13 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
         ...rest
     } = props;
 
-    const classes = twMerge(IconButtonBaseClassName, className);
+    const mapClassName = toggle ? IconButtonVariantToggleClassName : IconButtonVariantMapClassName;
+    const variantClass = mapClassName[variant][color] ?? {};
+    const classes = twMerge(variantClass, className);
 
-    const mapContentClassName = toggle ? IconButtonVariantToggleClassName : IconButtonVariantMapClassName;
-    const variantClass = mapContentClassName[variant] ?? {};
-    const variantContentClassName = variantClass[color];
+    const mapContentClassName = toggle ? IconButtonContentVariantToggleClassName : IconButtonContentVariantMapClassName;
+    const variantContentClass = mapContentClassName[variant] ?? {};
+    const variantContentClassName = variantContentClass[color];
 
 
     let childrenIcon = children;

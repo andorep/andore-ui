@@ -84,27 +84,27 @@ export const FabContentSizeMapClassName: Record<FabSize, string> = {
 export const FabContentMapClassName: Record<FabColor, string> = {
     primary: twMerge(
         FabContentClassName,
-        "MTfab-primary group-hover:bg-primary-container-text/[0.07] group-active:bg-primary-container-text/[0.12] group-focus:dark:bg-primary-dark-container-text/[0.07] group-active:dark:bg-primary-dark-container-text/[0.12]",
+        "MTfab-primary group-hover:bg-primary-container-text/[0.07] group-active:bg-primary-container-text/[0.12] group-hover:dark:bg-primary-dark-container-text/[0.07] group-active:dark:bg-primary-dark-container-text/[0.12]",
     ),
     secondary: twMerge(
         FabContentClassName,
-        "MTfab-secondary group-hover:bg-secondary-container-text/[0.07] group-active:bg-secondary-container-text/[0.12] group-focus:dark:bg-secondary-dark-container-text/[0.07] group-active:dark:bg-secondary-dark-container-text/[0.12]",
+        "MTfab-secondary group-hover:bg-secondary-container-text/[0.07] group-active:bg-secondary-container-text/[0.12] group-hover:dark:bg-secondary-dark-container-text/[0.07] group-active:dark:bg-secondary-dark-container-text/[0.12]",
     ),
     info: twMerge(
         FabContentClassName,
-        "MTfab-info group-hover:bg-info-container-text/[0.07] group-active:bg-info-container-text/[0.12] group-focus:dark:bg-info-dark-container-text/[0.07] group-active:dark:bg-info-dark-container-text/[0.12]",
+        "MTfab-info group-hover:bg-info-container-text/[0.07] group-active:bg-info-container-text/[0.12] group-hover:dark:bg-info-dark-container-text/[0.07] group-active:dark:bg-info-dark-container-text/[0.12]",
     ),
     success: twMerge(
         FabContentClassName,
-        "MTfab-success group-hover:bg-success-container-text/[0.07] group-active:bg-success-container-text/[0.12] group-focus:dark:bg-success-dark-container-text/[0.07] group-active:dark:bg-success-dark-container-text/[0.12]",
+        "MTfab-success group-hover:bg-success-container-text/[0.07] group-active:bg-success-container-text/[0.12] group-hover:dark:bg-success-dark-container-text/[0.07] group-active:dark:bg-success-dark-container-text/[0.12]",
     ),
     warning: twMerge(
         FabContentClassName,
-        "MTfab-warning group-hover:bg-warning-container-text/[0.07] group-active:bg-warning-container-text/[0.12] group-focus:dark:bg-warning-dark-container-text/[0.07] group-active:dark:bg-warning-dark-container-text/[0.12]",
+        "MTfab-warning group-hover:bg-warning-container-text/[0.07] group-active:bg-warning-container-text/[0.12] group-hover:dark:bg-warning-dark-container-text/[0.07] group-active:dark:bg-warning-dark-container-text/[0.12]",
     ),
     error: twMerge(
         FabContentClassName,
-        "MTfab-error group-hover:bg-error-container-text/[0.07] group-active:bg-error-container-text/[0.12] group-focus:dark:bg-error-dark-container-text/[0.07] group-active:dark:bg-error-dark-container-text/[0.12]",
+        "MTfab-error group-hover:bg-error-container-text/[0.07] group-active:bg-error-container-text/[0.12] group-hover:dark:bg-error-dark-container-text/[0.07] group-active:dark:bg-error-dark-container-text/[0.12]",
     )
 };
 

@@ -1,10 +1,11 @@
 import type {Meta, StoryObj} from "@storybook/react";
 import {ToggleButton, ToggleButtonGroup} from "@material-tailwind-ui/toggle-button";
 import React from "react";
+import {ToggleButtonGroupDensity} from "@material-tailwind-ui/toggle-button/src";
 
 const densityControl = {
     control: "inline-radio" as const,
-    options: [0, -1, -2, -3]
+    options: [0, -1, -2, -3] as ToggleButtonGroupDensity[]
 }
 const colorControl = {
     control: "select" as const,
@@ -193,4 +194,16 @@ export const Colors: Story = {
     argTypes: {
         color: colorControl
     }
+};
+
+export const Disabled: Story = {
+    render: () => {
+        return (
+            <>
+                <ToggleButton disabled>
+                    Toggle
+                </ToggleButton>
+            </>
+        )
+    },
 };

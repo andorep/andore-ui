@@ -43,7 +43,7 @@ export const ToggleButtonBaseDisabledClassName = twMerge(
     ToggleButtonBaseClassName,
     ToggleButtonBasePaddingClassName,
     "cursor-not-allowed",
-    "border-surface-disabled/10 surface-text-disabled dark:border-surface-dark-disabled/10 dark:text-surface-dark-text-disabled/35",
+    "border-surface-text/10 text-surface-text/35 dark:border-surface-dark-text/10 dark:text-surface-dark-text/35",
 );
 
 //  group-aria-pressed/button is a state attribute that indicates the current "pressed" state of toggle buttons.

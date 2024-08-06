@@ -1,9 +1,5 @@
 import colors from "tailwindcss/colors";
-
-// create type from tailwind colors
-export type TailwindColor = keyof typeof colors;
-
-export type TailwindTonal = '50' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '950';
+import {TailwindColor, TailwindTonal} from "../theme/theme.types";
 
 export const MaterialColorToTailwindColor: Record<number, TailwindTonal> = {
     99: '50',
@@ -18,7 +14,6 @@ export const MaterialColorToTailwindColor: Record<number, TailwindTonal> = {
     20: '900',
     10: '950'
 }
-
 
 export const getColorFromMaterialColor = (tailwindColor: TailwindColor, materialColor: number): string => {
     if (materialColor <= 0) {
