@@ -27,7 +27,8 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.4.0",
     "@material-tailwind-ui/fab": "workspace:*",
-    "@material-tailwind-ui/toggle-button": "workspace:*"
+    "@material-tailwind-ui/toggle-button": "workspace:*",
+    "@material-tailwind-ui/divider": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",

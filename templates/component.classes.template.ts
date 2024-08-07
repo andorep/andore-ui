@@ -1,1 +1,1 @@
-export const $COMPONENTNAMEBaseClassName = "MT$SNAKE-COMPONENT-root";
+export const $COMPONENTNAMEBaseClassName = "MT$PASCAL-COMPONENT-root";

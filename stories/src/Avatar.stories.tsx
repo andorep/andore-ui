@@ -1,5 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/react";
 import {Avatar, AvatarImage, AvatarFallback} from "@material-tailwind-ui/avatar";
+// @ts-ignore
+import AvatarSrc from '../assets/3d_avatar_13.png';
 
 const meta: Meta<typeof Avatar> = {
     component: Avatar,
@@ -13,7 +15,7 @@ export const Default: Story = {
         <>
             <Avatar>
                 <AvatarImage
-                    src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+                    src={AvatarSrc}
                     alt="Colm Tuite"
                 />
             </Avatar>

@@ -40,19 +40,19 @@ export const Default: Story = {
                 Headline large
             </Typography>
             <Typography variant="headline" size="md">
-                Headline medium
+                Display small
             </Typography>
             <Typography variant="headline" size="sm">
-                Headline small
+                Display small
             </Typography>
             <Typography variant="title" size="lg">
-                Title large
+                Display small
             </Typography>
             <Typography variant="title" size="md">
-                Title medium
+                Display small
             </Typography>
             <Typography variant="title" size="sm">
-                Title small
+                Display small
             </Typography>
             <Typography variant="body" size="lg">
                 Body large

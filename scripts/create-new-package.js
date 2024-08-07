@@ -1,7 +1,7 @@
 import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
-import {toSnakeCase} from "./utils.js";
+import {generateTemplate} from "./utils.js";
 
 // Convert URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -21,12 +21,12 @@ function createComponent(componentName) {
   }
 
   // Define the content for each file
-  const tsxContent = generateTemplate(componentName,'component.template.tsx');
-  const typesContent = generateTemplate(componentName,'component.types.template.ts');
-  const indexContent = generateTemplate(componentName,'component.index.template.ts');
-  const classesContent = generateTemplate(componentName,'component.classes.template.ts');
-  const packageJsonContent = generateTemplate(componentName,'package.template.json');
-  const rootIndexTemplateContent = generateTemplate(componentName,'index.template.ts');
+  const tsxContent = startGenerateTemplate(componentName,'component.template.tsx');
+  const typesContent = startGenerateTemplate(componentName,'component.types.template.ts');
+  const indexContent = startGenerateTemplate(componentName,'component.index.template.ts');
+  const classesContent = startGenerateTemplate(componentName,'component.classes.template.ts');
+  const packageJsonContent = startGenerateTemplate(componentName,'package.template.json');
+  const rootIndexTemplateContent = startGenerateTemplate(componentName,'index.template.ts');
   const viteConfigContent = fs.readFileSync(path.join(__dirname, "../templates/vite.config.template.ts"), "utf-8");
   const tsconfigContent = fs.readFileSync(path.join(__dirname, "../templates/tsconfig.template.json"), "utf-8");
 
@@ -56,12 +56,8 @@ function createComponent(componentName) {
 }
 
 
-const generateTemplate = (componentName, file) => {
-    let jsonString = fs.readFileSync(path.join(__dirname, `../templates/${file}`), "utf-8");
-    // replace $COMPONENTNAME with the actual component name
-    jsonString = jsonString.replace(/\$COMPONENTNAME/g, componentName);
-    jsonString = jsonString.replace(/\$SNAKE-COMPONENT/g, toSnakeCase(componentName));
-    return jsonString;
+const startGenerateTemplate = (componentName, file) => {
+  return generateTemplate(__dirname, componentName, file);
 }
 
 

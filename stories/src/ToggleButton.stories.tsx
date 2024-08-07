@@ -58,6 +58,7 @@ export const Group: Story = {
 };
 
 export const GroupDensity: Story = {
+    // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
         const setSelected = (index: number) => {
@@ -80,9 +81,11 @@ export const GroupDensity: Story = {
         )
     },
     args: {
+        // @ts-ignore
         density: -1
     },
     argTypes: {
+        // @ts-ignore
         density: densityControl
     }
 };
@@ -109,6 +112,7 @@ const DirectionsCarIcon = () => (
 );
 
 export const WithStartIcon: Story = {
+    // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
         const setSelected = (index: number) => {
@@ -132,9 +136,11 @@ export const WithStartIcon: Story = {
         )
     },
     args: {
+        // @ts-ignore
         density: 0
     },
     argTypes: {
+        // @ts-ignore
         density: densityControl
     }
 };
@@ -148,6 +154,7 @@ const HeartIcon = () => (
 );
 
 export const CustomCheckedIcon: Story = {
+    // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
         const setSelected = (index: number) => {
@@ -170,9 +177,11 @@ export const CustomCheckedIcon: Story = {
         )
     },
     args: {
+        // @ts-ignore
         density: 0
     },
     argTypes: {
+        // @ts-ignore
         density: densityControl
     }
 }

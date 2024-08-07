@@ -1,13 +1,14 @@
 import {fileURLToPath} from "url";
 import path from "path";
 import fs from "fs";
-import {toSnakeCase} from "./utils.js";
+import {generateTemplate} from "./utils.js";
 
 // Convert URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 /**
  * Creates a new React component folder with the specified name and base files.
+ * @param {string} rootComponentName The name of the root component.
  * @param {string} componentName The name of the component to create.
  */
 function createComponent(rootComponentName, componentName) {
@@ -21,10 +22,10 @@ function createComponent(rootComponentName, componentName) {
     }
 
     // Define the content for each file
-    const tsxContent = generateTemplate(componentName, 'component.template.tsx');
-    const typesContent = generateTemplate(componentName, 'component.types.template.ts');
-    const indexContent = generateTemplate(componentName, 'component.index.template.ts');
-    const classesContent = generateTemplate(componentName, 'component.classes.template.ts');
+    const tsxContent = startGenerateTemplate(componentName, 'component.template.tsx');
+    const typesContent = startGenerateTemplate(componentName, 'component.types.template.ts');
+    const indexContent = startGenerateTemplate(componentName, 'component.index.template.ts');
+    const classesContent = startGenerateTemplate(componentName, 'component.classes.template.ts');
 
     // Write the .tsx file
     fs.writeFileSync(path.join(srcDir, `${componentName}.tsx`), tsxContent);
@@ -38,7 +39,7 @@ function createComponent(rootComponentName, componentName) {
 
 
     // get root index template
-    let newComponentRootIndex = generateTemplate(componentName, 'index.template.ts');
+    let newComponentRootIndex = startGenerateTemplate(componentName, 'index.template.ts');
 
     // update the root index.ts file to include the new component
     const rootIndexFile = path.join(componentDir, "src", "index.ts");
@@ -50,12 +51,8 @@ function createComponent(rootComponentName, componentName) {
 }
 
 
-const generateTemplate = (componentName, file) => {
-    let jsonString = fs.readFileSync(path.join(__dirname, `../templates/${file}`), "utf-8");
-    // replace $COMPONENTNAME with the actual component name
-    jsonString = jsonString.replace(/\$COMPONENTNAME/g, componentName);
-    jsonString = jsonString.replace(/\$SNAKE-COMPONENT/g, toSnakeCase(componentName));
-    return jsonString;
+const startGenerateTemplate = (componentName, file) => {
+    return generateTemplate(__dirname, componentName, file);
 }
 
 
