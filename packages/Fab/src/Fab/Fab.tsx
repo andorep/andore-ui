@@ -12,7 +12,7 @@ import {
 } from './Fab.classes';
 
 const Fab = React.forwardRef<HTMLButtonElement, FabProps>((props, forwardedRef) => {
-    const {children, className, color = 'primary', size = 'medium', floating, icon, ...rest} = props;
+    const {children, className, color = 'primary', size = 'md', floating, icon, ...rest} = props;
 
     let classesFloating = '';
     if (floating) {

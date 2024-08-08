@@ -26,6 +26,7 @@ export default defineConfig({
              "@material-tailwind-ui/toggle-button": resolve(__dirname, "../packages/ToggleButton/src"),
              "@material-tailwind-ui/separator": resolve(__dirname, "../packages/Separator/src"),
              "@material-tailwind-ui/divider": resolve(__dirname, "../packages/Divider/src"),
+             "@material-tailwind-ui/radio": resolve(__dirname, "../packages/Radio/src"),
         }
     }
 })

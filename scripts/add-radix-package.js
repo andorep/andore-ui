@@ -17,10 +17,6 @@ function createComponent(parentComponentName, options) {
     const alias = options.find(option => option.startsWith("--alias"));
     const aliasValue = alias ? alias.split("=")[1] : null;
 
-
-    const radixName = options.find(option => option.startsWith("--radix"));
-    const radixNameValue = radixName ? radixName.split("=")[1] : null;
-
     // check package name
     const packageName = options.find(option => option.startsWith("--package"));
     const packageNameValue = packageName ? packageName.split("=")[1] : null;
@@ -39,7 +35,7 @@ function createComponent(parentComponentName, options) {
 
     const extraReplaces = {
         "RADIXCOMPONENTNAME": parentComponentName,
-        "SNAKE-RADIX-COMPONENT": toSnakeCase(radixNameValue),
+        "SNAKE-RADIX-COMPONENT": toSnakeCase(parentComponentName),
     }
 
     // Define the content for each file
@@ -47,6 +43,11 @@ function createComponent(parentComponentName, options) {
     const typesContent = startGenerateTemplate(componentName, 'radixComponent.types.template.ts', extraReplaces);
     const indexContent = startGenerateTemplate(componentName, 'component.index.template.ts', extraReplaces);
     const classesContent = startGenerateTemplate(componentName, 'component.classes.template.ts', extraReplaces);
+    const packageJsonContent = startGenerateTemplate(componentName, 'package.template.json', {
+        ...extraReplaces,
+        "SNAKE-COMPONENT": toSnakeCase(packageNameValue)
+    });
+    const rootIndexTemplateContent = startGenerateTemplate(componentName, 'index.template.ts', extraReplaces);
     const viteConfigContent = fs.readFileSync(path.join(__dirname, "../templates/vite.config.template.ts"), "utf-8");
     const tsconfigContent = fs.readFileSync(path.join(__dirname, "../templates/tsconfig.template.json"), "utf-8");
 
@@ -60,21 +61,17 @@ function createComponent(parentComponentName, options) {
     fs.writeFileSync(path.join(srcDir, `${componentName}.classes.ts`), classesContent);
     fs.writeFileSync(path.join(srcDir, `index.ts`), indexContent);
 
+    // write the root index.ts file
+    fs.writeFileSync(path.join(componentDir, `./src/index.ts`), rootIndexTemplateContent);
+
+    // Write the package.json file
+    fs.writeFileSync(path.join(componentDir, `package.json`), packageJsonContent);
+
     // Write the tsconfig.json file
     fs.writeFileSync(path.join(componentDir, `tsconfig.json`), tsconfigContent);
 
     // Write the vite.config.ts file
     fs.writeFileSync(path.join(componentDir, `vite.config.ts`), viteConfigContent);
-
-
-    // get root index template
-    let newComponentRootIndex = startGenerateTemplate(componentName, 'index.template.ts');
-
-    // update the root index.ts file to include the new component
-    const rootIndexFile = path.join(componentDir, "src", "index.ts");
-    let rootIndexContent = fs.readFileSync(rootIndexFile, "utf-8");
-    rootIndexContent += `${newComponentRootIndex}`;
-    fs.writeFileSync(rootIndexFile, rootIndexContent);
 
     console.log(`${componentName} component created successfully.`);
 }
@@ -92,38 +89,12 @@ const commands = args.filter(arg => arg.startsWith("--"));
 // filter all commands that do not start with --
 const componentCommands = args.filter(arg => !arg.startsWith("--"));
 
+// get the component name
+const parentComponent = componentCommands[0];
 
-if(componentCommands.length === 0) {
-    console.error("Please provide a component name");
+if (!parentComponent) {
+    console.error("Please provide a component name.");
     process.exit(1);
 }
 
-
-const alias = commands.find(option => option.startsWith("--alias"));
-const aliasValue = alias ? alias.split("=")[1] : null;
-
-
-if(componentCommands.length > 1 && aliasValue) {
-    console.error("Alias can only be used with a single component");
-    process.exit(1);
-}
-
-const packageName = commands.find(option => option.startsWith("--package"));
-const packageNameValue = packageName ? packageName.split("=")[1] : null;
-
-if(!packageNameValue) {
-    console.error("Please provide a package name using --package=packageName");
-    process.exit(1);
-}
-
-const radixName = commands.find(option => option.startsWith("--radix"));
-const radixNameValue = radixName ? radixName.split("=")[1] : null;
-
-if(!radixNameValue) {
-    console.error("Please the name of the radix library using --radix=radixName");
-    process.exit(1);
-}
-
-for (const componentCommand of componentCommands) {
-    createComponent(componentCommand, commands);
-}
+createComponent(parentComponent, commands);

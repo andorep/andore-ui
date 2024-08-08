@@ -56,26 +56,26 @@ export const FabBaseMapClassName: Record<FabColor, string> = {
 
 
 export const FabBaseSizeMapClassName: Record<FabSize, string> = {
-    small: twMerge(
+    sm: twMerge(
         "MTfab-small rounded-md h-fit",
     ),
-    medium: twMerge(
+    md: twMerge(
         "MTfab-medium rounded-lg h-fit",
     ),
-    large: twMerge(
+    lg: twMerge(
         "MTfab-large rounded-xl h-fit",
     )
 };
 
 
 export const FabContentSizeMapClassName: Record<FabSize, string> = {
-    small: twMerge(
+    sm: twMerge(
         "p-2 text-sm leading-[0]",
     ),
-    medium: twMerge(
+    md: twMerge(
         "p-4 text-sm leading-[0]",
     ),
-    large: twMerge(
+    lg: twMerge(
         "p-7 text-base leading-[0]",
     )
 };

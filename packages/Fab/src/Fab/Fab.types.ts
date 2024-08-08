@@ -3,7 +3,7 @@ import React, {PropsWithChildren} from 'react';
 
 export type FabColor = 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
 
-export type FabSize = 'small' | 'medium' | 'large';
+export type FabSize = 'sm' | 'md' | 'lg';
 
 export type FabFloating = 'left' | 'right' | 'center';
 

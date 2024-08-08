@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "add-radix-package": "node scripts/add-radix-package.js",
     "add-radix-component": "node scripts/add-radix-component.js",
     "create-new-component": "node scripts/create-new-component.js",
     "create-new-package": "node scripts/create-new-package.js",

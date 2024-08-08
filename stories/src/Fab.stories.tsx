@@ -1,10 +1,10 @@
 import type {Meta, StoryObj} from "@storybook/react";
 import {Fab} from "@material-tailwind-ui/fab";
-import {FabColor, FabFloating} from "@material-tailwind-ui/fab/src";
+import {FabColor, FabFloating, FabSize} from "@material-tailwind-ui/fab/src";
 
 const sizeControl = {
     control: "select" as const,
-    options: ["small", "medium", "large"]
+    options: ["sm", "md", "lg"] as FabSize[]
 }
 
 const colorControl = {
@@ -51,7 +51,7 @@ export const Sizes: Story = {
         </>
     ),
     args: {
-        size: "medium"
+        size: "md"
     },
     argTypes: {
         size: sizeControl
@@ -73,7 +73,7 @@ export const ExtendedFab: Story = {
         </>
     ),
     args: {
-        size: "medium"
+        size: "md"
     },
     argTypes: {
         size: sizeControl
@@ -102,7 +102,7 @@ export const Colors: Story = {
         </div>
     ),
     args: {
-        size: "medium",
+        size: "md",
         color: "primary"
     },
     argTypes: {
@@ -127,7 +127,7 @@ export const Floating: Story = {
         </div>
     ),
     args: {
-        size: "medium",
+        size: "md",
         color: "primary",
         floating: "right"
     },

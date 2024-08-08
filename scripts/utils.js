@@ -20,14 +20,14 @@ function clearAndUpper(str) {
 
 export const generateTemplate = (dir, componentName, file, extraReplaces) => {
     let jsonString = fs.readFileSync(path.join(dir, `../templates/${file}`), "utf-8");
-    // replace $COMPONENTNAME with the actual component name
-    jsonString = jsonString.replace(/\$COMPONENTNAME/g, componentName);
-    jsonString = jsonString.replace(/\$SNAKE-COMPONENT/g, toSnakeCase(componentName));
-    jsonString = jsonString.replace(/\$PASCAL-COMPONENT/g, toPascalCase(componentName));
     if(extraReplaces) {
         for (const key in extraReplaces) {
             jsonString = jsonString.replace(new RegExp(`\\$${key}`, 'g'), extraReplaces[key]);
         }
     }
+    // replace $COMPONENTNAME with the actual component name
+    jsonString = jsonString.replace(/\$COMPONENTNAME/g, componentName);
+    jsonString = jsonString.replace(/\$SNAKE-COMPONENT/g, toSnakeCase(componentName));
+    jsonString = jsonString.replace(/\$PASCAL-COMPONENT/g, toPascalCase(componentName));
     return jsonString;
 }
