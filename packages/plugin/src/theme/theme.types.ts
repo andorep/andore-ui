@@ -35,7 +35,7 @@ export interface BaseColors {
     disabled?: string;
     "dark-scrim"?: string;
     "dark-dim"?: string;
-    "dark-default"?: string;
+    "dark-DEFAULT"?: string;
     "dark-bright"?: string;
     "dark-container-lowest"?: string;
     "dark-container-low"?: string;

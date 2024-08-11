@@ -8,12 +8,22 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 /**
  * Creates a new React component folder with the specified name and base files.
- * @param {string} rootComponentName The name of the root component.
+ * @param {string} parentComponentName The name of the root component.
  * @param {string} componentName The name of the component to create.
  */
-function createComponent(rootComponentName, componentName) {
+function createComponent(parentComponentName, options) {
+    // check for alias command
+    const alias = options.find(option => option.startsWith("--alias"));
+    const aliasValue = alias ? alias.split("=")[1] : null;
+
+    // check package name
+    const packageName = options.find(option => option.startsWith("--package"));
+    const packageNameValue = packageName ? packageName.split("=")[1] : null;
+    const componentDirName = packageNameValue ?? parentComponentName;
+
+    const componentName = aliasValue ?? parentComponentName;
     // Define the directory path for the new component
-    const componentDir = path.join(__dirname, "../packages", rootComponentName);
+    const componentDir = path.join(__dirname, "../packages", componentDirName);
     const srcDir = path.join(componentDir, "src", componentName);
 
     // Create the directories if they don't exist
@@ -56,13 +66,38 @@ const startGenerateTemplate = (componentName, file) => {
 }
 
 
-// create component from command line
-const rootComponent = process.argv[2];
-const components = process.argv.slice(3);
-if (!rootComponent || components.length === 0) {
-    console.log("Usage: node create-new-component.js RootComponentName ComponentName1 ComponentName2 ...");
+
+// check for commands like --alias
+const args = process.argv.slice(2);
+// filter all commands that start with --
+const commands = args.filter(arg => arg.startsWith("--"));
+// filter all commands that do not start with --
+const componentCommands = args.filter(arg => !arg.startsWith("--"));
+
+
+if(componentCommands.length === 0) {
+    console.error("Please provide a component name");
     process.exit(1);
 }
-components.forEach((component) => {
-    createComponent(rootComponent, component);
-});
+
+
+const alias = commands.find(option => option.startsWith("--alias"));
+const aliasValue = alias ? alias.split("=")[1] : null;
+
+
+if(componentCommands.length > 1 && aliasValue) {
+    console.error("Alias can only be used with a single component");
+    process.exit(1);
+}
+
+const packageName = commands.find(option => option.startsWith("--package"));
+const packageNameValue = packageName ? packageName.split("=")[1] : null;
+
+if(!packageNameValue) {
+    console.error("Please provide a package name using --package=packageName");
+    process.exit(1);
+}
+
+for (const componentCommand of componentCommands) {
+    createComponent(componentCommand, commands);
+}

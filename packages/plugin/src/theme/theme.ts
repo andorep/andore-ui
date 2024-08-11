@@ -158,7 +158,7 @@ export const theme: Theme = {
             "text-variant": getColorFromMaterialColor('slate', 30),
             scrim: getColorFromMaterialColor('slate', 0),
             "dark-dim": getColorFromMaterialColor('stone', 30),
-            "dark-default": getColorFromMaterialColor('stone', 20),
+            "dark-DEFAULT": getColorFromMaterialColor('stone', 20),
             "dark-bright": getColorFromMaterialColor('stone', 10),
             "dark-container-lowest": getColorFromMaterialColor('neutral', 10),
             "dark-container-low": getColorFromMaterialColor('neutral', 20),
