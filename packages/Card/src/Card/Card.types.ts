@@ -4,5 +4,6 @@ export type CardVariant = 'elevated' | 'filled' | 'outlined';
 export interface CardProps extends PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {
     variant?: CardVariant;
     disabledDragImage?: boolean;
+    disabledStates?: boolean;
     disabled?: boolean;
 }

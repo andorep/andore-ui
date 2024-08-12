@@ -15,6 +15,22 @@ const warning = 'yellow' as TailwindColor;
 
 const error = 'red' as TailwindColor;
 
+// Typographic scale
+/*
+    - sm: body-small
+    - base: body-medium
+    - lg: body-large
+    - xl: title-small
+    - 2xl: title-medium
+    - 3xl: title-large
+    - 4xl: headline-small
+    - 5xl: headline-medium
+    - 6xl: headline-large
+    - 7xl: display-small
+    - 8xl: display-medium
+    - 9xl: display-large
+ */
+
 /** @type {import('tailwindcss').Config} */
 export const theme: Theme = {
     fontFamily: {

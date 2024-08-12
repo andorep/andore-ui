@@ -50,44 +50,44 @@ export const Default: Story = {
 };
 
 export const Toggle: Story = {
-    render: ({toggle}) => (
+    render: ({toggled}) => (
         <>
-            <IconButton variant="filled" color="primary" toggle={toggle} toggleIcon={<FilledHeart/>}>
+            <IconButton variant="filled" color="primary" toggled={toggled} toggleIcon={<FilledHeart/>}>
                 <OutlinedHeart/>
             </IconButton>
         </>
     ),
     args: {
-        toggle: true,
+        toggled: true,
     },
     argTypes: {
-        toggle: toggleControl,
+        toggled: toggleControl,
     },
 };
 
 
 export const Variant: Story = {
-    render: ({variant, toggle}) => (
+    render: ({variant, toggled}) => (
         <>
-            <IconButton variant={variant} color="primary" toggle={toggle} toggleIcon={<FilledHeart/>}>
+            <IconButton variant={variant} color="primary" toggled={toggled} toggleIcon={<FilledHeart/>}>
                 <OutlinedHeart/>
             </IconButton>
         </>
     ),
     args: {
         variant: 'filled',
-        toggle: false,
+        toggled: false,
     },
     argTypes: {
         variant: variantControl,
-        toggle: toggleControl,
+        toggled: toggleControl,
     },
 };
 
 export const Color: Story = {
-    render: ({color, toggle, variant}) => (
+    render: ({color, toggled, variant}) => (
         <>
-            <IconButton variant={variant} color={color} toggle={toggle} toggleIcon={<FilledHeart/>}>
+            <IconButton variant={variant} color={color} toggled={toggled} toggleIcon={<FilledHeart/>}>
                 <OutlinedHeart/>
             </IconButton>
         </>
@@ -95,11 +95,11 @@ export const Color: Story = {
     args: {
         variant: 'filled',
         color: 'primary',
-        toggle: false,
+        toggled: false,
     },
     argTypes: {
         variant: variantControl,
         color: colorControl,
-        toggle: toggleControl,
+        toggled: toggleControl,
     },
 };

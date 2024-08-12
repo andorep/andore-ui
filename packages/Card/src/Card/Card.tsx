@@ -3,9 +3,13 @@ import {twMerge} from 'tailwind-merge';
 import {CardProps} from './Card.types';
 import {
     CardBaseMapClassName,
+    CardBaseStatesMapClassName,
+    CardContentBaseClassName,
+    CardContentBaseStatesClassName,
     CardDisabledMapClassName,
     CardDraggableClassName,
     CardIsDraggingClassName,
+    DisabledStatesClassName,
 } from './Card.classes';
 import {
     calculateDragImagePosition,
@@ -20,8 +24,9 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>((props, forwardedRef) =
             variant = 'elevated',
             onDragStart,
             onDragEnd,
-            disabledDragImage,
-            disabled,
+            disabledStates = false,
+            disabledDragImage = false,
+            disabled = false,
             ...rest
         } = props;
         const [isDragging, setIsDragging] = React.useState(false);
@@ -29,7 +34,12 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>((props, forwardedRef) =
         const cardVariantClassName = CardBaseMapClassName[variant];
         const dragClassName = props.draggable ? CardDraggableClassName : '';
         const draggingClassName = isDragging ? CardIsDraggingClassName : '';
-        let classesRoot = twMerge(cardVariantClassName, draggingClassName, dragClassName, className);
+        const enableStatesClassName = disabledStates ? DisabledStatesClassName : '';
+        const statesClassName = disabledStates ? '' : CardBaseStatesMapClassName[variant];
+        let classesRoot = twMerge(cardVariantClassName, draggingClassName, dragClassName, enableStatesClassName, statesClassName, className);
+
+        let contentStatesClassName = disabledStates ? '' : CardContentBaseStatesClassName;
+        let classesContent = twMerge(CardContentBaseClassName, contentStatesClassName);
 
         if (disabled) {
             classesRoot = CardDisabledMapClassName[variant];
@@ -65,7 +75,9 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>((props, forwardedRef) =
                 onDragStart={handleDragStart}
                 onDragEnd={handleDragEnd}
             >
-                {children}
+                <div className={classesContent}>
+                    {children}
+                </div>
             </div>
         );
     }

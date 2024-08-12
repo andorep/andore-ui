@@ -12,24 +12,24 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
     const {
         children,
         className,
-        toggle = false,
+        toggled = false,
         variant = 'standard',
         color = 'primary',
         toggleIcon,
         ...rest
     } = props;
 
-    const mapClassName = toggle ? IconButtonVariantToggleClassName : IconButtonVariantMapClassName;
+    const mapClassName = toggled ? IconButtonVariantToggleClassName : IconButtonVariantMapClassName;
     const variantClass = mapClassName[variant][color] ?? {};
     const classes = twMerge(variantClass, className);
 
-    const mapContentClassName = toggle ? IconButtonContentVariantToggleClassName : IconButtonContentVariantMapClassName;
+    const mapContentClassName = toggled ? IconButtonContentVariantToggleClassName : IconButtonContentVariantMapClassName;
     const variantContentClass = mapContentClassName[variant] ?? {};
     const variantContentClassName = variantContentClass[color];
 
 
     let childrenIcon = children;
-    if (toggleIcon && toggle) {
+    if (toggleIcon && toggled) {
         childrenIcon = toggleIcon;
     }
 

@@ -252,27 +252,27 @@ export const IconButtonContentVariantMapClassName: Record<IconButtonVariant, Rec
     filled: {
         primary: twMerge(
             IconButtonContentFilledClassName,
-            " text-primary hover:bg-primary/[0.07] active:bg-primary/[0.15] dark:text-primary-dark dark:bg-primary-dark-DEFAULT/[0.07] dark:hover:bg-primary-dark-DEFAULT/10 dark:active:bg-primary-dark-DEFAULT/[0.15]",
+            " text-primary hover:bg-primary/[0.07] active:bg-primary/[0.15] dark:text-primary-dark-DEFAULT dark:bg-primary-dark-DEFAULT/[0.07] dark:hover:bg-primary-dark-DEFAULT/10 dark:active:bg-primary-dark-DEFAULT/[0.15]",
         ),
         secondary: twMerge(
             IconButtonContentFilledClassName,
-            " text-secondary hover:bg-secondary/[0.07] active:bg-secondary/[0.15] dark:text-secondary-dark dark:bg-secondary-dark-DEFAULT/[0.07] dark:hover:bg-secondary-dark-DEFAULT/10 dark:active:bg-secondary-dark-DEFAULT/[0.15]",
+            " text-secondary hover:bg-secondary/[0.07] active:bg-secondary/[0.15] dark:text-secondary-dark-DEFAULT dark:bg-secondary-dark-DEFAULT/[0.07] dark:hover:bg-secondary-dark-DEFAULT/10 dark:active:bg-secondary-dark-DEFAULT/[0.15]",
         ),
         info: twMerge(
             IconButtonContentFilledClassName,
-            " text-info hover:bg-info/[0.07] active:bg-info/[0.15] dark:text-info-dark dark:bg-info-dark-DEFAULT/[0.07] dark:hover:bg-info-dark-DEFAULT/10 dark:active:bg-info-dark-DEFAULT/[0.15]",
+            " text-info hover:bg-info/[0.07] active:bg-info/[0.15] dark:text-info-dark-DEFAULT dark:bg-info-dark-DEFAULT/[0.07] dark:hover:bg-info-dark-DEFAULT/10 dark:active:bg-info-dark-DEFAULT/[0.15]",
         ),
         success: twMerge(
             IconButtonContentFilledClassName,
-            " text-success hover:bg-success/[0.07] active:bg-success/[0.15] dark:text-success-dark dark:bg-success-dark-DEFAULT/[0.07] dark:hover:bg-success-dark-DEFAULT/10 dark:active:bg-success-dark-DEFAULT/[0.15]",
+            " text-success hover:bg-success/[0.07] active:bg-success/[0.15] dark:text-success-dark-DEFAULT dark:bg-success-dark-DEFAULT/[0.07] dark:hover:bg-success-dark-DEFAULT/10 dark:active:bg-success-dark-DEFAULT/[0.15]",
         ),
         warning: twMerge(
             IconButtonContentFilledClassName,
-            " text-warning hover:bg-warning/[0.07] active:bg-warning/[0.15] dark:text-warning-dark dark:bg-warning-dark-DEFAULT/[0.07] dark:hover:bg-warning-dark-DEFAULT/10 dark:active:bg-warning-dark-DEFAULT/[0.15]",
+            " text-warning hover:bg-warning/[0.07] active:bg-warning/[0.15] dark:text-warning-dark-DEFAULT dark:bg-warning-dark-DEFAULT/[0.07] dark:hover:bg-warning-dark-DEFAULT/10 dark:active:bg-warning-dark-DEFAULT/[0.15]",
         ),
         error: twMerge(
             IconButtonContentFilledClassName,
-            " text-error hover:bg-error/[0.07] active:bg-error/[0.15] dark:text-error-dark dark:bg-error-dark-DEFAULT/[0.07] dark:hover:bg-error-dark-DEFAULT/10 dark:active:bg-error-dark-DEFAULT/[0.15]",
+            " text-error hover:bg-error/[0.07] active:bg-error/[0.15] dark:text-error-dark-DEFAULT dark:bg-error-dark-DEFAULT/[0.07] dark:hover:bg-error-dark-DEFAULT/10 dark:active:bg-error-dark-DEFAULT/[0.15]",
         ),
     },
     //@ts-ignore

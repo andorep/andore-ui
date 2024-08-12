@@ -7,6 +7,6 @@ export type IconButtonColor = "primary" | "secondary" | "info" | "success" | "wa
 export interface IconButtonProps extends PropsWithChildren<React.HTMLAttributes<HTMLButtonElement>> {
     variant?: IconButtonVariant;
     color?: IconButtonColor;
-    toggle?: boolean;
+    toggled?: boolean;
     toggleIcon?: React.ReactNode;
 }
