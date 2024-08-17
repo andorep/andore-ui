@@ -33,6 +33,9 @@ const error = 'red' as TailwindColor;
 
 /** @type {import('tailwindcss').Config} */
 export const theme: Theme = {
+    spacing: {
+        '4.5': '1.1rem',
+    },
     fontFamily: {
         sans: ["Noto Sans", "sans-serif"],
     },

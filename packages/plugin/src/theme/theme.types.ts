@@ -68,6 +68,7 @@ export interface BaseTheme {
   animation?: Record<string, string>;
   fontSize?: Record<string, string>;
   fontFamily?: Record<string, string[]>;
+  spacing?: Record<string, string>;
   transitionProperty?: Record<string, string>;
 }
 

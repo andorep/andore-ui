@@ -28,6 +28,8 @@ export default defineConfig({
              "@material-tailwind-ui/divider": resolve(__dirname, "../packages/Divider/src"),
              "@material-tailwind-ui/radio": resolve(__dirname, "../packages/Radio/src"),
              "@material-tailwind-ui/card": resolve(__dirname, "../packages/Card/src"),
+             "@material-tailwind-ui/snackbar": resolve(__dirname, "../packages/Snackbar/src"),
+             "@material-tailwind-ui/switch": resolve(__dirname, "../packages/Switch/src"),
         }
     }
 })

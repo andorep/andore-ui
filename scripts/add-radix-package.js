@@ -45,7 +45,7 @@ function createComponent(parentComponentName, options) {
     const classesContent = startGenerateTemplate(componentName, 'component.classes.template.ts', extraReplaces);
     const packageJsonContent = startGenerateTemplate(componentName, 'package.template.json', {
         ...extraReplaces,
-        "SNAKE-COMPONENT": toSnakeCase(packageNameValue)
+        "SNAKE-COMPONENT": toSnakeCase(componentDirName)
     });
     const rootIndexTemplateContent = startGenerateTemplate(componentName, 'index.template.ts', extraReplaces);
     const viteConfigContent = fs.readFileSync(path.join(__dirname, "../templates/vite.config.template.ts"), "utf-8");
