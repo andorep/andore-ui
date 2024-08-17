@@ -22,6 +22,12 @@ export interface BaseColors {
   };
   surface: {
     scrim?: string;
+    inverse?: string;
+    "inverse-text"?: string;
+    "inverse-primary"?: string;
+    "dark-inverse"?: string;
+    "dark-inverse-text"?: string;
+    "dark-inverse-primary"?: string;
     dim?: string;
     default?: string;
     bright?: string;

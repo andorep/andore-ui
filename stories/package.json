@@ -31,7 +31,8 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.4.0",
     "@material-tailwind-ui/card": "workspace:*",
-    "@material-tailwind-ui/switch": "workspace:*"
+    "@material-tailwind-ui/switch": "workspace:*",
+    "@material-tailwind-ui/tooltip": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
