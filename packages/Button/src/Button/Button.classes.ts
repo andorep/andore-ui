@@ -31,7 +31,10 @@ export const ButtonBaseEndIconClassName = twMerge(
 
 export const ButtonElevatedClassName = twMerge(
     ButtonBaseClassName,
-    "MTButton-variant-elevated shadow-sm hover:shadow dark:shadow-dark-sm dark:hover:shadow-dark",
+    "MTButton-variant-elevated",
+    "shadow-sm dark:shadow-dark-sm",
+    "hover:shadow dark:hover:shadow-dark-DEFAULT",
+    "active:shadow-sm dark:active:shadow-dark-sm",
 );
 
 export const ButtonElevatedSpanClassName = twMerge(
