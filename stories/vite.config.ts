@@ -31,6 +31,7 @@ export default defineConfig({
              "@material-tailwind-ui/snackbar": resolve(__dirname, "../packages/Snackbar/src"),
              "@material-tailwind-ui/switch": resolve(__dirname, "../packages/Switch/src"),
              "@material-tailwind-ui/tooltip": resolve(__dirname, "../packages/Tooltip/src"),
+             "@material-tailwind-ui/popover": resolve(__dirname, "../packages/Popover/src"),
         }
     }
 })

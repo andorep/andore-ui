@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, #storybook-root {
+    height: 100%;
+}
+
 body{
     @apply bg-surface-default dark:bg-surface-dark-DEFAULT;
     font-family: "Noto Sans", sans-serif;
