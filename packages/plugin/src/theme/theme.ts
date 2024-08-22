@@ -166,7 +166,7 @@ export const theme: Theme = {
         },
         surface: {
             dim: getColorFromMaterialColor('stone', 90),
-            default: getColorFromMaterialColor('stone', 95),
+            DEFAULT: getColorFromMaterialColor('stone', 95),
             bright: getColorFromMaterialColor('stone', 99),
             "container-lowest": getColorFromMaterialColor('slate', 100),
             "container-low": getColorFromMaterialColor('slate', 99),

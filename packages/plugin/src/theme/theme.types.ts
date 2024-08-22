@@ -29,7 +29,7 @@ export interface BaseColors {
     "dark-inverse-text"?: string;
     "dark-inverse-primary"?: string;
     dim?: string;
-    default?: string;
+    DEFAULT?: string;
     bright?: string;
     text?: string;
     "text-variant"?: string;

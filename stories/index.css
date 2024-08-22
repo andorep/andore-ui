@@ -11,5 +11,7 @@ html, body, #storybook-root {
 body{
     @apply bg-surface-default dark:bg-surface-dark-DEFAULT;
     font-family: "Noto Sans", sans-serif;
+    background-image: radial-gradient(circle, theme('colors.neutral.300') 1px, transparent 1px);
+    background-size: theme('space.2') theme('space.2');
 }
 

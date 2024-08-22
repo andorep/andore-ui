@@ -92,6 +92,14 @@ const commands = args.filter(arg => arg.startsWith("--"));
 // filter all commands that do not start with --
 const componentCommands = args.filter(arg => !arg.startsWith("--"));
 
+// if any of the commands is help, show help
+if(commands.includes("--help")) {
+    console.log("--alias=aliasName: The alias name to use for the component");
+    console.log("--package=packageName: The package name to use for the component");
+    console.log("--radix=radixName: The radix name to use for the component");
+    process.exit(0);
+}
+
 
 if(componentCommands.length === 0) {
     console.error("Please provide a component name");

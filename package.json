@@ -10,11 +10,11 @@
     "storybook": "pnpm --filter @material-tailwind-ui/stories storybook",
     "packages:build": "pnpm --filter ./packages/* build",
     "storybook:build": "pnpm --filter @material-tailwind-ui/stories run build",
-    "add-radix-package": "node scripts/add-radix-package.js",
-    "add-radix-component": "node scripts/add-radix-component.js",
-    "create-new-component": "node scripts/create-new-component.js",
-    "create-new-package": "node scripts/create-new-package.js",
-    "create-story": "node scripts/create-story.js"
+    "create:package:radix": "node scripts/add-radix-package.js",
+    "create:component:radix": "node scripts/add-radix-component.js",
+    "create:component": "node scripts/create-new-component.js",
+    "create:package": "node scripts/create-new-package.js",
+    "create:story": "node scripts/create-story.js"
   },
   "dependencies": {
   },
