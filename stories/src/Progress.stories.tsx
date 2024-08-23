@@ -1,6 +1,7 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
 import {LinearProgress} from "@material-tailwind-ui/linear-progress";
+import {CircularProgress} from "@material-tailwind-ui/circular-progress";
 
 const sizeControl = {
     control: 'select' as const,
@@ -63,5 +64,13 @@ export const Indeterminate: Story = {
     },
     argTypes: {
         size: sizeControl
+    }
+}
+
+export const Circular: Story = {
+    render: () => {
+        return (
+            <CircularProgress/>
+        );
     }
 }

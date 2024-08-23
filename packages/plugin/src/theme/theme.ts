@@ -115,6 +115,7 @@ export const theme: Theme = {
         slideUpAndFade: `slideUpAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
         slideRightAndFade: `slideRightAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
         progressIndeterminate: `progressIndeterminate ${motion.duration.extraLong4} ${motion.easing.emphasizedAccelerate.timingFunction} infinite`,
+        circularProgressIndeterminate: `spin ${motion.duration.extraLong4} linear infinite`,
     },
     keyframes: {
         overlayShow: {

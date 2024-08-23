@@ -34,7 +34,8 @@
     "@material-tailwind-ui/switch": "workspace:*",
     "@material-tailwind-ui/tooltip": "workspace:*",
     "@material-tailwind-ui/popover": "workspace:*",
-    "@material-tailwind-ui/tabs": "workspace:*"
+    "@material-tailwind-ui/tabs": "workspace:*",
+    "@material-tailwind-ui/circular-progress": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
