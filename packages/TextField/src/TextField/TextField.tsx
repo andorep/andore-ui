@@ -2,7 +2,8 @@ import React, {useId} from 'react';
 import {twMerge} from 'tailwind-merge';
 import {TextFieldProps} from './TextField.types';
 import {
-    TextFieldBaseClassName, TextFieldBaseDisabledClassName,
+    TextFieldBaseClassName,
+    TextFieldBaseDisabledClassName,
     TextFieldBaseWithPlaceholderClassName,
     TextFieldFilledBaseClassName,
     TextFieldInputClassName,
@@ -15,7 +16,9 @@ import {
     TextFieldInputStateFilledClassName,
     TextFieldInputStateOutlinedClassName,
     TextFieldLabelClassName,
-    TextFieldLeadingClassName, TextFieldLeadingFilledClassName, TextFieldLeadingOutlinedClassName,
+    TextFieldLeadingClassName,
+    TextFieldLeadingFilledClassName,
+    TextFieldLeadingOutlinedClassName,
     TextFieldOutlinedBaseClassName,
     TextFieldPrefixClassName,
     TextFieldPrefixFilledClassName,
@@ -24,7 +27,9 @@ import {
     TextFieldSuffixFilledClassName,
     TextFieldSuffixOutlinedClassName,
     TextFieldSupportTextClassName,
-    TextFieldTrailingClassName, TextFieldTrailingFilledClassName, TextFieldTrailingOutlinedClassName
+    TextFieldTrailingClassName,
+    TextFieldTrailingFilledClassName,
+    TextFieldTrailingOutlinedClassName
 } from './TextField.classes';
 
 const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwardedRef) => {
@@ -34,27 +39,24 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
         supportText,
         className,
         variant = 'filled',
-        placeholder,
         leading,
         trailing,
-        defaultValue,
-        value,
         prefix,
         suffix,
-        disabled,
-        required,
-        minLength,
-        maxLength,
-        readOnly,
+        onChange,
+        placeholder=' ',
         ...rest
     } = props;
+
     const inputId = id || useId();
     const labeledId = `${inputId}-label`;
     const supportTextId = `${inputId}-support-text`;
 
-    const withPlaceholder = placeholder != null && placeholder != '' ? TextFieldBaseWithPlaceholderClassName : '';
+    const placeholderValue = placeholder != null && placeholder != '' ? placeholder : ' ';
+
+    const withPlaceholder =TextFieldBaseWithPlaceholderClassName;
     const variantClasses = variant === 'filled' ? TextFieldFilledBaseClassName : TextFieldOutlinedBaseClassName;
-    const disabledClasses = disabled ? TextFieldBaseDisabledClassName : '';
+    const disabledClasses = props.disabled ? TextFieldBaseDisabledClassName : '';
     const classes = twMerge(TextFieldBaseClassName, variantClasses, withPlaceholder, disabledClasses, className);
 
     const inputRootVariantClasses = variant === 'filled' ? TextFieldInputRootFilledClassName : TextFieldInputRootOutlinedClassName;
@@ -81,14 +83,15 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
     const suffixVariantClasses = variant === 'filled' ? TextFieldSuffixFilledClassName : TextFieldSuffixOutlinedClassName;
     const suffixClasses = twMerge(TextFieldSuffixClassName, suffixVariantClasses);
 
+
     return (
-        <div {...rest} ref={forwardedRef} className={classes}>
+        <div ref={forwardedRef} className={classes}>
             <div className={inputRootClasses}>
                 <div className={inputStateClasses}>
                     {leading && (<span className={leadingClasses}>{leading}</span>)}
                     {label && (
                         <label htmlFor={inputId} id={labeledId} className={labelClasses}>
-                            {label}{required && (<span aria-hidden="true">*</span>)}
+                            {label}{props.required && (<span aria-hidden="true">*</span>)}
                         </label>
                     )}
                     {prefix && (<span className={prefixClasses}>{prefix}</span>)}
@@ -96,15 +99,9 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
                         type="text"
                         id={inputId}
                         aria-labelledby={`${labeledId} ${supportTextId}`}
-                        defaultValue={defaultValue}
-                        value={value}
-                        placeholder={placeholder}
                         className={inputClasses}
-                        disabled={disabled}
-                        required={required}
-                        minLength={minLength}
-                        maxLength={maxLength}
-                        readOnly={readOnly}
+                        placeholder={placeholderValue}
+                        {...rest}
                     />
                     {suffix && (<span className={suffixClasses}>{suffix}</span>)}
                     {trailing && (<span className={trailingClasses}>{trailing}</span>)}

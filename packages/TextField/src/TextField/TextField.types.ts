@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 
 export type TextFieldVariant = 'filled' | 'outlined';
 
-export interface TextFieldProps extends PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {
+export interface TextFieldProps extends PropsWithChildren<React.HTMLAttributes<HTMLInputElement>> {
     label?: string;
     supportText?: string;
     variant?: TextFieldVariant;

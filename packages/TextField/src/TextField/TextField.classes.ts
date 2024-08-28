@@ -114,8 +114,8 @@ export const TextFieldInputFilledClassName = twMerge(
 export const TextFieldInputOutlinedClassName = twMerge(
     "MTTextField-input-outlined",
     TextFieldInputFilledNormalPaddingClassName,
-    "focus:pt-1 active:pt-1",
     "focus:peer-[]/label:pt-3 active:peer-[]/label:pt-3",
+    "focus:pl-[calc(theme(spacing.4)-1px)] active:pl-[calc(theme(spacing.4)-1px)]",
     "group-has-[.MTTextField-prefix]:pl-0"
 )
 
