@@ -15,3 +15,8 @@ body{
     background-size: theme('space.2') theme('space.2');
 }
 
+[data-mode="dark"] {
+    body {
+        background-image: radial-gradient(circle, theme('colors.neutral.800') 1px, transparent 1px);
+    }
+}

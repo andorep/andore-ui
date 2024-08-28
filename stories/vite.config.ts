@@ -34,6 +34,7 @@ export default defineConfig({
              "@material-tailwind-ui/popover": resolve(__dirname, "../packages/Popover/src"),
              "@material-tailwind-ui/tabs": resolve(__dirname, "../packages/Tabs/src"),
              "@material-tailwind-ui/circular-progress": resolve(__dirname, "../packages/CircularProgress/src"),
+             "@material-tailwind-ui/text-field": resolve(__dirname, "../packages/TextField/src"),
         }
     }
 })
