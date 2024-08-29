@@ -14,6 +14,10 @@ const readOnlyControl = {
     control: 'boolean' as const,
 }
 
+const errorControl = {
+    control: 'boolean' as const,
+}
+
 const meta: Meta<typeof TextField> = {
     component: TextField,
 };
@@ -36,35 +40,38 @@ const CancelIcon = () => (
 );
 
 export const Default: Story = {
-    render: ({variant, disabled, readOnly}) => (
+    render: ({variant, disabled, readOnly, error}) => (
         <form className={'flex flex-col gap-2 w-[400px]'}>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} placeholder={'Nice placeholder!'}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly}/>
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} placeholder={'Nice placeholder!'}/>
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'}/>
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}/>
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}/>
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
                        leading={<SearchIcon/>}/>
-            <TextField required variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+            <TextField required variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
                        trailing={<CancelIcon/>}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
                        leading={<SearchIcon/>} trailing={<CancelIcon/>}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
                        defaultValue={'1,000'}
                        prefix={'$'}/>
-            <TextField variant={variant} disabled={disabled} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+            <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
+                       type={'file'}
                        defaultValue={'1,000'}
                        suffix={'kg'}/>
         </form>
     ),
     args: {
         variant: 'filled',
-        disabled: true,
-        readOnly: true,
+        disabled: false,
+        readOnly: false,
+        error: true,
     },
     argTypes: {
         variant: variantControl,
         disabled: disabledControl,
         readOnly: readOnlyControl,
+        error: errorControl,
     }
 };

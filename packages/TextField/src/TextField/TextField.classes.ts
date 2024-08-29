@@ -4,6 +4,10 @@ export const TextFieldBaseWithPlaceholderClassName = twMerge(
     "MTTextField-with-placeholder",
 )
 
+export const TextFieldBaseErrorClassName = twMerge(
+    "MTTextField-error",
+)
+
 export const TextFieldBaseClassName = twMerge(
     "MTTextField-root group",
     "transition-all duration-short4 ease-emphasized",
@@ -52,6 +56,7 @@ export const TextFieldInputRootFilledClassName = twMerge(
     "has-[input:focus]:border-primary dark:has-[input:focus]:border-primary-dark-DEFAULT",
     "has-[input:active]:border-primary dark:has-[input:active]:border-primary-dark-DEFAULT",
     "has-[input:focus]:border-b-4 has-[input:active]:border-b-4",
+    "group-[.MTTextField-error]:border-error dark:group-[.MTTextField-error]:border-e-error-dark-DEFAULT",
     "group-[.MTTextField-disabled]:bg-surface-text/[0.04] dark:group-[.MTTextField-disabled]:bg-surface-dark-text/[0.04]",
     "group-[.MTTextField-disabled]:border-surface-text/[0.38] dark:group-[.MTTextField-disabled]:border-surface-dark-text/[0.38]"
 )
@@ -63,6 +68,7 @@ export const TextFieldInputRootOutlinedClassName = twMerge(
     "border-outline dark:border-outline-dark",
     "hover:border-surface-text dark:hover:border-surface-dark-text",
     "has-[input:focus]:border-2 has-[input:active]:border-2",
+    "group-[.MTTextField-error]:border-error dark:group-[.MTTextField-error]:border-e-error-dark-DEFAULT",
     "group-[.MTTextField-disabled]:border-surface-text/[0.12] dark:group-[.MTTextField-disabled]:border-surface-dark-text/[0.12]"
 )
 
@@ -133,6 +139,7 @@ export const TextFieldLabelClassName = twMerge(
     "group-has-[input:active]:text-primary dark:group-has-[input:active]:text-primary-dark-DEFAULT",
     "group-has-[.MTTextField-leading]:left-[calc(theme(spacing.14)-4px)]",
     "group-[.MTTextField-with-placeholder]:group-has-[input:not(:placeholder-shown)]:top-2 group-[.MTTextField-with-placeholder]:group-has-[input:not(:placeholder-shown)]:text-xs",
+    "group-[.MTTextField-error]:text-error dark:group-[.MTTextField-error]:text-e-error-dark-DEFAULT",
     "group-[.MTTextField-disabled]:text-surface-text/[0.38] dark:group-[.MTTextField-disabled]:text-surface-dark-text/[0.38]",
 )
 
@@ -248,5 +255,6 @@ export const TextFieldSupportTextClassName = twMerge(
     "px-4 mt-1",
     "text-xs font-normal",
     "text-surface-text-variant dark:text-surface-dark-text-variant",
+    "group-[.MTTextField-error]:text-error dark:group-[.MTTextField-error]:text-e-error-dark-DEFAULT",
     "group-[.MTTextField-disabled]:text-surface-text/[0.38] dark:group-[.MTTextField-disabled]:text-surface-dark-text/[0.38]"
 )

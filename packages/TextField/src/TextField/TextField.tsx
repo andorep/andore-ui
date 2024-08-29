@@ -3,7 +3,7 @@ import {twMerge} from 'tailwind-merge';
 import {TextFieldProps} from './TextField.types';
 import {
     TextFieldBaseClassName,
-    TextFieldBaseDisabledClassName,
+    TextFieldBaseDisabledClassName, TextFieldBaseErrorClassName,
     TextFieldBaseWithPlaceholderClassName,
     TextFieldFilledBaseClassName,
     TextFieldInputClassName,
@@ -44,7 +44,8 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
         prefix,
         suffix,
         onChange,
-        placeholder=' ',
+        placeholder = ' ',
+        error,
         ...rest
     } = props;
 
@@ -54,10 +55,11 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
 
     const placeholderValue = placeholder != null && placeholder != '' ? placeholder : ' ';
 
-    const withPlaceholder =TextFieldBaseWithPlaceholderClassName;
+    const errorClasses = error ? TextFieldBaseErrorClassName : '';
+    const withPlaceholderClasses = TextFieldBaseWithPlaceholderClassName;
     const variantClasses = variant === 'filled' ? TextFieldFilledBaseClassName : TextFieldOutlinedBaseClassName;
     const disabledClasses = props.disabled ? TextFieldBaseDisabledClassName : '';
-    const classes = twMerge(TextFieldBaseClassName, variantClasses, withPlaceholder, disabledClasses, className);
+    const classes = twMerge(TextFieldBaseClassName, variantClasses, withPlaceholderClasses, errorClasses, disabledClasses, className);
 
     const inputRootVariantClasses = variant === 'filled' ? TextFieldInputRootFilledClassName : TextFieldInputRootOutlinedClassName;
     const inputRootClasses = twMerge(TextFieldInputRootClassName, inputRootVariantClasses);
