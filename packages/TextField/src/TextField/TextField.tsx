@@ -15,7 +15,7 @@ import {
     TextFieldInputStateClassName,
     TextFieldInputStateFilledClassName,
     TextFieldInputStateOutlinedClassName,
-    TextFieldLabelClassName,
+    TextFieldLabelClassName, TextFieldLabelFilledClassName, TextFieldLabelOutlinedClassName,
     TextFieldLeadingClassName,
     TextFieldLeadingFilledClassName,
     TextFieldLeadingOutlinedClassName,
@@ -70,7 +70,9 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
     const inputVariantClasses = variant === 'filled' ? TextFieldInputFilledClassName : TextFieldInputOutlinedClassName;
     const inputClasses = twMerge(TextFieldInputClassName, inputVariantClasses);
 
-    const labelClasses = twMerge(TextFieldLabelClassName);
+    const labelVariantClasses = variant === 'filled' ? TextFieldLabelFilledClassName : TextFieldLabelOutlinedClassName;
+    const labelClasses = twMerge(TextFieldLabelClassName, labelVariantClasses);
+
     const supportTextClasses = twMerge(TextFieldSupportTextClassName);
 
     const leadingVariantClasses = variant === 'filled' ? TextFieldLeadingFilledClassName : TextFieldLeadingOutlinedClassName;

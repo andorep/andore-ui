@@ -143,6 +143,14 @@ export const TextFieldLabelClassName = twMerge(
     "group-[.MTTextField-disabled]:text-surface-text/[0.38] dark:group-[.MTTextField-disabled]:text-surface-dark-text/[0.38]",
 )
 
+export const TextFieldLabelFilledClassName = twMerge(
+    "MTTextField-label-filled",
+)
+
+export const TextFieldLabelOutlinedClassName = twMerge(
+    "MTTextField-label-outlined",
+)
+
 export const TextFieldLeadingClassName = twMerge(
     "MTTextField-leading",
     "flex items-center justify-center",
