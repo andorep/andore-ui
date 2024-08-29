@@ -57,7 +57,6 @@ export const Default: Story = {
                        defaultValue={'1,000'}
                        prefix={'$'}/>
             <TextField variant={variant} disabled={disabled} error={error} readOnly={readOnly} label={'Label'} supportText={'Support text'} placeholder={'Nice placeholder!'}
-                       type={'file'}
                        defaultValue={'1,000'}
                        suffix={'kg'}/>
         </form>
