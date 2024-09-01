@@ -43,7 +43,6 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
         trailing,
         prefix,
         suffix,
-        onChange,
         placeholder = ' ',
         error,
         ...rest

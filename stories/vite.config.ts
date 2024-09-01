@@ -36,6 +36,8 @@ export default defineConfig({
              "@material-tailwind-ui/circular-progress": resolve(__dirname, "../packages/CircularProgress/src"),
              "@material-tailwind-ui/text-field": resolve(__dirname, "../packages/TextField/src"),
              "@material-tailwind-ui/textarea": resolve(__dirname, "../packages/Textarea/src"),
+             "@material-tailwind-ui/select": resolve(__dirname, "../packages/Select/src"),
+             "@material-tailwind-ui/circular-progress": resolve(__dirname, "../packages/CircularProgress/src"),
         }
     }
 })
