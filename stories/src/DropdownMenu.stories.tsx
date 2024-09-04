@@ -38,7 +38,7 @@ export const Default: Story = {
             <div style={{paddingLeft: 100}}>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <IconButton aria-label="Customise options">
+                        <IconButton aria-label="Customise options" variant={'filled'}>
                             +
                         </IconButton>
                     </DropdownMenuTrigger>
@@ -184,7 +184,7 @@ export const Condensed: Story = {
             <div style={{paddingLeft: 100}}>
                 <DropdownMenu condensed={condensed}>
                     <DropdownMenuTrigger asChild>
-                        <IconButton aria-label="Customise options">
+                        <IconButton aria-label="Customise options"  variant={'filled'}>
                             +
                         </IconButton>
                     </DropdownMenuTrigger>

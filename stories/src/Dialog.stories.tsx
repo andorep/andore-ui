@@ -11,8 +11,7 @@ import {
     DialogCloseButton,
 } from "@material-tailwind-ui/dialog";
 import {Button} from "@material-tailwind-ui/button";
-import {Label} from "@material-tailwind-ui/label";
-import {Input} from "@material-tailwind-ui/input";
+import {TextField} from "@material-tailwind-ui/text-field";
 
 const meta: Meta<typeof Dialog> = {
   component: Dialog,
@@ -40,21 +39,17 @@ export const Default: Story = {
                         Make changes to your profile here. Click save when you're done.
                     </DialogDescription>
                     <fieldset className="mb-[15px] flex items-center gap-5">
-                        <Label htmlFor="name">
-                            Name
-                        </Label>
-                        <Input
+                        <TextField
                             id="name"
                             defaultValue="Pedro Duarte"
+                            label="Name"
                         />
                     </fieldset>
                     <fieldset className="mb-[15px] flex items-center gap-5">
-                        <Label htmlFor="username">
-                            Username
-                        </Label>
-                        <Input
+                        <TextField
                             id="username"
                             defaultValue="@peduarte"
+                            label="Username"
                         />
                     </fieldset>
                     <div className="mt-[25px] flex justify-end">

@@ -3,7 +3,7 @@ import type {Meta, StoryObj} from "@storybook/react";
 import {NavigationList, NavigationHeadline, NavigationItem, NavigationDivider} from "@material-tailwind-ui/navigation";
 
 const condensedControl = {
-    control: 'boolean',
+    control: 'boolean' as const,
 };
 
 const variantControl = {
@@ -59,14 +59,14 @@ const FolderIcon = () => (
 
 export const Default: Story = {
     // @ts-ignore
-    render: ({collapse, condensed, variant, iconOnly}) => {
+    render: ({condensed, variant, iconOnly}) => {
         const [active, setActive] = React.useState(0);
         const handleClick = (index: number) => (event: React.MouseEvent<HTMLAnchorElement>) => {
             event.preventDefault();
             setActive(index);
         }
         return (
-            <div className={`${collapse ? 'w-[72px]' : 'w-[500px]'} py-4 bg-surface`}>
+            <div className={`${iconOnly ? 'w-fit' : 'w-[500px]'} py-4 bg-surface dark:bg-surface-dark-DEFAULT`}>
                 <NavigationList condensed={condensed} variant={variant} iconOnly={iconOnly}>
                     <NavigationHeadline>Mail</NavigationHeadline>
                     <NavigationItem
@@ -129,17 +129,10 @@ export const Default: Story = {
         )
     },
     args: {
-        // @ts-ignore
-        collapse: false,
         condensed: false,
         iconOnly: false,
     },
     argTypes: {
-        // @ts-ignore
-        collapse: {
-            control: 'boolean',
-        },
-        // @ts-ignore
         condensed: condensedControl,
         variant: variantControl,
         iconOnly: iconOnlyControl,
