@@ -38,7 +38,8 @@
     "@material-tailwind-ui/circular-progress": "workspace:*",
     "@material-tailwind-ui/text-field": "workspace:*",
     "@material-tailwind-ui/textarea": "workspace:*",
-    "@material-tailwind-ui/navigation": "workspace:*"
+    "@material-tailwind-ui/navigation": "workspace:*",
+    "@material-tailwind-ui/list": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
