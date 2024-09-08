@@ -1,7 +1,9 @@
+import React from "react";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import AppIcon from "@/app/AppIcon";
+import Header from "@/app/_components/Header/Header";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -18,34 +20,8 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        <header className="flex items-center justify-between p-4 mx-auto container">
-            <div className="left-side flex items-center space-x-4">
-                <AppIcon className="w-8 h-8"/>
-                <nav>
-                    <ul className="flex space-x-4">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div className="right-side">
-                <nav>
-                    <ul className="flex space-x-4">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        {children}
+        <Header/>
+        <main>{children}</main>
         </body>
         </html>
     );
