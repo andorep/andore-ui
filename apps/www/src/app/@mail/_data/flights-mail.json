@@ -1,0 +1,138 @@
+[
+  {
+    "id": "1",
+    "from": "American Airlines",
+    "subject": "Your flight has been delayed",
+    "message": "Your flight has been delayed by 2 hours. We apologize for the inconvenience.",
+    "date": "2022-01-01",
+    "category": "flights"
+  },
+    {
+        "id": "2",
+        "from": "Delta Airlines",
+        "subject": "Your flight has been cancelled",
+        "message": "Your flight has been cancelled. We apologize for the inconvenience.",
+        "date": "2022-01-02",
+        "category": "flights"
+    },
+    {
+        "id": "3",
+        "from": "United Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 1 hour. We apologize for the inconvenience.",
+        "date": "2022-01-03",
+        "category": "flights"
+    },
+    {
+        "id": "4",
+        "from": "Southwest Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 3 hours. We apologize for the inconvenience.",
+        "date": "2022-01-04",
+        "category": "flights"
+    },
+    {
+        "id": "5",
+        "from": "JetBlue Airways",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 4 hours. We apologize for the inconvenience.",
+        "date": "2022-01-05",
+        "category": "flights"
+    },
+    {
+        "id": "6",
+        "from": "Alaska Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 5 hours. We apologize for the inconvenience.",
+        "date": "2022-01-06",
+        "category": "flights"
+    },
+    {
+        "id": "7",
+        "from": "Spirit Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 6 hours. We apologize for the inconvenience.",
+        "date": "2022-01-07",
+        "category": "flights"
+    },
+    {
+        "id": "8",
+        "from": "Frontier Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 7 hours. We apologize for the inconvenience.",
+        "date": "2022-01-08",
+        "category": "flights"
+    },
+    {
+        "id": "9",
+        "from": "Hawaiian Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 8 hours. We apologize for the inconvenience.",
+        "date": "2022-01-09",
+        "category": "flights"
+    },
+    {
+        "id": "10",
+        "from": "Allegiant Air",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 9 hours. We apologize for the inconvenience.",
+        "date": "2022-01-10",
+        "category": "flights"
+    },
+    {
+        "id": "11",
+        "from": "Sun Country Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 10 hours. We apologize for the inconvenience.",
+        "date": "2022-01-11",
+        "category": "flights"
+    },
+    {
+        "id": "12",
+        "from": "Allegiant Air",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 11 hours. We apologize for the inconvenience.",
+        "date": "2022-01-12",
+        "category": "flights"
+    },
+    {
+        "id": "13",
+        "from": "Sun Country Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 12 hours. We apologize for the inconvenience.",
+        "date": "2022-01-13",
+        "category": "flights"
+    },
+    {
+        "id": "14",
+        "from": "Allegiant Air",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 13 hours. We apologize for the inconvenience.",
+        "date": "2022-01-14",
+        "category": "flights"
+    },
+    {
+        "id": "15",
+        "from": "Sun Country Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 14 hours. We apologize for the inconvenience.",
+        "date": "2022-01-15",
+        "category": "flights"
+    },
+    {
+        "id": "16",
+        "from": "Allegiant Air",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 15 hours. We apologize for the inconvenience.",
+        "date": "2022-01-16",
+        "category": "flights"
+    },
+    {
+        "id": "17",
+        "from": "Sun Country Airlines",
+        "subject": "Your flight has been delayed",
+        "message": "Your flight has been delayed by 16 hours. We apologize for the inconvenience.",
+        "date": "2022-01-17",
+        "category": "flights"
+    }
+]

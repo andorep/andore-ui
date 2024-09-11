@@ -1,20 +1,14 @@
 import type { Config } from "tailwindcss";
+import {MaterialTailwindUiThemePlugin} from "@material-tailwind-ui/theme-plugin";
 
 const config: Config = {
+  darkMode: ["class", '[data-mode="dark"]'],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@material-tailwind-ui/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
+  plugins: [MaterialTailwindUiThemePlugin],
 };
 export default config;
