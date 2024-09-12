@@ -30,7 +30,10 @@ jobs:
           node-version: '20.x'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install -r
+
+      - name: Build libraries first
+        run: pnpm run packages:build
 
       - name: Build Next.js app
         run: pnpm run website:build
