@@ -8,6 +8,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "pnpm --filter @material-tailwind-ui/stories storybook",
+    "website:build": "pnpm --filter ./apps/www build",
+    "website:export": "pnpm --filter ./apps/www export",
     "packages:build": "pnpm --filter ./packages/* build",
     "storybook:build": "pnpm --filter @material-tailwind-ui/stories run build",
     "create:package:radix": "node scripts/add-radix-package.js",

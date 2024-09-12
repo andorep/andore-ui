@@ -6,32 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5",
+    "@material-tailwind-ui/avatar": "workspace:*",
+    "@material-tailwind-ui/fab": "workspace:*",
+    "@material-tailwind-ui/icon-button": "workspace:*",
+    "@material-tailwind-ui/list": "workspace:*",
+    "@material-tailwind-ui/navigation": "workspace:*",
+    "@material-tailwind-ui/search": "workspace:*",
+    "@material-tailwind-ui/tabs": "workspace:*",
     "@material-tailwind-ui/text-field": "workspace:*",
     "@material-tailwind-ui/theme-plugin": "workspace:*",
-    "@material-tailwind-ui/icon-button": "workspace:*",
-    "@material-tailwind-ui/typography": "workspace:*",
     "@material-tailwind-ui/toggle-button": "workspace:*",
-    "@material-tailwind-ui/navigation": "workspace:*",
-    "@material-tailwind-ui/avatar": "workspace:*",
-    "@material-tailwind-ui/list": "workspace:*",
-    "@material-tailwind-ui/tabs": "workspace:*",
-    "@material-tailwind-ui/search": "workspace:*",
-    "@material-tailwind-ui/fab": "workspace:*"
+    "@material-tailwind-ui/typography": "workspace:*",
+    "next": "14.2.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.10",
+    "postcss": "^8.4.45",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "typescript": "^5.6.2"
   }
 }

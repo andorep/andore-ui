@@ -10,9 +10,10 @@ import FlightIcon from "@/app/@mail/_components/icons/FlightIcon";
 import ExploreIcon from "@/app/@mail/_components/icons/ExploreIcon";
 import TripIcon from "@/app/@mail/_components/icons/TripIcon";
 import MailList from "@/app/@mail/_components/MailList/MailList";
+import {Mail} from "@/app/@mail/_data/mail.data";
 
 interface MailTabListProps {
-    items: any[];
+    items: Mail[];
 }
 
 const MailTabList = ({items}: MailTabListProps) => {
