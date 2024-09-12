@@ -6,7 +6,6 @@ export const NavigationItemBaseClassName = twMerge(
     "group",
     "w-full",
     "cursor-pointer",
-    "bg-surface dark:bg-surface-dark-DEFAULT",
     "rounded-full",
     "text-base font-medium",
     "text-surface-text-variant dark:text-surface-dark-text-variant",

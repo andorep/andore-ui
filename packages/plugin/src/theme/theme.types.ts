@@ -32,6 +32,7 @@ export interface BaseColors {
     DEFAULT?: string;
     bright?: string;
     text?: string;
+    variant?: string;
     "text-variant"?: string;
     "container-lowest"?: string;
     "container-low"?: string;
@@ -49,6 +50,7 @@ export interface BaseColors {
     "dark-container-high"?: string;
     "dark-container-highest"?: string;
     "dark-text"?: string;
+    "dark-variant"?: string;
     "dark-text-variant"?: string;
   };
   gray: Record<string, string>;

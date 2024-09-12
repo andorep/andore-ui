@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import AppIcon from "@/app/AppIcon";
 import GithubIcon from "@/app/_components/icons/GithubIcon";
-import { TextField } from "@material-tailwind-ui/text-field";
+import { Search } from "@material-tailwind-ui/search";
 import { IconButton } from "@material-tailwind-ui/icon-button";
 import LightModeIcon from "@/app/_components/icons/LightModeIcon";
 import useTheme from "@/app/_hooks/useTheme";
@@ -54,7 +54,7 @@ const Header = () => {
         </nav>
       </div>
       <div className="right-side flex flex-row items-center gap-3">
-        <TextField placeholder={"Search documentation..."} />
+        <Search placeholder={"Search documentation..."} />
         <IconButton>
           <a
             href="https://github.com/andreperegrina/material-tailwind-ui"
