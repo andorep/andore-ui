@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExploreIcon = () => {
+const EditIcon = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"   fill={"currentColor"}>
             <path
@@ -9,4 +9,4 @@ const ExploreIcon = () => {
     );
 };
 
-export default ExploreIcon;
+export default EditIcon;

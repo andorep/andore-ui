@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "from": "Ila Roth" ,
+    "message": "Hey, how are you?",
+    "date": "2022-01-01"
+  },
+  {
+    "id": "2",
+    "from": "Merle Shah",
+    "message": "I'm good, how are you?",
+    "date": "2022-01-02"
+  },
+  {
+    "id": "3",
+    "from": "Johanna Benjamin",
+    "message": "I'm good too, thanks for asking.",
+    "date": "2022-01-03"
+  }
+]

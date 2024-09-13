@@ -16,13 +16,14 @@ const Header = () => {
       <div className="left-side flex items-center space-x-4 gap-3">
         <span className={"flex flex-row items-center gap-2"}>
           <AppIcon className="w-8 h-8" />
-          <span
+          <Link
+            href="/"
             className={
               "font-semibold text-surface-text dark:text-surface-dark-text"
             }
           >
             andore/ui
-          </span>
+          </Link>
         </span>
         <nav>
           <ul className="flex space-x-4 gap-3">

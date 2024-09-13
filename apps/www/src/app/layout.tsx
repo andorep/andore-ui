@@ -14,10 +14,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  mail,
 }: Readonly<{
   children: React.ReactNode;
-  mail: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -26,7 +24,6 @@ export default function RootLayout({
         <Header />
         <main>
           {children}
-          {mail}
         </main>
       </body>
     </html>
