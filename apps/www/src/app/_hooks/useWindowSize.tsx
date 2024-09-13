@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
 const useWindowSize = () => {
-  let width = 0;
+  let width = 1281;
   let height = 0;
   if (isBrowser()) {
     width = window.innerWidth;

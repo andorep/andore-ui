@@ -33,7 +33,7 @@ jobs:
         run: pnpm install -r
 
       - name: Build libraries first
-        run: pnpm run packages:build
+        run: pnpm --filter @material-tailwind-ui/* --filter=!@material-tailwind-ui/stories build
 
       - name: Build Next.js app
         run: pnpm run website:build
