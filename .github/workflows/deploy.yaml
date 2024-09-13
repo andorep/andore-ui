@@ -1,6 +1,7 @@
 name: Deploy Next.js to GitHub Pages
 permissions:
   id-token: write
+  pages: write
 on:
   push:
     branches:
