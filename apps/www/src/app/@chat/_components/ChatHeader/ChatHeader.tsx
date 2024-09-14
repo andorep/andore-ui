@@ -36,7 +36,7 @@ const ChatHeader = () => {
                   <SettingsIcon/>
               </IconButton>
               <Avatar>
-                  <AvatarImage src={"/3d_avatar_13.png"} alt="Colm Tuite"/>
+                  <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite"/>
               </Avatar>
           </div>
       </div>
