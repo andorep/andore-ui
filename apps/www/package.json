@@ -21,6 +21,7 @@
     "@material-tailwind-ui/theme-plugin": "workspace:*",
     "@material-tailwind-ui/toggle-button": "workspace:*",
     "@material-tailwind-ui/typography": "workspace:*",
+    "@material-tailwind-ui/card": "workspace:*",
     "next": "14.2.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

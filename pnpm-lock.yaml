@@ -13,6 +13,9 @@ importers:
       '@material-tailwind-ui/avatar':
         specifier: workspace:*
         version: link:../../packages/Avatar
+      '@material-tailwind-ui/card':
+        specifier: workspace:*
+        version: link:../../packages/Card
       '@material-tailwind-ui/fab':
         specifier: workspace:*
         version: link:../../packages/Fab

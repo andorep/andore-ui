@@ -9,8 +9,8 @@ export const ListItemBaseDividerClassName = twMerge(
 
 export const ListItemBaseClassName = twMerge(
     "MTListItem-root",
+    "transition-all duration-short4 ease-emphasized",
     "flex flex-row items-center gap-2",
-    "bg-surface dark:bg-surface-dark-DEFAULT",
     ListItemBaseDividerClassName
 );
 
@@ -23,6 +23,7 @@ export const ListItemBaseClickableClassName = twMerge(
 export const ListItemStateClassName = twMerge(
     "MTListItem-state",
     "flex flex-row items-center gap-2",
+    "transition-[inherit] duration-[inherit] ease-[inherit]",
     "h-14 w-full",
     "px-4 py-2",
 );

@@ -15,7 +15,7 @@ const Header = () => {
     <header className="flex items-center justify-between p-4 mx-auto container">
       <div className="left-side flex items-center space-x-4 gap-3">
         <span className={"flex flex-row items-center gap-2"}>
-          <AppIcon className="w-8 h-8" />
+          <AppIcon className="w-5 h-5 fill-primary dark:fill-primary-dark-DEFAULT" />
           <Link
             href="/"
             className={
@@ -55,20 +55,22 @@ const Header = () => {
         </nav>
       </div>
       <div className="right-side flex flex-row items-center gap-3">
-        <Search placeholder={"Search documentation..."} />
-        <IconButton>
-          <a
-            href="https://github.com/andreperegrina/material-tailwind-ui"
-            target="_blank"
-            className={"text-surface-text dark:text-surface-dark-text"}
-          >
-            <GithubIcon className={"w-6 h-6"} />
-          </a>
-        </IconButton>
-        <IconButton onClick={toggleTheme}>
-          {theme === "light" && <LightModeIcon className={"w-6 h-6"} />}
-          {theme === "dark" && <DarkModeIcon className={"w-6 h-6"} />}
-        </IconButton>
+        <Search placeholder={"Search documentation..."} size={"sm"} />
+        <div className="right-side flex flex-row items-center">
+          <IconButton>
+            <a
+              href="https://github.com/andreperegrina/material-tailwind-ui"
+              target="_blank"
+              className={"text-surface-text dark:text-surface-dark-text"}
+            >
+              <GithubIcon className={"w-6 h-6"} />
+            </a>
+          </IconButton>
+          <IconButton onClick={toggleTheme}>
+            {theme === "light" && <LightModeIcon className={"w-6 h-6"} />}
+            {theme === "dark" && <DarkModeIcon className={"w-6 h-6"} />}
+          </IconButton>
+        </div>
       </div>
     </header>
   );

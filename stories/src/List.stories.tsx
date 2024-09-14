@@ -16,15 +16,15 @@ export const Default: Story = {
     render: ({divider}) => (
         <div className={'w-80'}>
             <List divider={divider}>
-                <ListItem>
+                <ListItem onClick={()=>{}}>
                     <ListItemText  supportingText={'Supporting text'}>Headline</ListItemText>
                     D
                 </ListItem>
-                <ListItem>
+                <ListItem onClick={()=>{}}>
                     <ListItemText  supportingText={'Supporting text'}>Headline</ListItemText>
                     D
                 </ListItem>
-                <ListItem>
+                <ListItem onClick={()=>{}}>
                     <ListItemText  supportingText={'Supporting text'}>Headline</ListItemText>
                     D
                 </ListItem>

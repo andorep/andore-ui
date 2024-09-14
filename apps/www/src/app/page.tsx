@@ -1,6 +1,7 @@
 import Mail from "@/app/@mail/page";
 import Main from "@/app/_components/Main/Main";
 import Chat from "@/app/@chat/page";
+import Photos from "@/app/@photos/page";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Main
         mailApp={<Mail />}
         chatApp={<Chat />}
-        photosApp={<div>Photos App</div>}
+        photosApp={<Photos/>}
       />
     </section>
   );

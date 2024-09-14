@@ -20,7 +20,7 @@ const ChatList = ({items}: ChatListProps) => {
                   </AvatarFallback>
               </Avatar>
             <ListItemText supportingText={item.message}>
-              {item.message}:
+              {item.from}:
             </ListItemText>
             <span className={'text-secondary dark:text-secondary-dark-DEFAULT text-xs h-full flex items-start'}>{item.date}</span>
           </ListItem>
