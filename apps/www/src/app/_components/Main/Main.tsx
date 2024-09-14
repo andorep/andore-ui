@@ -20,12 +20,12 @@ const Main = (props: MainProps) => {
   const { mailApp, chatApp, photosApp } = props;
   const [selected, setSelected] = useState(0);
   return (
-    <section className="title flex flex-col justify-between p-4 mx-auto container">
+    <section className="flex flex-col justify-between mx-auto container">
       <section className="title flex flex-col justify-between mb-9">
         <span className={"flex items-center gap-1 mb-3"}>
           <Typography
             variant={"headline"}
-            className={"text-slate-950"}
+            className={"text-slate-950 text-3xl sm:text-5xl"}
             size={"md"}
           >
             <span className={"text-blue-500"}>Tailwind </span>
@@ -35,7 +35,7 @@ const Main = (props: MainProps) => {
         </span>
         <Typography
           variant={"title"}
-          className={"text-slate-950 font-normal -mt-3"}
+          className={"text-slate-950 font-normal -mt-3 text-lg sm:text-2xl"}
           size={"md"}
         >
           The Perfect Blend of Style and Utility

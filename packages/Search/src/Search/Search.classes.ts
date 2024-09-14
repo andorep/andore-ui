@@ -93,6 +93,7 @@ export const SearchInputStateOutlinedClassName = twMerge(
 export const SearchInputClassName = twMerge(
     "MTSearch-input",
     "flex-1",
+    "w-full",
     "transition-[inherit] duration-[inherit] ease-[inherit]",
     "text-base font-normal",
     "outline-none border-none bg-transparent",

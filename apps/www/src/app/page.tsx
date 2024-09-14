@@ -5,7 +5,7 @@ import Photos from "@/app/@photos/page";
 
 export default function Home() {
   return (
-    <section className="title flex flex-col justify-between p-4 mx-auto container">
+    <section className="flex flex-col justify-between p-4 mx-auto container">
       <Main
         mailApp={<Mail />}
         chatApp={<Chat />}

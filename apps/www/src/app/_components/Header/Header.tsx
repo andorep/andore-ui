@@ -13,19 +13,19 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <header className="flex items-center justify-between p-4 mx-auto container">
-      <div className="left-side flex items-center space-x-4 gap-3">
+      <div className="left-side flex items-center pr-4 sm:pr-0 gap-3">
         <span className={"flex flex-row items-center gap-2"}>
           <AppIcon className="w-5 h-5 fill-primary dark:fill-primary-dark-DEFAULT" />
           <Link
             href="/"
             className={
-              "font-semibold text-surface-text dark:text-surface-dark-text"
+              "font-semibold text-surface-text dark:text-surface-dark-text hidden md:block"
             }
           >
             andore/ui
           </Link>
         </span>
-        <nav>
+        <nav className="hidden md:block">
           <ul className="flex space-x-4 gap-3">
             <li>
               <Link

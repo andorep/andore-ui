@@ -9,7 +9,7 @@ const Mail = () => {
     <section className="App h-[600px] flex flex-row  mx-auto container xl:px-0 lg:px-2">
       <div className={"flex flex-row w-full h-full border border-outline-variant bg-surface-container-low dark:bg-surface-dark-DEFAULT rounded"}>
           <MailNavigation />
-          <div className={"Main flex flex-col flex-1 h-auto px-3 xl:pl-0"}>
+          <div className={"Main flex flex-col flex-1 h-auto px-3 xl:pl-0 overflow-auto"}>
               <MailHeader />
               <MailMain />
           </div>
