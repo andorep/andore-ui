@@ -16,14 +16,14 @@ body {
     z-index: -1;
     @apply bg-white dark:bg-gray-950 transition-colors duration-200 ease-in-out;
 
-    background-image: linear-gradient(to bottom, theme(colors.white/90%), theme(colors.white/95%)), url('/dot8.png');
+    background-image: linear-gradient(to bottom, theme(colors.white/90%), theme(colors.white/95%)), url('/material-tailwind-ui/dot8.png');
 
 }
 
 /* Dark mode styles */
     .dot-grid:is([data-mode="dark"] *) {
         @apply bg-gray-950 dark:bg-gray-950 transition-colors duration-200 ease-in-out;
-        background-image: linear-gradient(to bottom, theme(colors.gray.950/90%), theme(colors.gray.950/95%)), url('/dot8-w.png');
+        background-image: linear-gradient(to bottom, theme(colors.gray.950/90%), theme(colors.gray.950/95%)), url('/material-tailwind-ui/dot8-w.png');
     }
 
 
