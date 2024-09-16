@@ -31,7 +31,7 @@ const MailHeader = () => {
       </div>
       <div className={"flex flex-row gap-2"}>
         <IconButton>
-          <SettingsIcon />
+            <SettingsIcon className={"h-6 w-6"}/>
         </IconButton>
         <Avatar>
           <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite" />

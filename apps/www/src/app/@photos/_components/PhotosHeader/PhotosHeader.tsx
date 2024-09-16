@@ -32,8 +32,8 @@ const PhotosHeader = () => {
               />
           </div>
           <div className={"flex flex-row gap-2"}>
-              <IconButton>
-                  <SettingsIcon/>
+              <IconButton className={'w-10 h-11'}>
+                  <SettingsIcon className={"h-6 w-6"}/>
               </IconButton>
               <Avatar>
                   <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite"/>

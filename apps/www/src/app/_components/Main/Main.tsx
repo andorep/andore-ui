@@ -45,13 +45,13 @@ const Main = (props: MainProps) => {
         <div className="blob1"></div>
         <div className="blob2"></div>
         <ToggleButtonGroup density={-2}>
-          <ToggleButton startIcon={<MailIcon/>} selected={selected == 0} onClick={() => setSelected(0)}>
+          <ToggleButton startIcon={<MailIcon className={'w-4 h-4'}/>} selected={selected == 0} onClick={() => setSelected(0)}>
             Mail
           </ToggleButton>
-          <ToggleButton startIcon={<ChatIcon/>} selected={selected == 1} onClick={() => setSelected(1)}>
+          <ToggleButton startIcon={<ChatIcon className={'w-4 h-4'}/>} selected={selected == 1} onClick={() => setSelected(1)}>
             Chat
           </ToggleButton>
-          <ToggleButton startIcon={<ImageIcon/>} selected={selected == 2} onClick={() => setSelected(2)}>
+          <ToggleButton startIcon={<ImageIcon className={'w-4 h-4'}/>} selected={selected == 2} onClick={() => setSelected(2)}>
             Photos
           </ToggleButton>
         </ToggleButtonGroup>
