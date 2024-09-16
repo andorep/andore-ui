@@ -8,9 +8,11 @@ import { IconButton } from "@material-tailwind-ui/icon-button";
 import LightModeIcon from "@/app/_components/icons/LightModeIcon";
 import useTheme from "@/app/_hooks/useTheme";
 import DarkModeIcon from "@/app/_components/icons/DarkModeIcon";
+import {usePathname} from "next/navigation";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname()
   return (
     <header className="flex items-center justify-between p-4 mx-auto container">
       <div className="left-side flex items-center pr-4 sm:pr-0 gap-3">
@@ -19,36 +21,36 @@ const Header = () => {
           <Link
             href="/"
             className={
-              "font-semibold text-surface-text dark:text-surface-dark-text hidden md:block"
+              `font-semibold text-surface-text dark:text-surface-dark-text hidden md:block`
             }
           >
             andore/ui
           </Link>
         </span>
         <nav className="hidden md:block">
-          <ul className="flex space-x-4 gap-3">
+          <ul className="flex gap-3">
             <li>
               <Link
                 href="/docs"
-                className={"text-surface-text dark:text-surface-dark-text"}
+                className={`text-surface-text dark:text-surface-dark-text ${pathname === "/docs" ? "font-semibold" : ""}`}
               >
                 Docs
               </Link>
             </li>
             <li>
               <Link
-                href="/components"
-                className={"text-surface-text dark:text-surface-dark-text"}
+                href="/examples"
+                className={`text-surface-text dark:text-surface-dark-text ${pathname === "/examples" ? "font-semibold" : ""}`}
               >
-                Components
+                Examples
               </Link>
             </li>
             <li>
               <Link
-                href="/apps"
-                className={"text-surface-text dark:text-surface-dark-text"}
+                href="/themes"
+                className={`text-surface-text dark:text-surface-dark-text ${pathname === "/themes" ? "font-semibold" : ""}`}
               >
-                Apps
+                Themes
               </Link>
             </li>
           </ul>

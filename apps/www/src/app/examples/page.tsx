@@ -1,4 +1,4 @@
-export default function AppsPage() {
+export default function ExamplesPage() {
     return (
         <div>
         </div>
