@@ -94,3 +94,117 @@ body {
         clip-path: path("M348.911 0.399739C384.724 -4.37534 410.092 34.4222 435.46 74.4135C460.529 114.405 485.598 155.59 486.493 197.67C487.687 239.751 464.707 282.129 427.999 302.125C391.29 322.419 340.555 319.733 303.548 314.361C266.84 309.288 243.561 301.528 211.031 318.241C178.202 334.954 135.824 376.139 115.828 371.662C95.5338 367.185 97.6229 317.047 73.449 280.339C49.2752 243.63 -1.46 220.352 0.0322095 197.969C1.82286 175.585 55.5425 154.396 85.6852 127.835C116.126 101.572 122.692 70.2353 141.195 64.8633C159.699 59.4913 190.14 79.7854 228.341 66.3555C266.84 52.6272 312.8 4.87637 348.911 0.399739Z"  );
     }
 }
+
+
+.code-block {
+    .rehype-code-title {
+        @apply px-5 py-3 font-mono text-sm font-bold text-neutral-800 bg-neutral-100 border border-b-0 rounded-t dark:text-neutral-200  dark:bg-neutral-900;
+        @apply border-outline-variant dark:border-outline-dark-variant;
+    }
+
+    .rehype-code-title + pre {
+        @apply mt-0 border border-outline-variant dark:border-outline-dark-variant;
+        @apply rounded-t-none rounded-b;
+        @apply bg-neutral-100 dark:bg-neutral-900;
+        @apply p-4;
+        @apply overflow-auto h-full;
+    }
+
+    .prose .anchor {
+        @apply absolute invisible no-underline delay-[50ms] transition-all -ml-10 pr-2 cursor-pointer;
+    }
+
+    .anchor:hover {
+        @apply visible;
+    }
+
+    .prose a {
+        @apply transition-all;
+    }
+
+    .prose .anchor:after {
+        @apply text-neutral-300 dark:text-neutral-700;
+        content: "#";
+    }
+
+    .prose *:hover > .anchor {
+        @apply visible;
+    }
+
+    .prose pre {
+        @apply border shadow-md border-neutral-300 bg-neutral-200 dark:border-neutral-700 dark:bg-neutral-800;
+    }
+
+    .prose code {
+        @apply font-mono text-neutral-800 dark:text-neutral-200 px-1 py-0.5 border border-neutral-400 dark:border-neutral-800 rounded-lg bg-neutral-300 dark:bg-neutral-800;
+    }
+
+    .prose pre code {
+        @apply text-neutral-800 dark:text-neutral-200 p-0;
+        border: initial;
+    }
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata,
+    .token.console {
+        @apply text-neutral-700 dark:text-neutral-300;
+    }
+    .token.punctuation {
+        @apply text-secondary dark:text-secondary-dark-DEFAULT;
+    }
+
+    .token.number,
+    .token.symbol,
+    .token.boolean,
+    .token.constant,
+    .token.property,
+    .token.tag,
+    .token.deleted {
+        @apply text-blue-500;
+    }
+    .token.string {
+        @apply text-surface-text-variant dark:text-surface-dark-text-variant;
+    }
+    .token.attr-name,
+    .token.builtin,
+    .token.char,
+    .token.selector,
+    .token.inserted {
+        @apply text-purple-500;
+    }
+
+    .token.entity,
+    .token.important,
+    .token.operator,
+    .token.regex,
+    .token.url,
+    .token.variable,
+    .language-css .token.string,
+    .style .token.string {
+        @apply text-warning dark:text-warning-dark-DEFAULT;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        @apply text-error dark:text-error-dark-DEFAULT;
+    }
+
+    .token.function,
+    .token.class-name {
+        @apply text-primary;
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        @apply text-neutral-800 dark:text-neutral-200;
+    }
+
+    blockquote p {
+        @apply font-mono;
+    }
+    blockquote p::before {
+        content: "" !important;
+    }
+}

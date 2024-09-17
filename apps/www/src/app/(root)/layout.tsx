@@ -1,9 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/app/_components/Header/Header";
-import DotBackground from "@/app/_components/DotBackground/DotBackground";
+import "@/app/globals.css";
+import Header from "@/app/(root)/_components/Header/Header";
+import DotBackground from "@/app/(root)/_components/DotBackground/DotBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 

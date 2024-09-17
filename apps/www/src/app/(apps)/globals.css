@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply h-full w-full;
+}
+
+body {
+    @apply bg-white dark:bg-gray-950 transition-colors duration-200 ease-in-out;
+}

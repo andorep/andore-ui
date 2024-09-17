@@ -13,6 +13,7 @@ const preview: Preview = {
   },
 
   decorators: [
+    (Story) => <Story />,
     withThemeByDataAttribute({
       themes: {
         light: "light",
@@ -23,7 +24,7 @@ const preview: Preview = {
     }),
   ],
 
-  tags: ["!autodocs"]
+  tags: ["!autodocs"],
 };
 
 export default preview;

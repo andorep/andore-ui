@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 import {
   NavigationDivider,
   NavigationHeadline,
@@ -13,6 +12,7 @@ import { Typography } from "@material-tailwind-ui/typography";
 import { Fab } from "@material-tailwind-ui/fab";
 import useWindowSize from "@/app/_hooks/useWindowSize";
 import { Avatar, AvatarFallback } from "@material-tailwind-ui/avatar";
+import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 import HomeIcon from "@/app/@chat/_components/icons/HomeIcon";
 import AlternateEmailIcon from "@/app/@chat/_components/icons/AlternateEmailIcon";
 import KeepIcon from "@/app/@chat/_components/icons/KeepIcon";

@@ -4,11 +4,11 @@ import {twMerge} from "tailwind-merge";
 export const ToggleButtonBaseClassName = twMerge(
     "MTToggleButton-root group/button rounded-full font-medium text-base flex items-center justify-center transition-colorsShadow duration-short3 ease-emphasizedAccelerate",
     // group behavior
-    "group-[.MTToggleButtonGroup]/root:rounded-none",
+    "group-[.MTToggleButtonGroup]/root:rounded-none group-[.MTToggleButtonGroup]/root:border-r-0",
     // first child
     "group-[.MTToggleButtonGroup]/root:first-of-type:rounded-l-full group-[.MTToggleButtonGroup]/root:first-of-type:border-r-0",
     // last child
-    "group-[.MTToggleButtonGroup]/root:last-of-type:rounded-r-full group-[.MTToggleButtonGroup]/root:last-of-type:border-l-0",
+    "group-[.MTToggleButtonGroup]/root:last-of-type:rounded-r-full  group-[.MTToggleButtonGroup]/root:last-of-type:border-r",
 )
 
 export const ToggleButtonBasePaddingClassName = twMerge(""

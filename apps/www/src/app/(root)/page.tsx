@@ -1,7 +1,7 @@
 import Mail from "@/app/@mail/page";
-import Main from "@/app/_components/Main/Main";
 import Chat from "@/app/@chat/page";
 import Photos from "@/app/@photos/page";
+import Main from "@/app/(root)/_components/Main/Main";
 
 export default function Home() {
   return (

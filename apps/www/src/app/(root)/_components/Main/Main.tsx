@@ -45,21 +45,35 @@ const Main = (props: MainProps) => {
         <div className="blob1"></div>
         <div className="blob2"></div>
         <ToggleButtonGroup density={-2}>
-          <ToggleButton startIcon={<MailIcon className={'w-4 h-4'}/>} selected={selected == 0} onClick={() => setSelected(0)}>
+          <ToggleButton
+            startIcon={<MailIcon className={"w-4 h-4"} />}
+            selected={selected == 0}
+            onClick={() => setSelected(0)}
+          >
             Mail
           </ToggleButton>
-          <ToggleButton startIcon={<ChatIcon className={'w-4 h-4'}/>} selected={selected == 1} onClick={() => setSelected(1)}>
+          <ToggleButton
+            startIcon={<ChatIcon className={"w-4 h-4"} />}
+            selected={selected == 1}
+            onClick={() => setSelected(1)}
+          >
             Chat
           </ToggleButton>
-          <ToggleButton startIcon={<ImageIcon className={'w-4 h-4'}/>} selected={selected == 2} onClick={() => setSelected(2)}>
+          <ToggleButton
+            startIcon={<ImageIcon className={"w-4 h-4"} />}
+            selected={selected == 2}
+            onClick={() => setSelected(2)}
+          >
             Photos
           </ToggleButton>
         </ToggleButtonGroup>
       </section>
       <section className="flex flex-col justify-between">
-        {selected == 0 && mailApp}
-        {selected == 1 && chatApp}
-        {selected == 2 && photosApp}
+        <section className="App h-[600px] flex flex-row  mx-auto container xl:px-0 lg:px-2">
+          {selected == 0 && mailApp}
+          {selected == 1 && chatApp}
+          {selected == 2 && photosApp}
+        </section>
       </section>
     </section>
   );

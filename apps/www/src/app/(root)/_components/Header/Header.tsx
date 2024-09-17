@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import AppIcon from "@/app/AppIcon";
+import AppIcon from "@/app/(root)/_components/AppIcon/AppIcon";
 import GithubIcon from "@/app/_components/icons/GithubIcon";
 import { Search } from "@material-tailwind-ui/search";
 import { IconButton } from "@material-tailwind-ui/icon-button";
 import LightModeIcon from "@/app/_components/icons/LightModeIcon";
-import useTheme from "@/app/_hooks/useTheme";
+import useTheme from "@/app//_hooks/useTheme";
 import DarkModeIcon from "@/app/_components/icons/DarkModeIcon";
 import {usePathname} from "next/navigation";
 

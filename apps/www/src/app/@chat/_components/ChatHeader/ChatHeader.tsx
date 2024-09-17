@@ -1,12 +1,13 @@
 "use client";
+
+import React from "react";
 import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
 import { Search } from "@material-tailwind-ui/search";
-import React from "react";
-import SettingsIcon from "@/app/@chat/_components/icons/SettingsIcon";
 import { IconButton } from "@material-tailwind-ui/icon-button";
 import useWindowSize from "@/app/_hooks/useWindowSize";
-import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 import { Typography } from "@material-tailwind-ui/typography";
+import SettingsIcon from "@/app/@chat/_components/icons/SettingsIcon";
+import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 
 const ChatHeader = () => {
   const windowSize = useWindowSize();
