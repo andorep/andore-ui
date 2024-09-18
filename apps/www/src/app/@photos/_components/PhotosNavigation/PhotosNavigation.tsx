@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import MenuIcon from "@/app/@photos/_components/icons/MenuIcon";
 import {
   NavigationDivider,
   NavigationHeadline,
@@ -11,6 +10,7 @@ import {
 import { IconButton } from "@material-tailwind-ui/icon-button";
 import { Typography } from "@material-tailwind-ui/typography";
 import useWindowSize from "@/app/_hooks/useWindowSize";
+import MenuIcon from "@/app/@photos/_components/icons/MenuIcon";
 import ImageIcon from "@/app/_components/icons/ImageIcon";
 import SearchIcon from "@/app/@photos/_components/icons/SearchIcon";
 import GroupIcon from "@/app/@photos/_components/icons/GroupIcon";

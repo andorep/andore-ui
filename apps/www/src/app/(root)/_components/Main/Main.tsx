@@ -38,7 +38,7 @@ const Main = (props: MainProps) => {
           className={"text-slate-950 font-normal -mt-3 text-lg sm:text-2xl"}
           size={"md"}
         >
-          The Perfect Blend of Style and Utility
+          A collection of beautifully crafted react components
         </Typography>
       </section>
       <section className="flex flex-col  justify-between mb-4">

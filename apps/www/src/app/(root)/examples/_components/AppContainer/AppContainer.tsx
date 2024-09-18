@@ -35,7 +35,7 @@ const AppContainer = (props: AppContainerProps) => {
         </ToggleButton>
       </ToggleButtonGroup>
       {selected == 0 && (
-        <iframe className={`w-full h-[600px] rounded`} src={`/${name}`} />
+        <iframe className={`w-full h-[600px] rounded`} src={`./${name}`} />
       )}
       {selected == 1 && (
           <div className={'code-block h-[600px] flex flex-col'}>

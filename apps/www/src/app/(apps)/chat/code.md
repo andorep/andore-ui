@@ -98,7 +98,6 @@ const items =[
 ]
 
 const Chat = () => {
-  // get size of the window
   return (
     <div
       className={
