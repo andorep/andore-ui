@@ -61,7 +61,7 @@ const Header = () => {
         <div className="right-side flex flex-row items-center">
           <IconButton>
             <a
-              href="https://github.com/andreperegrina/material-tailwind-ui"
+              href="https://github.com/andreperegrina/andore-ui"
               target="_blank"
               className={"text-surface-text dark:text-surface-dark-text"}
             >

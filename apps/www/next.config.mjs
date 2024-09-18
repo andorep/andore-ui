@@ -6,8 +6,8 @@ import rehypePrism from 'rehype-prism-plus'
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
     output: 'export',
-    basePath: isProd?'/material-tailwind-ui' : '',
-    assetPrefix: isProd?'/material-tailwind-ui' : '',
+    basePath: isProd?'/andore-ui' : '',
+    assetPrefix: isProd?'/andore-ui' : '',
     // Configure `pageExtensions` to include markdown and MDX files
     pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 };

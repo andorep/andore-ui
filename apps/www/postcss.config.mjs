@@ -7,7 +7,7 @@ const config = {
       url: (asset) => {
         if (process.env.NODE_ENV === "production") {
           if (asset.url.startsWith("/")) {
-            return `/material-tailwind-ui${asset.url}`;
+            return `/andore-ui${asset.url}`;
           }
         }
         return asset.url;
