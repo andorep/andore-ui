@@ -24,6 +24,7 @@
     "@material-tailwind-ui/theme-plugin": "workspace:*",
     "@material-tailwind-ui/toggle-button": "workspace:*",
     "@material-tailwind-ui/typography": "workspace:*",
+    "@material-tailwind-ui/divider": "workspace:*",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.11",

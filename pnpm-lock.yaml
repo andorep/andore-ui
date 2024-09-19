@@ -19,6 +19,9 @@ importers:
       '@material-tailwind-ui/card':
         specifier: workspace:*
         version: link:../../packages/Card
+      '@material-tailwind-ui/divider':
+        specifier: workspace:*
+        version: link:../../packages/Divider
       '@material-tailwind-ui/fab':
         specifier: workspace:*
         version: link:../../packages/Fab
