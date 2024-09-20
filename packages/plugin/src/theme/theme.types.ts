@@ -2,13 +2,13 @@ import colors from "tailwindcss/colors";
 
 export interface Color {
   DEFAULT: string;
-  container?: string;
-  text?: string;
-  "container-text"?: string;
-  "dark-DEFAULT"?: string;
-  "dark-container"?: string;
-  "dark-text"?: string;
-  "dark-container-text"?: string;
+  container: string;
+  text: string;
+  "container-text": string;
+  "dark-DEFAULT": string;
+  "dark-container": string;
+  "dark-text": string;
+  "dark-container-text": string;
 }
 
 export interface BaseColors {

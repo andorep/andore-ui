@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { ThemeType } from "@material-tailwind-ui/theme-plugin";
 import PrimaryColorList from "@/app/(root)/themes/_components/PrimaryColorList/PrimaryColorList";
 import SurfaceColorList from "@/app/(root)/themes/_components/SurfaceColorList/SurfaceColorList";
@@ -13,7 +13,7 @@ interface CustomThemeProps {
 
 const CustomTheme = (props: CustomThemeProps) => {
   const { defaultTheme } = props;
-  const [theme, setTheme] = React.useState<ThemeType | undefined>(defaultTheme);
+  const [theme] = React.useState<ThemeType | undefined>(defaultTheme);
   const colors = theme?.colors || ({} as ThemeType["colors"]);
 
   return (

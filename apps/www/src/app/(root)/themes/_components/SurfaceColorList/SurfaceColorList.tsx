@@ -40,13 +40,9 @@ const SurfaceColorList = (props: SurfaceColorListProps) => {
               return name.charAt(0).toUpperCase() + name.slice(1);
             })
             .join(" ");
+          const surfaceColor = surface[color as keyof typeof surface] ?? "";
           return (
-            <ColorItem
-              key={index}
-              // @ts-ignore
-              color={surface[color]}
-              name={colorName}
-            />
+            <ColorItem key={index} color={surfaceColor} name={colorName} />
           );
         })}
       </List>

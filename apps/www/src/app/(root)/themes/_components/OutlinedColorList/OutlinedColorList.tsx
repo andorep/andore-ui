@@ -19,12 +19,10 @@ const OutlinedColorList = (props: OutlinedColorListProps) => {
             <List className={"mb-4"}>
                 <List className={"mb-4"}>
                     <ColorItem
-                        // @ts-ignore
                         color={outlineColors.DEFAULT}
                         name={"default"}
                     />
                     <ColorItem
-                        // @ts-ignore
                         color={outlineColors.variant}
                         name={"variant"}
                     />
