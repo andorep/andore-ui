@@ -5,6 +5,7 @@ export const PopoverBaseClassName = twMerge(
     "rounded-md *:rounded-[inherit]",
     "shadow dark:shadow-dark-DEFAULT",
     "bg-surface-container dark:bg-surface-dark-container",
+    "outline-none",
 )
 
 

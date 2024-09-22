@@ -7,6 +7,11 @@ import { PrimaryColor } from "@material-tailwind-ui/theme-plugin/src";
 
 interface PrimaryColorListProps {
   colors: ThemeType["colors"];
+  onClick?: (
+    event: React.MouseEvent<HTMLElement>,
+    name: string,
+    color: string,
+  ) => void;
 }
 
 const primaryColors = [
@@ -19,7 +24,12 @@ const primaryColors = [
 ];
 
 const PrimaryColorList = (props: PrimaryColorListProps) => {
-  const { colors } = props;
+  const { colors, onClick } = props;
+  const handleClick =(name:string) => (event: React.MouseEvent<HTMLElement>, color: string) => {
+    if (onClick) {
+      onClick(event, name, color);
+    }
+  }
   return primaryColors.map((color, index) => {
     const colorValue = colors[color] as PrimaryColor;
     return (
@@ -32,21 +42,25 @@ const PrimaryColorList = (props: PrimaryColorListProps) => {
             key={index}
             color={colorValue.DEFAULT}
             name={"default"}
+            onClick={handleClick(`${color}.DEFAULT`)}
           />
           <ColorItem
             key={index}
             color={colorValue.text}
             name={"text"}
+            onClick={handleClick(`${color}.text`)}
           />
           <ColorItem
             key={index}
             color={colorValue.container}
             name={"container"}
+            onClick={handleClick(`${color}.container`)}
           />
           <ColorItem
             key={index}
             color={colorValue["container-text"]}
             name={"container text"}
+            onClick={handleClick(`${color}.container-text`)}
           />
         </List>
       </>
