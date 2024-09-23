@@ -1,4 +1,3 @@
-import React from 'react';
 import {twMerge} from 'tailwind-merge';
 import {
     useFloating,
@@ -14,7 +13,7 @@ import {
 import {PopoverProps} from './Popover.types';
 import {PopoverBaseClassName, PopoverBaseGuttersClassName, PopoverDefaultWidth} from './Popover.classes';
 
-const Popover = React.forwardRef<HTMLDivElement, PopoverProps>((props,) => {
+const Popover = (props: PopoverProps) => {
     const {
         children,
         className,
@@ -58,7 +57,7 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>((props,) => {
     return (
         <>
             {open && (
-                <FloatingFocusManager context={context} modal={false}>
+                <FloatingFocusManager context={context} modal={false} >
                     <div
                         ref={refs.setFloating}
                         style={floatingStyles}
@@ -72,6 +71,6 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>((props,) => {
             )}
         </>
     );
-});
+};
 
 export default Popover;

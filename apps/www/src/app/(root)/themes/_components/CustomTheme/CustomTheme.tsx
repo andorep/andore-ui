@@ -52,20 +52,22 @@ const CustomTheme = (props: CustomThemeProps) => {
   };
 
   return (
-    <div className="flex flex-col max-h-full overflow-auto p-4 rounded-[inherit] rounded-r-none bg-surface-container-highest dark:bg-surface-dark-container-highest border-outline-variant border-solid border border-r-0">
+    <section className="flex flex-col w-full h-fit p-4 rounded bg-surface-container-lowest dark:bg-surface-dark-container-lowest border-outline-variant border-solid border">
       <Typography variant={"title"} size={"sm"} className={"mb-4"}>
         Theme
       </Typography>
-      <PrimaryColorList colors={colors} onClick={handleClick} />
-      <SurfaceColorList colors={colors} />
-      <OutlinedColorList colors={colors} />
+      <div className={'flex flex-row  overflow-auto gap-4'}>
+        <PrimaryColorList colors={colors} onClick={handleClick} />
+        <SurfaceColorList colors={colors} />
+        <OutlinedColorList colors={colors} />
+      </div>
       <PopoverChangeColor
-        key={colorSelected?.name}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        defaultColor={colorSelected?.color}
+          key={colorSelected?.name}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          defaultColor={colorSelected?.color}
       />
-    </div>
+    </section>
   );
 };
 

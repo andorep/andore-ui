@@ -19,4 +19,5 @@ export interface TextFieldProps extends PropsWithChildren<React.HTMLAttributes<H
     maxLength?: number;
     readOnly?: boolean;
     error?: boolean;
+    type?: React.InputHTMLAttributes<HTMLInputElement>['type'];
 }

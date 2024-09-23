@@ -45,6 +45,7 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
         suffix,
         placeholder = ' ',
         error,
+        type = 'text',
         ...rest
     } = props;
 
@@ -99,7 +100,7 @@ const TextField = React.forwardRef<HTMLDivElement, TextFieldProps>((props, forwa
                     )}
                     {prefix && (<span className={prefixClasses}>{prefix}</span>)}
                     <input
-                        type="text"
+                        type={type}
                         id={inputId}
                         aria-labelledby={`${labeledId} ${supportTextId}`}
                         className={inputClasses}

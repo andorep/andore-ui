@@ -29,6 +29,7 @@ const PopoverChangeColor = (props: PopoverChangeColorProps) => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
             anchorEl={anchorEl}
+            className={'z-50'}
         >
             <PopoverHeader className={'mb-4'}>
                 Customized color

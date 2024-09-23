@@ -24,6 +24,7 @@ export const ListItemStateClassName = twMerge(
     "MTListItem-state",
     "flex flex-row items-center gap-2",
     "transition-[inherit] duration-[inherit] ease-[inherit]",
+    "rounded-[inherit]",
     "h-14 w-full",
     "px-4 py-2",
 );

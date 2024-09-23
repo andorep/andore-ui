@@ -20,12 +20,14 @@
     "@material-tailwind-ui/navigation": "workspace:*",
     "@material-tailwind-ui/popover": "workspace:*",
     "@material-tailwind-ui/search": "workspace:*",
+    "@material-tailwind-ui/surface": "workspace:*",
     "@material-tailwind-ui/switch": "workspace:*",
     "@material-tailwind-ui/tabs": "workspace:*",
     "@material-tailwind-ui/text-field": "workspace:*",
     "@material-tailwind-ui/theme-plugin": "workspace:*",
     "@material-tailwind-ui/toggle-button": "workspace:*",
     "@material-tailwind-ui/typography": "workspace:*",
+    "@material-tailwind-ui/linear-progress": "workspace:*",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.11",
@@ -44,7 +46,8 @@
     "rehype-prism": "^2.3.2",
     "rehype-prism-plus": "^2.0.0",
     "remark-gfm": "^4.0.0",
-    "tailwind-highlightjs": "^2.0.1"
+    "tailwind-highlightjs": "^2.0.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.16.5",

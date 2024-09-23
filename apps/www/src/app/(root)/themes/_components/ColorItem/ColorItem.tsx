@@ -17,7 +17,7 @@ const ColorItem = (props: ColorItemProps) => {
     }
   }
   return (
-    <ListItem>
+    <ListItem className={'w-max'}>
       <Card className="w-10 h-10" onClick={handleClick}>
         <span
           className="w-full h-full block rounded-[inherit]"

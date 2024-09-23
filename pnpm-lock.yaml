@@ -28,6 +28,9 @@ importers:
       '@material-tailwind-ui/icon-button':
         specifier: workspace:*
         version: link:../../packages/IconButton
+      '@material-tailwind-ui/linear-progress':
+        specifier: workspace:*
+        version: link:../../packages/LinearProgress
       '@material-tailwind-ui/list':
         specifier: workspace:*
         version: link:../../packages/List
@@ -40,6 +43,9 @@ importers:
       '@material-tailwind-ui/search':
         specifier: workspace:*
         version: link:../../packages/Search
+      '@material-tailwind-ui/surface':
+        specifier: workspace:*
+        version: link:../../packages/Surface
       '@material-tailwind-ui/switch':
         specifier: workspace:*
         version: link:../../packages/Switch
@@ -115,6 +121,9 @@ importers:
       tailwind-highlightjs:
         specifier: ^2.0.1
         version: 2.0.1(highlight.js@11.10.0)(tailwindcss@3.4.11)
+      tailwind-merge:
+        specifier: ^2.4.0
+        version: 2.5.2
     devDependencies:
       '@types/node':
         specifier: ^20.16.5
@@ -516,6 +525,61 @@ importers:
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.5
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.16.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.6.2))(eslint@8.57.0)(typescript@5.6.2)
+      '@typescript-eslint/parser':
+        specifier: ^7.16.0
+        version: 7.18.0(eslint@8.57.0)(typescript@5.6.2)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.4.4(@types/node@22.5.4)(terser@5.32.0))
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.20(postcss@8.4.45)
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.2
+        version: 4.6.2(eslint@8.57.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.7
+        version: 0.4.11(eslint@8.57.0)
+      eslint-plugin-storybook:
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.57.0)(typescript@5.6.2)
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.11
+      typescript:
+        specifier: ^5.5.3
+        version: 5.6.2
+      vite:
+        specifier: ^5.3.3
+        version: 5.4.4(@types/node@22.5.4)(terser@5.32.0)
+      vite-plugin-dts:
+        specifier: ^3.9.1
+        version: 3.9.1(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)(vite@5.4.4(@types/node@22.5.4)(terser@5.32.0))
+
+  packages/Chip:
+    dependencies:
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.4.0
+        version: 2.5.2
+    devDependencies:
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.5
@@ -1956,6 +2020,9 @@ importers:
       '@material-tailwind-ui/checkbox':
         specifier: workspace:*
         version: link:../packages/Checkbox
+      '@material-tailwind-ui/chip':
+        specifier: workspace:*
+        version: link:../packages/Chip
       '@material-tailwind-ui/circular-progress':
         specifier: workspace:*
         version: link:../packages/CircularProgress

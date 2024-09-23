@@ -1,9 +1,15 @@
 import React from "react";
 import { Typography } from "@material-tailwind-ui/typography";
 import CustomTheme from "@/app/(root)/themes/_components/CustomTheme/CustomTheme";
-import {theme} from "@material-tailwind-ui/theme-plugin";
-import Chat from "@/app/@chat/page";
-
+import { theme } from "@material-tailwind-ui/theme-plugin";
+import CalendarView from "@/app/(root)/themes/_components/_blocks/CalendarView/CalendarView";
+import TweetCard from "@/app/(root)/themes/_components/_blocks/TweetCard/TweetCard";
+import MediaPlayer from "@/app/(root)/themes/_components/_blocks/MediaPlayer/MediaPlayer";
+import DirectMessages from "@/app/(root)/themes/_components/_blocks/DirectMessages/DirectMessages";
+import Settings from "@/app/(root)/themes/_components/_blocks/Settings/Settings";
+import Chat from "@/app/(root)/themes/_components/_blocks/Chat/Chat";
+import SignIn from "@/app/(root)/themes/_components/_blocks/SignIn/SignIn";
+import BigStat from "@/app/(root)/themes/_components/_blocks/BigStat/BigStat";
 
 const Main = () => {
   return (
@@ -15,7 +21,7 @@ const Main = () => {
               className={"text-slate-950 text-3xl sm:text-5xl"}
               size={"md"}
           >
-              Shape Your Experience
+            Shape Your Experience
           </Typography>
         </span>
               <Typography
@@ -26,11 +32,16 @@ const Main = () => {
                   Add your own personal touch to your application
               </Typography>
           </section>
-          <section className="flex flex-row max-h-[500px] justify-between mb-4 rounded">
-              <CustomTheme defaultTheme={theme}/>
-              <section className="flex-1 rounded-[inherit] rounded-l-none bg-surface-container-highest dark:bg-surface-dark-container-highest">
-                  <Chat/>
-              </section>
+          <CustomTheme defaultTheme={theme}/>
+          <section id={"Blocks"} className="flex flex-wrap flex-row mt-4 gap-4 items-start">
+              <CalendarView/>
+              <TweetCard/>
+              <MediaPlayer/>
+              <DirectMessages/>
+              <Settings/>
+              <Chat/>
+              <SignIn/>
+              <BigStat/>
           </section>
       </section>
   );

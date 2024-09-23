@@ -9,7 +9,6 @@ import {
   NavigationList,
 } from "@material-tailwind-ui/navigation";
 import InboxIcon from "@/app/@mail/_components/icons/InboxIcon";
-import SendIcon from "@/app/@mail/_components/icons/SendIcon";
 import FavoriteIcon from "@/app/@mail/_components/icons/FavoriteIcon";
 import TrashIcon from "@/app/@mail/_components/icons/TrashIcon";
 import FolderIcon from "@/app/@mail/_components/icons/FolderIcon";
@@ -18,6 +17,7 @@ import { Typography } from "@material-tailwind-ui/typography";
 import { Fab } from "@material-tailwind-ui/fab";
 import EditIcon from "@/app/@mail/_components/icons/EditIcon";
 import useWindowSize from "@/app/_hooks/useWindowSize";
+import SendIcon from "@/app/_components/icons/SendIcon";
 
 const MailNavigation = () => {
   const windowSize = useWindowSize();
