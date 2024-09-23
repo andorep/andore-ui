@@ -41,6 +41,7 @@ export default defineConfig({
              "@material-tailwind-ui/navigation": resolve(__dirname, "../packages/Navigation/src"),
              "@material-tailwind-ui/list": resolve(__dirname, "../packages/List/src"),
              "@material-tailwind-ui/search": resolve(__dirname, "../packages/Search/src"),
+             "@material-tailwind-ui/chip": resolve(__dirname, "../packages/Chip/src"),
         }
     }
 })
