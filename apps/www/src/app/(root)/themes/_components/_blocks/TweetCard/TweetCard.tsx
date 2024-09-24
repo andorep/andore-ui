@@ -12,7 +12,7 @@ const TweetCard = () => {
       <div className="flex items-center gap-4">
         <Avatar className={"w-12 h-12"}>
           <AvatarImage
-            src="https://pbs.twimg.com/profile_images/1308769664240160770/AfgzWVE7_400x400.jpg"
+            src="./3d_avatar_13.png"
             alt="profile"
           />
         </Avatar>

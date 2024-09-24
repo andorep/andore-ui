@@ -35,14 +35,14 @@ const SignIn = () => {
           <TextField
             variant={"outlined"}
             label={"Email"}
-            placeholder={"Email"}
+            placeholder={"Type your email"}
             type={"email"}
             required
           />
           <TextField
             variant={"outlined"}
             label={"Password"}
-            placeholder={"Password"}
+            placeholder={"Type your password"}
             type={"password"}
             required
           />

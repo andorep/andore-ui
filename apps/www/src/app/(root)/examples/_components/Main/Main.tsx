@@ -15,7 +15,7 @@ const Main = () => {
               className={"text-slate-950 text-3xl sm:text-5xl"}
               size={"md"}
           >
-              Built in with andore/ui
+              Built with andore/ui
           </Typography>
         </span>
               <Typography

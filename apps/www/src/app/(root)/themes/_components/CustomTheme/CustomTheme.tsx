@@ -58,8 +58,8 @@ const CustomTheme = (props: CustomThemeProps) => {
       </Typography>
       <div className={'flex flex-row  overflow-auto gap-4'}>
         <PrimaryColorList colors={colors} onClick={handleClick} />
-        <SurfaceColorList colors={colors} />
-        <OutlinedColorList colors={colors} />
+        <SurfaceColorList colors={colors} onClick={handleClick} />
+        <OutlinedColorList colors={colors} onClick={handleClick} />
       </div>
       <PopoverChangeColor
           key={colorSelected?.name}

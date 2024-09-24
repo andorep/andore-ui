@@ -6,6 +6,11 @@ import { Typography } from "@material-tailwind-ui/typography";
 
 interface SurfaceColorListProps {
   colors: ThemeType["colors"];
+  onClick?: (
+      event: React.MouseEvent<HTMLElement>,
+      name: string,
+      color: string,
+  ) => void;
 }
 
 const surfaceColors = [
@@ -25,8 +30,13 @@ const surfaceColors = [
 ];
 
 const SurfaceColorList = (props: SurfaceColorListProps) => {
-  const { colors } = props;
+  const { colors, onClick } = props;
   const surface = colors.surface;
+  const handleClick =(name:string) => (event: React.MouseEvent<HTMLElement>, color: string) => {
+    if (onClick) {
+      onClick(event, name, color);
+    }
+  }
   return (
     <div className={"w-fit h-fit flex flex-col gap-2"}>
       <Typography variant={"body"} size={"sm"} className={"font-semibold"}>
@@ -42,7 +52,7 @@ const SurfaceColorList = (props: SurfaceColorListProps) => {
             .join(" ");
           const surfaceColor = surface[color as keyof typeof surface] ?? "";
           return (
-            <ColorItem key={index} color={surfaceColor} name={colorName} />
+            <ColorItem key={index} color={surfaceColor} name={colorName} onClick={handleClick(`surface.${color}`)} />
           );
         })}
       </List>

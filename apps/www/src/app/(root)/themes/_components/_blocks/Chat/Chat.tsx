@@ -9,7 +9,7 @@ import { Typography } from "@material-tailwind-ui/typography";
 
 const Chat = () => {
   return (
-    <Block title="Jhon Doe" className={'pr-1'}>
+    <Block title="John Doe" className={'pr-1'}>
       <div className={"Chat flex flex-col justify-between flex-1 gap-8"}>
         <div className={"Messages flex-1 flex flex-col gap-4 pr-2"}>
           <div className={"Message flex flex-row"}>
