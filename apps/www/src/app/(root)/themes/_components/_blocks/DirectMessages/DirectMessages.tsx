@@ -27,6 +27,18 @@ const DirectMessages = () => {
           </Avatar>
           <ListItemText>John Doe</ListItemText>
         </ListItem>
+        <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
+            <Avatar className={"w-6 h-6"}>
+                <AvatarImage src={"./3d_avatar_10.png"} alt="Colm Tuite" />
+            </Avatar>
+            <ListItemText>Jane Doe</ListItemText>
+        </ListItem>
+        <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
+            <Avatar className={"w-6 h-6"}>
+                <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite" />
+            </Avatar>
+            <ListItemText>John Smith</ListItemText>
+        </ListItem>
       </List>
     </Block>
   );

@@ -18,11 +18,11 @@ const SignIn = () => {
           Sign in to your account
         </Typography>
       </div>
-      <div className="flex flex-col gap-4">
-        <Button variant={"outlined"} startIcon={<GoogleIcon />}>
+      <div className="flex flex-row gap-4">
+        <Button variant={"outlined"} startIcon={<GoogleIcon />} className={'flex-1'}>
           Google
         </Button>
-        <Button variant={"outlined"} startIcon={<GithubIcon />}>
+        <Button variant={"outlined"} startIcon={<GithubIcon />} className={'flex-1'}>
           Github
         </Button>
       </div>

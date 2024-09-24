@@ -28,6 +28,7 @@
     "@material-tailwind-ui/toggle-button": "workspace:*",
     "@material-tailwind-ui/typography": "workspace:*",
     "@material-tailwind-ui/linear-progress": "workspace:*",
+    "@material-tailwind-ui/chip": "workspace:*",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.11",

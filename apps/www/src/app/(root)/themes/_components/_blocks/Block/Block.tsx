@@ -12,7 +12,7 @@ const Block = (props: BlockProps) => {
   const { title, subtitle, children, className, ...rest } = props;
 
   const classes = twMerge(
-      "CalenderView flex flex-col min-w-full lg:min-w-96 p-2",
+      "CalenderView flex flex-col w-full max-w-full p-2",
        className
   );
 

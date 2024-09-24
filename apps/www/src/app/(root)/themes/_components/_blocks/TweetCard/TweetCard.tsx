@@ -9,7 +9,7 @@ import FavoriteFilledIcon from "@/app/_components/icons/FavoriteFilledIcon";
 
 const TweetCard = () => {
   return (
-    <Block className={'lg:max-w-[500px]'}>
+    <Block>
       <div className="flex items-center gap-4">
         <Avatar className={"w-12 h-12"}>
           <AvatarImage
