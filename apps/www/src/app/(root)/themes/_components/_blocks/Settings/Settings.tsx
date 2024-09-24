@@ -13,20 +13,16 @@ const Settings = () => {
     >
       <List>
         <ListItem className={"p-0"}>
-          <ListItemText supportingText={"Reset your password"}>
-            <span className={"font-medium"}>Account</span>
-          </ListItemText>
-          <Button variant={"outlined"}>Reset</Button>
-        </ListItem>
-        <ListItem className={"p-0"}>
-          <ListItemText supportingText={"Change your email"}>
-            <span className={"font-medium"}>Email</span>
-          </ListItemText>
-          <Button variant={"outlined"}>Change</Button>
-        </ListItem>
-        <ListItem className={"p-0"}>
           <ListItemText supportingText={"Enabled two-factor authentication"}>
             <span className={"font-medium"}>2FA</span>
+          </ListItemText>
+          <Switch>
+            <SwitchThumb />
+          </Switch>
+        </ListItem>
+        <ListItem className={"p-0"}>
+          <ListItemText supportingText={"Receive notifications"}>
+            <span className={"font-medium"}>Notifications</span>
           </ListItemText>
           <Switch>
             <SwitchThumb />

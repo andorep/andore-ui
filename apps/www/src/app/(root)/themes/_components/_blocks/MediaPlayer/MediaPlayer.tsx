@@ -11,20 +11,20 @@ import SkipNextIcon from "@/app/_components/icons/SkipNextIcon";
 
 const MediaPlayer = () => {
   return (
-    <Card variant="elevated" disabledStates={true} className={"px-6"}>
+    <Card variant="elevated" disabledStates={true} className={"px-6 h-full"}>
       <CardContent
         className={
           "flex flex-row py-2 gap-6 items-center justify-center h-full"
         }
       >
-        <div className={"flex flex-col items-center"}>
+        <div className={"flex-col items-center hidden sm:flex"}>
           <CardMedia
-            className="!rounded-full w-60 h-60 p-0"
+            className="!rounded-full w-60 h-60 p-0 "
             alt="Healthy food"
             src="https://images.unsplash.com/photo-1563204424-2b6268a06a6c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
-        <div className={"flex flex-col justify-center"}>
+        <div className={"flex flex-col justify-center flex-1 sm:flex-auto"}>
           <CardContent
             className={"flex flex-col  justify-center gap-1 my-2"}
             disabledGutters

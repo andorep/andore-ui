@@ -12,11 +12,11 @@ const OutlinedColorList = (props: OutlinedColorListProps) => {
   const { colors } = props;
   const outlineColors = colors.outline;
   return (
-    <div className={"w-fit h-fit flex-col"}>
+    <div className={"w-fit h-fit flex flex-col gap-2"}>
       <Typography variant={"body"} size={"sm"} className={"font-semibold"}>
         Outline
       </Typography>
-      <List className={"mb-4 flex-row"}>
+      <List className={"flex-row"}>
         <ColorItem color={outlineColors.DEFAULT} name={"default"} />
         <ColorItem color={outlineColors.variant} name={"variant"} />
       </List>

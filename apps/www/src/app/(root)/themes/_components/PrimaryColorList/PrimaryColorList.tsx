@@ -33,11 +33,11 @@ const PrimaryColorList = (props: PrimaryColorListProps) => {
   return primaryColors.map((color, index) => {
     const colorValue = colors[color] as PrimaryColor;
     return (
-      <div className={'w-fit h-fit flex-col'} key={color}>
+      <div className={'w-fit h-fit flex flex-col gap-2'} key={color}>
         <Typography variant={"body"} size={"sm"} className={"font-semibold"}>
           {color.charAt(0).toUpperCase() + color.slice(1)}
         </Typography>
-        <List className={"mb-4 flex-row"}>
+        <List className={"flex-row"}>
           <ColorItem
             color={colorValue.DEFAULT}
             name={"default"}

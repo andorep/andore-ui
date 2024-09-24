@@ -28,11 +28,11 @@ const SurfaceColorList = (props: SurfaceColorListProps) => {
   const { colors } = props;
   const surface = colors.surface;
   return (
-    <div className={"w-fit h-fit flex-col"}>
+    <div className={"w-fit h-fit flex flex-col gap-2"}>
       <Typography variant={"body"} size={"sm"} className={"font-semibold"}>
         Surface
       </Typography>
-      <List className={"mb-4 flex-row"} >
+      <List className={"flex-row"} >
         {surfaceColors.map((color, index) => {
           const colorNames = color.split("-");
           const colorName = colorNames

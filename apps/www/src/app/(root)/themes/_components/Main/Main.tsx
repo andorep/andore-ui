@@ -11,6 +11,7 @@ import Chat from "@/app/(root)/themes/_components/_blocks/Chat/Chat";
 import SignIn from "@/app/(root)/themes/_components/_blocks/SignIn/SignIn";
 import BigStat from "@/app/(root)/themes/_components/_blocks/BigStat/BigStat";
 import Tags from "@/app/(root)/themes/_components/_blocks/Tags/Tags";
+import FloatingFab from "@/app/(root)/themes/_components/_blocks/FloatingFab/FloatingFab";
 
 const Main = () => {
   return (
@@ -34,21 +35,57 @@ const Main = () => {
         </Typography>
       </section>
       <CustomTheme defaultTheme={theme} />
-      <section id={"Blocks"} className="grid grid-cols-12 gap-4 mt-4">
-        <div className="col-span-4 auto-rows-max flex flex-col gap-4">
+      <section
+        id={"Blocks"}
+        className="grid xl:max-2xl:grid-cols-3 2xl:grid-rows-4 2xl:grid-flow-col gap-4 mt-4"
+      >
+        <div className="2xl:row-span-1">
           <CalendarView />
+        </div>
+        <div className="xl:max-2xl:col-span-2 2xl:hidden">
+          <MediaPlayer />
+        </div>
+        <div className="2xl:row-span-2">
           <SignIn />
         </div>
-        <div className="col-span-5 row-span-2 flex flex-col gap-4">
-          <MediaPlayer />
+        <div className="xl:max-2xl:col-span-2 grid grid-rows-2 gap-4 2xl:hidden">
           <Tags />
           <TweetCard />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
           <Settings />
         </div>
-        <div className="col-span-3 row-span-2 flex flex-col gap-4">
+        <div className="hidden 2xl:block 2xl:row-span-1">
+          <MediaPlayer />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
+          <Tags />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
+          <TweetCard />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
+          <FloatingFab />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
           <BigStat />
+        </div>
+        <div className="xl:max-2xl:col-span-3 2xl:hidden grid grid-cols-subgrid gap-4">
+          <div className="col-span-1">
+            <BigStat />
+          </div>
+          <div className="col-span-2">
+            <Chat />
+          </div>
+        </div>
+        <div className="hidden 2xl:row-span-1">
           <DirectMessages />
-          <Chat />
+        </div>
+        <div className="2xl:row-span-2">
+          <DirectMessages />
+        </div>
+        <div className="xl:max-2xl:col-span-2 2xl:hidden">
+          <FloatingFab />
         </div>
       </section>
     </section>
