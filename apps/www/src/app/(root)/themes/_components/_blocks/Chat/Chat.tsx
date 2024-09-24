@@ -28,7 +28,7 @@ const Chat = () => {
           <div className={"Message flex flex-row justify-end"}>
             <div className={"flex flex-col gap-2"}>
               <Surface variant={"filled"} className={"*:p-2 w-fit"}>
-                <Typography variant={'body'} size={'sm'}>Hey, I'm good. How about you?</Typography>
+                <Typography variant={'body'} size={'sm'}>Hey, I&apos;m good. How about you?</Typography>
               </Surface>
               <Surface variant={"filled"} className={"*:p-2 w-fit"}>
                 <Typography variant={'body'} size={'sm'}>Yes, I did. Thank you!</Typography>

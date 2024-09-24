@@ -78,10 +78,13 @@ const Main = () => {
             <Chat />
           </div>
         </div>
-        <div className="hidden 2xl:row-span-1">
+        <div className="hidden 2xl:block 2xl:row-span-2">
+          <Chat />
+        </div>
+        <div className="hidden 2xl:block 2xl:row-span-1">
           <DirectMessages />
         </div>
-        <div className="2xl:row-span-2">
+        <div className="col-span-1 2xl:hidden">
           <DirectMessages />
         </div>
         <div className="xl:max-2xl:col-span-2 2xl:hidden">

@@ -1,7 +1,6 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
 import { List, ListItem, ListItemText } from "@material-tailwind-ui/list";
-import { Button } from "@material-tailwind-ui/button";
 import { Switch, SwitchThumb } from "@material-tailwind-ui/switch";
 
 const Settings = () => {

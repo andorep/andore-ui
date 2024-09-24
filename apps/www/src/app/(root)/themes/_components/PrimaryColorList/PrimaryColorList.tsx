@@ -30,7 +30,7 @@ const PrimaryColorList = (props: PrimaryColorListProps) => {
       onClick(event, name, color);
     }
   }
-  return primaryColors.map((color, index) => {
+  return primaryColors.map((color) => {
     const colorValue = colors[color] as PrimaryColor;
     return (
       <div className={'w-fit h-fit flex flex-col gap-2'} key={color}>

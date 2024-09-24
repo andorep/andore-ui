@@ -3,7 +3,6 @@ import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
 import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
 import { Typography } from "@material-tailwind-ui/typography";
 import { IconButton } from "@material-tailwind-ui/icon-button";
-import FavoriteIcon from "@/app/_components/icons/FavoriteIcon";
 import RepeatIcon from "@/app/_components/icons/RepeatIcon";
 import FavoriteFilledIcon from "@/app/_components/icons/FavoriteFilledIcon";
 
