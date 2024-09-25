@@ -9,9 +9,9 @@ import {
     DialogDescription,
     DialogClose,
     DialogCloseButton,
-} from "@material-tailwind-ui/dialog";
-import {Button} from "@material-tailwind-ui/button";
-import {TextField} from "@material-tailwind-ui/text-field";
+} from "@andore-ui/dialog";
+import {Button} from "@andore-ui/button";
+import {TextField} from "@andore-ui/text-field";
 
 const meta: Meta<typeof Dialog> = {
   component: Dialog,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Search } from "@material-tailwind-ui/search";
+import { Search } from "@andore-ui/search";
 
 const variantControl = {
   control: "radio" as const,

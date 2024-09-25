@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
-import { Search } from "@material-tailwind-ui/search";
-import { IconButton } from "@material-tailwind-ui/icon-button";
+import { Avatar, AvatarImage } from "@andore-ui/avatar";
+import { Search } from "@andore-ui/search";
+import { IconButton } from "@andore-ui/icon-button";
 import useWindowSize from "@/app/_hooks/useWindowSize";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import SettingsIcon from "@/app/@chat/_components/icons/SettingsIcon";
 import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 

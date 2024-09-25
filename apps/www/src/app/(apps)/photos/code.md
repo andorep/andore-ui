@@ -6,12 +6,12 @@ import {
   NavigationHeadline,
   NavigationItem,
   NavigationList,
-} from "@material-tailwind-ui/navigation";
-import { IconButton } from "@material-tailwind-ui/icon-button";
-import { Typography } from "@material-tailwind-ui/typography";
-import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
-import { Search } from "@material-tailwind-ui/search";
-import { Card, CardMedia } from "@material-tailwind-ui/card";
+} from "@andore-ui/navigation";
+import { IconButton } from "@andore-ui/icon-button";
+import { Typography } from "@andore-ui/typography";
+import { Avatar, AvatarImage } from "@andore-ui/avatar";
+import { Search } from "@andore-ui/search";
+import { Card, CardMedia } from "@andore-ui/card";
 
 const SettingsIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg

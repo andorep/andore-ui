@@ -1,15 +1,25 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Search } from "@material-tailwind-ui/search";
-import { IconButton } from "@material-tailwind-ui/icon-button";
+import { Search } from "@andore-ui/search";
+import { IconButton } from "@andore-ui/icon-button";
 import SendIcon from "@/app/_components/icons/SendIcon";
-import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
-import { Surface } from "@material-tailwind-ui/surface";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Avatar, AvatarImage } from "@andore-ui/avatar";
+import { Surface } from "@andore-ui/surface";
+import { Typography } from "@andore-ui/typography";
+import path from "node:path";
+import fs from "node:fs";
 
-const Chat = () => {
+
+const readCopyFile = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/Chat', "copy.txt");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const Chat =  async () => {
+  const copyText = await readCopyFile();
   return (
-    <Block title="John Doe" className={'pr-1'}>
+    <Block title="John Doe" className={'pr-1'} copyText={copyText}>
       <div className={"Chat flex flex-col justify-between flex-1 gap-8"}>
         <div className={"Messages flex-1 flex flex-col gap-4 pr-2"}>
           <div className={"Message flex flex-row"}>

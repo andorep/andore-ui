@@ -5,7 +5,7 @@ import {
     TabPanel,
     TabsContext,
     TabsList,
-} from "@material-tailwind-ui/tabs";
+} from "@andore-ui/tabs";
 import FlightIcon from "@/app/@mail/_components/icons/FlightIcon";
 import ExploreIcon from "@/app/@mail/_components/icons/ExploreIcon";
 import TripIcon from "@/app/@mail/_components/icons/TripIcon";

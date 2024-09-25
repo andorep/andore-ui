@@ -11,8 +11,8 @@ import {
     AlertDialogAction,
     AlertDialogActionContent,
     AlertDialogContentSizes
-} from "@material-tailwind-ui/alert-dialog";
-import {Button} from "@material-tailwind-ui/button";
+} from "@andore-ui/alert-dialog";
+import {Button} from "@andore-ui/button";
 
 const sizeControl = {
     type: "select" as const,

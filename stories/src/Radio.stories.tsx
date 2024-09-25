@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {RadioGroup, RadioButton, RadioButtonSize} from "@material-tailwind-ui/radio";
+import {RadioGroup, RadioButton, RadioButtonSize} from "@andore-ui/radio";
 
 const colorControl = {
     control: 'select' as const,

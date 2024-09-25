@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Surface, SurfaceVariant} from "@material-tailwind-ui/surface";
+import {Surface, SurfaceVariant} from "@andore-ui/surface";
 
 const variantControl = {
     control: 'select' as const,

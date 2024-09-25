@@ -1,6 +1,6 @@
 import React from "react";
-import { ListItem, ListItemText } from "@material-tailwind-ui/list";
-import { Card } from "@material-tailwind-ui/card";
+import { ListItem, ListItemText } from "@andore-ui/list";
+import { Card } from "@andore-ui/card";
 
 interface ColorItemProps {
   color: string;

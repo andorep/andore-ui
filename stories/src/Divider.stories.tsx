@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Divider} from "@material-tailwind-ui/divider";
-import {Typography} from "@material-tailwind-ui/typography";
+import {Divider} from "@andore-ui/divider";
+import {Typography} from "@andore-ui/typography";
 
 
 const disableSpaceBetweenControl = {

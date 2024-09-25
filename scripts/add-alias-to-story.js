@@ -12,7 +12,7 @@ const viteConfigPath = path.join(__dirname, '../stories/vite.config.ts');
 // Function to add a new alias
 export const addAlias = (componentName) => {
 
-    const aliasName = `@material-tailwind-ui/${toSnakeCase(componentName)}`;
+    const aliasName = `@andore-ui/${toSnakeCase(componentName)}`;
     const aliasPath = `../packages/${componentName}/src`;
     // Read the vite.config.ts file
     let viteConfigContent = fs.readFileSync(viteConfigPath, 'utf-8');

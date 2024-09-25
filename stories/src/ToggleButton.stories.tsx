@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {ToggleButton, ToggleButtonGroup} from "@material-tailwind-ui/toggle-button";
+import {ToggleButton, ToggleButtonGroup} from "@andore-ui/toggle-button";
 import React from "react";
-import {ToggleButtonGroupDensity} from "@material-tailwind-ui/toggle-button/src";
+import {ToggleButtonGroupDensity} from "@andore-ui/toggle-button/src";
 
 const densityControl = {
     control: "inline-radio" as const,

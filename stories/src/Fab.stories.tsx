@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Fab} from "@material-tailwind-ui/fab";
-import {FabColor, FabFloating, FabSize} from "@material-tailwind-ui/fab/src";
+import {Fab} from "@andore-ui/fab";
+import {FabColor, FabFloating, FabSize} from "@andore-ui/fab/src";
 
 const sizeControl = {
     control: "select" as const,

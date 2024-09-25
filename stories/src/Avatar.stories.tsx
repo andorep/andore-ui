@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Avatar, AvatarImage, AvatarFallback} from "@material-tailwind-ui/avatar";
+import {Avatar, AvatarImage, AvatarFallback} from "@andore-ui/avatar";
 // @ts-ignore
 import AvatarSrc from '../assets/3d_avatar_13.png';
 

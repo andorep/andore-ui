@@ -1,12 +1,21 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import CheckIcon from "@/app/_components/icons/CheckIcon";
 import TrendingUpIcon from "@/app/_components/icons/TrendingUpIcon";
+import fs from "node:fs";
+import path from "node:path";
 
-const BigStat = () => {
+const readCopyFile = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/BigStat', "copy.txt");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const BigStat = async () => {
+  const copyText = await readCopyFile();
   return (
-    <Block>
+    <Block copyText={copyText}>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="p-4 rounded-full bg-primary dark:bg-primary-dark-DEFAULT">

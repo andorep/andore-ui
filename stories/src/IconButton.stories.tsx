@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {IconButton} from "@material-tailwind-ui/icon-button";
-import {IconButtonColor, IconButtonVariant} from "@material-tailwind-ui/icon-button/src";
+import {IconButton} from "@andore-ui/icon-button";
+import {IconButtonColor, IconButtonVariant} from "@andore-ui/icon-button/src";
 
 const toggleControl = {
     control: 'boolean' as const,

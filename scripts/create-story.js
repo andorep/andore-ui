@@ -46,7 +46,7 @@ const updatePackageJson = (componentName) => {
 
   // Add the new component to dependencies
   packageJson.dependencies = packageJson.dependencies || {};
-  packageJson.dependencies[`@material-tailwind-ui/${toSnakeCase(componentName)}`] = "workspace:*";
+  packageJson.dependencies[`@andore-ui/${toSnakeCase(componentName)}`] = "workspace:*";
 
   // Write the updated package.json back to the file
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));

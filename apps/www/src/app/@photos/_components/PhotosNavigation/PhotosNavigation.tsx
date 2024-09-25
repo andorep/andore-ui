@@ -6,9 +6,9 @@ import {
   NavigationHeadline,
   NavigationItem,
   NavigationList,
-} from "@material-tailwind-ui/navigation";
-import { IconButton } from "@material-tailwind-ui/icon-button";
-import { Typography } from "@material-tailwind-ui/typography";
+} from "@andore-ui/navigation";
+import { IconButton } from "@andore-ui/icon-button";
+import { Typography } from "@andore-ui/typography";
 import useWindowSize from "@/app/_hooks/useWindowSize";
 import MenuIcon from "@/app/@photos/_components/icons/MenuIcon";
 import ImageIcon from "@/app/_components/icons/ImageIcon";

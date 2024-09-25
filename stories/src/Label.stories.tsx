@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Avatar} from "@material-tailwind-ui/avatar";
-import {Label} from "@material-tailwind-ui/label";
-import {Input} from "@material-tailwind-ui/input";
+import {Avatar} from "@andore-ui/avatar";
+import {Label} from "@andore-ui/label";
+import {Input} from "@andore-ui/input";
 
 const meta: Meta<typeof Avatar> = {
     component: Avatar,

@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import {
   ToggleButton,
   ToggleButtonGroup,
-} from "@material-tailwind-ui/toggle-button";
+} from "@andore-ui/toggle-button";
 import MailIcon from "@/app/_components/icons/MailIcon";
 import ChatIcon from "@/app/_components/icons/ChatIcon";
 import ImageIcon from "@/app/_components/icons/ImageIcon";

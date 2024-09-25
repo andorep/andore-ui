@@ -1,15 +1,25 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Typography } from "@material-tailwind-ui/typography";
-import { Button } from "@material-tailwind-ui/button";
-import { Divider } from "@material-tailwind-ui/divider";
-import { TextField } from "@material-tailwind-ui/text-field";
+import { Typography } from "@andore-ui/typography";
+import { Button } from "@andore-ui/button";
+import { Divider } from "@andore-ui/divider";
+import { TextField } from "@andore-ui/text-field";
 import GoogleIcon from "@/app/_components/icons/GoogleIcon";
 import GithubIcon from "@/app/_components/icons/GithubIcon";
+import path from "node:path";
+import fs from "node:fs";
 
-const SignIn = () => {
+
+const readCopyFile = async () => {
+    const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/SignIn', "copy.txt");
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    return fileContent;
+};
+
+const SignIn = async () => {
+    const copyText = await readCopyFile();
   return (
-    <Block>
+    <Block copyText={copyText}>
       <div className="flex flex-col mb-4">
         <Typography variant={"title"} size={"md"}>
           Sign In

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import {Chat} from "@/app/@chat/_data/chat.data";
-import { List, ListItem, ListItemText } from "@material-tailwind-ui/list";
-import { Avatar, AvatarFallback } from "@material-tailwind-ui/avatar";
+import { List, ListItem, ListItemText } from "@andore-ui/list";
+import { Avatar, AvatarFallback } from "@andore-ui/avatar";
 
 
 interface ChatListProps {

@@ -1,6 +1,6 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import {NavigationList, NavigationHeadline, NavigationItem, NavigationDivider} from "@material-tailwind-ui/navigation";
+import {NavigationList, NavigationHeadline, NavigationItem, NavigationDivider} from "@andore-ui/navigation";
 
 const condensedControl = {
     control: 'boolean' as const,

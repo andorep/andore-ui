@@ -1,6 +1,6 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import {Select} from "@material-tailwind-ui/select";
+import {Select} from "@andore-ui/select";
 
 const variantControl = {
     control: 'radio' as const,

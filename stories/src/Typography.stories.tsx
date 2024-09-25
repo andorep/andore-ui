@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Typography, TypographySizes} from "@material-tailwind-ui/typography";
-import {TypographyColors, TypographyVariants} from "@material-tailwind-ui/typography/src";
+import {Typography, TypographySizes} from "@andore-ui/typography";
+import {TypographyColors, TypographyVariants} from "@andore-ui/typography/src";
 
 const variantControl = {
     control: 'select' as const,

@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {TabsContext, TabsList, Tab, TabPanel} from "@material-tailwind-ui/tabs";
+import {TabsContext, TabsList, Tab, TabPanel} from "@andore-ui/tabs";
 
 const inlineControl = {
     control: 'boolean' as const,

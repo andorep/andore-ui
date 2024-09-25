@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import CustomTheme from "@/app/(root)/themes/_components/CustomTheme/CustomTheme";
-import { theme } from "@material-tailwind-ui/theme-plugin";
+import { theme } from "@andore-ui/theme-plugin";
 import CalendarView from "@/app/(root)/themes/_components/_blocks/CalendarView/CalendarView";
 import TweetCard from "@/app/(root)/themes/_components/_blocks/TweetCard/TweetCard";
 import MediaPlayer from "@/app/(root)/themes/_components/_blocks/MediaPlayer/MediaPlayer";

@@ -1,4 +1,4 @@
-import {MaterialTailwindUiThemePlugin} from "@material-tailwind-ui/theme-plugin";
+import {MaterialTailwindUiThemePlugin} from "@andore-ui/theme-plugin";
 import {Config} from "tailwindcss";
 
 /** @type {import('tailwindcss').Config} */

@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Checkbox, CheckboxIndicator} from "@material-tailwind-ui/checkbox";
-import {Label} from "@material-tailwind-ui/label";
+import {Checkbox, CheckboxIndicator} from "@andore-ui/checkbox";
+import {Label} from "@andore-ui/label";
 
 const colorsControl = {
     control: "select" as const,

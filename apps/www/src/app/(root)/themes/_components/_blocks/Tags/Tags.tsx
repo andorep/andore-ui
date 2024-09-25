@@ -1,12 +1,22 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Chip } from "@material-tailwind-ui/chip";
+import { Chip } from "@andore-ui/chip";
+import path from "node:path";
+import fs from "node:fs";
 
-const Tags = () => {
+
+const readCopyFile = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/Tags', "copy.txt");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const Tags = async () => {
+  const copyText = await readCopyFile();
   return (
     <Block
       title={"People also searched for"}
-    >
+      copyText={copyText}>
       <div className="columns-2 gap-1 mb-1">
         <Chip variant={"outlined"} className={"w-full"}>
           React

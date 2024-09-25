@@ -1,17 +1,33 @@
-'use client'
-
 import React from "react";
-import { Card, CardContent, CardMedia } from "@material-tailwind-ui/card";
-import { Typography } from "@material-tailwind-ui/typography";
-import { LinearProgress } from "@material-tailwind-ui/linear-progress";
-import { IconButton } from "@material-tailwind-ui/icon-button";
+import { CardContent, CardMedia } from "@andore-ui/card";
+import { Typography } from "@andore-ui/typography";
+import { LinearProgress } from "@andore-ui/linear-progress";
+import { IconButton } from "@andore-ui/icon-button";
 import SkipPreviousIcon from "@/app/_components/icons/SkipPreviousIcon";
 import PlayIcon from "@/app/_components/icons/PlayIcon";
 import SkipNextIcon from "@/app/_components/icons/SkipNextIcon";
+import path from "node:path";
+import fs from "node:fs";
+import CopyClipboardButton from "@/app/_components/CopyClipboardButton/CopyClipboardButton";
+import CardMediaPlayer from "@/app/(root)/themes/_components/_blocks/MediaPlayer/CardMediaPlayer";
 
-const MediaPlayer = () => {
+const readCopyFile = async () => {
+  const filePath = path.join(
+    process.cwd(),
+    "src/app/(root)/themes/_components/_blocks/MediaPlayer",
+    "copy.txt",
+  );
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const MediaPlayer = async () => {
+  const copyText = await readCopyFile();
   return (
-    <Card variant="elevated" disabledStates={true} className={"px-6 h-full"}>
+    <CardMediaPlayer>
+      <span className={"absolute right-1 top-1"}>
+        {copyText && <CopyClipboardButton text={copyText} />}
+      </span>
       <CardContent
         className={
           "flex flex-row py-2 gap-6 items-center justify-center h-full"
@@ -66,7 +82,7 @@ const MediaPlayer = () => {
           </CardContent>
         </div>
       </CardContent>
-    </Card>
+    </CardMediaPlayer>
   );
 };
 

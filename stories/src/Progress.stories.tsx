@@ -1,7 +1,7 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import {LinearProgress} from "@material-tailwind-ui/linear-progress";
-import {CircularProgress} from "@material-tailwind-ui/circular-progress";
+import {LinearProgress} from "@andore-ui/linear-progress";
+import {CircularProgress} from "@andore-ui/circular-progress";
 
 const sizeControl = {
     control: 'select' as const,

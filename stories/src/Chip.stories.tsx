@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Chip, ChipVariant } from "@material-tailwind-ui/chip";
+import { Chip, ChipVariant } from "@andore-ui/chip";
 
 const variantControl = {
   options: ["elevated", "outlined"] as ChipVariant[],

@@ -5,7 +5,7 @@ import {
     AccordionItem,
     AccordionHeader,
     AccordionContent
-} from "@material-tailwind-ui/accordion";
+} from "@andore-ui/accordion";
 
 const variantControl = {
     options: ["standard", "divided"] as AccordionVariant[],

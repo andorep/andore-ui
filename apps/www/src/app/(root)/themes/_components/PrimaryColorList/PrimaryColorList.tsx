@@ -1,9 +1,9 @@
 import React from "react";
-import { List } from "@material-tailwind-ui/list";
-import { ThemeType } from "@material-tailwind-ui/theme-plugin";
+import { List } from "@andore-ui/list";
+import { ThemeType } from "@andore-ui/theme-plugin";
 import ColorItem from "@/app/(root)/themes/_components/ColorItem/ColorItem";
-import { Typography } from "@material-tailwind-ui/typography";
-import { PrimaryColor } from "@material-tailwind-ui/theme-plugin/src";
+import { Typography } from "@andore-ui/typography";
+import { PrimaryColor } from "@andore-ui/theme-plugin/src";
 
 interface PrimaryColorListProps {
   colors: ThemeType["colors"];

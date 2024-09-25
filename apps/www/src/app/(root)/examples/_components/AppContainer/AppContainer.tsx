@@ -4,7 +4,7 @@ import React from "react";
 import {
   ToggleButton,
   ToggleButtonGroup,
-} from "@material-tailwind-ui/toggle-button";
+} from "@andore-ui/toggle-button";
 import PreviewIcon from "@/app/_components/icons/PreviewIcon";
 import CodeIcon from "@/app/_components/icons/CodeIcon";
 

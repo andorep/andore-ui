@@ -7,14 +7,14 @@ import {
   NavigationHeadline,
   NavigationItem,
   NavigationList,
-} from "@material-tailwind-ui/navigation";
+} from "@andore-ui/navigation";
 import InboxIcon from "@/app/@mail/_components/icons/InboxIcon";
 import FavoriteIcon from "@/app/@mail/_components/icons/FavoriteIcon";
 import TrashIcon from "@/app/@mail/_components/icons/TrashIcon";
 import FolderIcon from "@/app/@mail/_components/icons/FolderIcon";
-import { IconButton } from "@material-tailwind-ui/icon-button";
-import { Typography } from "@material-tailwind-ui/typography";
-import { Fab } from "@material-tailwind-ui/fab";
+import { IconButton } from "@andore-ui/icon-button";
+import { Typography } from "@andore-ui/typography";
+import { Fab } from "@andore-ui/fab";
 import EditIcon from "@/app/@mail/_components/icons/EditIcon";
 import useWindowSize from "@/app/_hooks/useWindowSize";
 import SendIcon from "@/app/_components/icons/SendIcon";

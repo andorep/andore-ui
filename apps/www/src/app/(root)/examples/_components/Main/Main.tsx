@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import AppContainer from "@/app/(root)/examples/_components/AppContainer/AppContainer";
 import PhotosAppCode from "@/app/(apps)/photos/code.md";
 import ChatAppCode from "@/app/(apps)/chat/code.md";

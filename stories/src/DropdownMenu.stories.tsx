@@ -18,8 +18,8 @@ import {
     DropdownMenuArrow,
     DropdownMenuItemTrailing,
     DropdownMenuItemLeading
-} from "@material-tailwind-ui/dropdown-menu";
-import {IconButton} from "@material-tailwind-ui/icon-button";
+} from "@andore-ui/dropdown-menu";
+import {IconButton} from "@andore-ui/icon-button";
 
 const meta: Meta<typeof DropdownMenu> = {
     component: DropdownMenu,

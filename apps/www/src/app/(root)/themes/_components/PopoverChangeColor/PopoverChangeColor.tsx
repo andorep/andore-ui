@@ -1,10 +1,10 @@
 'use client';
 
 import React, {useState} from 'react';
-import {Popover, PopoverContent, PopoverHeader} from "@material-tailwind-ui/popover";
+import {Popover, PopoverContent, PopoverHeader} from "@andore-ui/popover";
 import { HexColorPicker } from "react-colorful";
-import { Typography } from "@material-tailwind-ui/typography";
-import { TextField } from "@material-tailwind-ui/text-field";
+import { Typography } from "@andore-ui/typography";
+import { TextField } from "@andore-ui/text-field";
 
 interface PopoverChangeColorProps {
     anchorEl: HTMLElement | undefined;

@@ -1,8 +1,8 @@
 import React from "react";
 import type {Meta, StoryObj} from "@storybook/react";
-import {Popover, PopoverHeader, PopoverContent, PopoverActions, Placement} from "@material-tailwind-ui/popover";
-import {Button} from "@material-tailwind-ui/button";
-import {Typography} from "@material-tailwind-ui/typography";
+import {Popover, PopoverHeader, PopoverContent, PopoverActions, Placement} from "@andore-ui/popover";
+import {Button} from "@andore-ui/button";
+import {Typography} from "@andore-ui/typography";
 // @ts-ignore
 import DogSrc from '../assets/husky.jpg';
 

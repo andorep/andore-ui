@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Textarea} from "@material-tailwind-ui/textarea";
+import {Textarea} from "@andore-ui/textarea";
 
 const variantControl = {
     control: 'radio' as const,

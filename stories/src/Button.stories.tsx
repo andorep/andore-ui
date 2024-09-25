@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Button, ButtonVariant} from "@material-tailwind-ui/button";
+import {Button, ButtonVariant} from "@andore-ui/button";
 
 const variantControl = {
     options: ["elevated", "filled", "outlined", "text"] as ButtonVariant[],

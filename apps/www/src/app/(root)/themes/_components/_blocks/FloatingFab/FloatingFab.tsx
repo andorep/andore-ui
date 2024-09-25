@@ -2,13 +2,23 @@ import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
 import { fetchPhotos } from "@/app/@photos/_data/photos.data";
 import PhotosList from "@/app/(root)/themes/_components/PhotoList/PhotoList";
-import { Fab } from "@material-tailwind-ui/fab";
+import { Fab } from "@andore-ui/fab";
+import path from "node:path";
+import fs from "node:fs";
 
-const FloatingFab = async () => {
+
+const readCopyFile = async () => {
+    const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/FloatingFab', "copy.txt");
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    return fileContent;
+};
+
+const FloatingFab =  async () => {
+    const copyText = await readCopyFile();
   const photosList = await fetchPhotos();
   const list = photosList.slice(0, 6);
   return (
-    <Block className={" relative"}>
+    <Block className={" relative"} copyText={copyText}>
       <PhotosList items={list} />
       <Fab className={'absolute'} floating={'right'} icon={(
           <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" fill="currentColor">

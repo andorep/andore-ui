@@ -1,14 +1,24 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
-import { Typography } from "@material-tailwind-ui/typography";
-import { IconButton } from "@material-tailwind-ui/icon-button";
+import { Avatar, AvatarImage } from "@andore-ui/avatar";
+import { Typography } from "@andore-ui/typography";
+import { IconButton } from "@andore-ui/icon-button";
 import RepeatIcon from "@/app/_components/icons/RepeatIcon";
 import FavoriteFilledIcon from "@/app/_components/icons/FavoriteFilledIcon";
+import path from "node:path";
+import fs from "node:fs";
 
-const TweetCard = () => {
+
+const readCopyFile = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/TweetCard', "copy.txt");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const TweetCard = async () => {
+  const copyText = await readCopyFile();
   return (
-    <Block>
+    <Block copyText={copyText}>
       <div className="flex items-center gap-4">
         <Avatar className={"w-12 h-12"}>
           <AvatarImage

@@ -6,12 +6,12 @@ import {
   NavigationHeadline,
   NavigationItem,
   NavigationList,
-} from "@material-tailwind-ui/navigation";
-import { IconButton } from "@material-tailwind-ui/icon-button";
-import { Typography } from "@material-tailwind-ui/typography";
-import { Fab } from "@material-tailwind-ui/fab";
+} from "@andore-ui/navigation";
+import { IconButton } from "@andore-ui/icon-button";
+import { Typography } from "@andore-ui/typography";
+import { Fab } from "@andore-ui/fab";
 import useWindowSize from "@/app/_hooks/useWindowSize";
-import { Avatar, AvatarFallback } from "@material-tailwind-ui/avatar";
+import { Avatar, AvatarFallback } from "@andore-ui/avatar";
 import MenuIcon from "@/app/@chat/_components/icons/MenuIcon";
 import HomeIcon from "@/app/@chat/_components/icons/HomeIcon";
 import AlternateEmailIcon from "@/app/@chat/_components/icons/AlternateEmailIcon";

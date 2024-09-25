@@ -9,12 +9,12 @@ import {
     CardDivider,
     CardMedia,
     CardVariant
-} from "@material-tailwind-ui/card";
-import {IconButton} from "@material-tailwind-ui/icon-button";
+} from "@andore-ui/card";
+import {IconButton} from "@andore-ui/icon-button";
 // @ts-ignore
 import AvatarSrc from '../assets/3d_avatar_13.png';
-import { Typography } from "@material-tailwind-ui/typography";
-import { LinearProgress } from "@material-tailwind-ui/linear-progress";
+import { Typography } from "@andore-ui/typography";
+import { LinearProgress } from "@andore-ui/linear-progress";
 
 const variantControl = {
     control: 'select' as const,

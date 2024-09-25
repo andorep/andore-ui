@@ -1,6 +1,6 @@
 'use client';
 import {Photos} from "@/app/@photos/_data/photos.data";
-import { Card, CardMedia } from "@material-tailwind-ui/card";
+import { Card, CardMedia } from "@andore-ui/card";
 
 
 interface PhotosListProps {

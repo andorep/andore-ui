@@ -1,12 +1,21 @@
 import React from "react";
 import Block from "@/app/(root)/themes/_components/_blocks/Block/Block";
-import { Surface } from "@material-tailwind-ui/surface";
-import { Typography } from "@material-tailwind-ui/typography";
-import { Avatar, AvatarImage } from "@material-tailwind-ui/avatar";
+import { Surface } from "@andore-ui/surface";
+import { Typography } from "@andore-ui/typography";
+import { Avatar, AvatarImage } from "@andore-ui/avatar";
+import path from "node:path";
+import fs from "node:fs";
 
-const CalendarView = () => {
+const readCopyFile = async () => {
+  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/CalendarView', "copy.txt");
+  const fileContent = fs.readFileSync(filePath, "utf8");
+  return fileContent;
+};
+
+const CalendarView = async () => {
+  const copyText = await readCopyFile();
   return (
-    <Block title={"Today"}>
+    <Block title={"Today"} copyText={copyText}>
       <div className={"flex flex-col gap-2"}>
         <Surface
           variant={"filled"}

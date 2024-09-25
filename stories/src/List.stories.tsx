@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {List, ListItem,ListItemText} from "@material-tailwind-ui/list";
+import {List, ListItem,ListItemText} from "@andore-ui/list";
 
 const dividerControl = {
     control: 'boolean' as const,

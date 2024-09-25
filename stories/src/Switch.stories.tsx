@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from "@storybook/react";
-import {Switch, SwitchThumb} from "@material-tailwind-ui/switch";
+import {Switch, SwitchThumb} from "@andore-ui/switch";
 
 const meta: Meta<typeof Switch> = {
     component: Switch,

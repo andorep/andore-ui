@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {Mail} from "@/app/@mail/_data/mail.data";
-import {List, ListItem, ListItemText} from "@material-tailwind-ui/list";
+import {List, ListItem, ListItemText} from "@andore-ui/list";
 
 
 interface MailListProps {

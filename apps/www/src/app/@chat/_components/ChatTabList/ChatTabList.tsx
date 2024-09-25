@@ -2,10 +2,10 @@
 import React from "react";
 import ChatList from "@/app/@chat/_components/ChatList/ChatList";
 import { Chat } from "@/app/@chat/_data/chat.data";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import {
   ToggleButton,
-} from "@material-tailwind-ui/toggle-button";
+} from "@andore-ui/toggle-button";
 import MarkChatUnread from "@/app/@chat/_components/icons/MarkChatUnread";
 
 interface ChatTabListProps {

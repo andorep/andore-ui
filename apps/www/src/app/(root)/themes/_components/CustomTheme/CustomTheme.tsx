@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { ThemeType } from "@material-tailwind-ui/theme-plugin";
+import { ThemeType } from "@andore-ui/theme-plugin";
 import PrimaryColorList from "@/app/(root)/themes/_components/PrimaryColorList/PrimaryColorList";
 import SurfaceColorList from "@/app/(root)/themes/_components/SurfaceColorList/SurfaceColorList";
 import OutlinedColorList from "@/app/(root)/themes/_components/OutlinedColorList/OutlinedColorList";
-import { Typography } from "@material-tailwind-ui/typography";
+import { Typography } from "@andore-ui/typography";
 import PopoverChangeColor from "@/app/(root)/themes/_components/PopoverChangeColor/PopoverChangeColor";
 
 interface CustomThemeProps {
