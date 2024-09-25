@@ -12,15 +12,19 @@ export interface Color {
 }
 
 export interface BaseColors {
-  primary: Color;
-  secondary: Color;
-  outline: {
+  primary?: Color;
+  secondary?: Color;
+  info?: Color;
+  success?: Color;
+  warning?: Color;
+  error?: Color;
+  outline?: {
     DEFAULT: string;
     variant: string;
     dark: string;
     "dark-variant": string;
   };
-  surface: {
+  surface?: {
     scrim?: string;
     inverse?: string;
     "inverse-text"?: string;
@@ -53,13 +57,9 @@ export interface BaseColors {
     "dark-variant"?: string;
     "dark-text-variant"?: string;
   };
-  gray: Record<string, string>;
-  white: string;
-  black: string;
-  info: Color;
-  success: Color;
-  warning: Color;
-  error: Color;
+  gray?: Record<string, string>;
+  white?: string;
+  black?: string;
 }
 
 export interface Colors extends BaseColors {

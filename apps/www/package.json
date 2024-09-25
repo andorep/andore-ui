@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "css": "tailwindcss -o output.css",
     "export": "next export"
   },
   "dependencies": {

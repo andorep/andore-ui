@@ -1,4 +1,4 @@
-import {MaterialTailwindUiThemePlugin} from "@andore-ui/theme-plugin";
+import {AndoreUIThemePlugin} from "@andore-ui/theme-plugin";
 import {Config} from "tailwindcss";
 
 /** @type {import('tailwindcss').Config} */
@@ -8,5 +8,5 @@ export default {
         "../packages/**/*.{js,ts,jsx,tsx}",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
-    plugins: [MaterialTailwindUiThemePlugin],
+    plugins: [AndoreUIThemePlugin],
 } as Config;

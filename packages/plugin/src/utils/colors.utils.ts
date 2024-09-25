@@ -1,28 +1,74 @@
-import colors from "tailwindcss/colors";
-import {TailwindColor, TailwindTonal} from "../theme/theme.types";
+export const mapColorsToCssVariables = (colors = {}, parentKey = "") => {
+    const output = {} as Record<string, unknown>;
 
-export const MaterialColorToTailwindColor: Record<number, TailwindTonal> = {
-    99: '50',
-    95: '100',
-    90: '200',
-    80: '300',
-    70: '400',
-    60: '500',
-    50: '600',
-    40: '700',
-    30: '800',
-    20: '900',
-    10: '950'
-}
+    for (const [key, value] of Object.entries(colors)) {
+        let newKey = key;
+        if (key === "DEFAULT") {
+            newKey = parentKey;
+        }else{
+            newKey = parentKey ? `${parentKey}-${key}` : key
+        }
 
-export const getColorFromMaterialColor = (tailwindColor: TailwindColor, materialColor: number): string => {
-    if (materialColor <= 0) {
-        return colors.black;
+        if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+            // Recursively handle nested objects
+            output[key] = mapColorsToCssVariables(value, newKey);
+        } else {
+            // Convert the value to a CSS variable format
+            output[key] = `rgb(var(--aui-${newKey}))`;
+        }
     }
-    if (materialColor >= 100) {
-        return colors.white;
+
+    return output;
+};
+
+export const transformColorsToCssVariables = (input = {}, parentKey = "") => {
+    let cssVariables = {}
+
+    for (const [key, value] of Object.entries(input)) {
+        let newKey = key;
+        if (key === "DEFAULT") {
+            newKey = parentKey;
+        }else{
+            newKey = parentKey ? `${parentKey}-${key}` : key
+        }
+
+        if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+            // Recursively handle nested objects
+            cssVariables = {
+                ...cssVariables,
+                ...transformColorsToCssVariables(value, newKey)
+            }
+        } else {
+            // Convert hex color to RGB
+            const rgb = hexToRgb(value as string);
+            if (rgb) {
+                cssVariables ={
+                    ...cssVariables,
+                    [`--aui-${newKey}`]: rgb
+                }
+            }
+        }
     }
-    const color = colors[tailwindColor];
-    const materialTranslateColor = MaterialColorToTailwindColor[materialColor];
-    return color[materialTranslateColor];
+
+    return cssVariables;
+};
+
+function hexToRgb(hex: string) {
+    // Remove the hash at the start if it's there
+    hex = hex.replace(/^#/, "");
+
+    // Parse the hex string
+    if (hex.length === 3) {
+        hex = hex
+            .split("")
+            .map((x) => x + x)
+            .join("");
+    }
+
+    const bigint = parseInt(hex, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+
+    return `${r} ${g} ${b}`;
 }
