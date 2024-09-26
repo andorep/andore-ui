@@ -41,7 +41,8 @@
     "@material-tailwind-ui/navigation": "workspace:*",
     "@material-tailwind-ui/list": "workspace:*",
     "@material-tailwind-ui/search": "workspace:*",
-    "@material-tailwind-ui/chip": "workspace:*"
+    "@material-tailwind-ui/chip": "workspace:*",
+    "@material-tailwind-ui/bottom-sheet": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
