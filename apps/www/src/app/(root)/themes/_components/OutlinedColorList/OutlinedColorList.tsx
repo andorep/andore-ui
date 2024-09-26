@@ -29,12 +29,12 @@ const OutlinedColorList = (props: OutlinedColorListProps) => {
       </Typography>
       <List className={"flex-row"}>
         <ColorItem
-          color={outlineColors.DEFAULT}
+          color={outlineColors?.DEFAULT ?? ""}
           name={"default"}
           onClick={handleClick(`outline.DEFAULT`)}
         />
         <ColorItem
-          color={outlineColors.variant}
+          color={outlineColors?.variant ?? ""}
           name={"variant"}
           onClick={handleClick(`outline.variant`)}
         />

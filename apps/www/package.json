@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "type-check": "tsc --noEmit",
     "export": "next export"
   },
   "dependencies": {
     "@andore-ui/avatar": "workspace:*",
     "@andore-ui/button": "workspace:*",
+    "@andore-ui/bottom-sheet": "workspace:*",
     "@andore-ui/card": "workspace:*",
     "@andore-ui/chip": "workspace:*",
     "@andore-ui/divider": "workspace:*",

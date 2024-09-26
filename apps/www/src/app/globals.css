@@ -216,6 +216,10 @@ body {
     }
 }
 
+.theme-default {
+    --aui-primary: 101 85 143;
+}
+
 
 .theme-miku {
     --aui-gray-50: 249 250 251;
@@ -473,6 +477,7 @@ body {
     --aui-error-dark-container: 147 0 10;
     --aui-error-dark-container-text: 255 218 214;
 }
+
 .theme-deku {
     --aui-primary: 26 107 81;
     --aui-primary-container: 166 242 210;

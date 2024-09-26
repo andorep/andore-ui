@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import { BottomSheet } from "@material-tailwind-ui/bottom-sheet";
-import { Button } from "@material-tailwind-ui/button";
-import { Avatar, AvatarFallback } from "@material-tailwind-ui/avatar";
+import { BottomSheet } from "@andore-ui/bottom-sheet";
+import { Button } from "@andore-ui/button";
+import { Avatar, AvatarFallback } from "@andore-ui/avatar";
 
 const meta: Meta<typeof BottomSheet> = {
   component: BottomSheet,
@@ -39,7 +39,12 @@ export const Default: Story = {
     return (
       <div>
         <Button onClick={() => setOpen(true)}>Open</Button>
-        <BottomSheet open={open} onClose={() => setOpen(false)}>
+        <BottomSheet
+          title={"Actions"}
+          description={"Choose an action to perform"}
+          open={open}
+          onClose={() => setOpen(false)}
+        >
           <div
             className={"flex flex-row items-center justify-center gap-4 w-full"}
           >

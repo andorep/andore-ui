@@ -42,7 +42,7 @@
     "@andore-ui/list": "workspace:*",
     "@andore-ui/search": "workspace:*",
     "@andore-ui/chip": "workspace:*",
-    "@material-tailwind-ui/bottom-sheet": "workspace:*"
+    "@andore-ui/bottom-sheet": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",

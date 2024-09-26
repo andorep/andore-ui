@@ -1,7 +1,5 @@
 import React from "react";
 import { Typography } from "@andore-ui/typography";
-import CustomTheme from "@/app/(root)/themes/_components/CustomTheme/CustomTheme";
-import { theme } from "@andore-ui/theme-plugin";
 import CalendarView from "@/app/(root)/themes/_components/_blocks/CalendarView/CalendarView";
 import TweetCard from "@/app/(root)/themes/_components/_blocks/TweetCard/TweetCard";
 import MediaPlayer from "@/app/(root)/themes/_components/_blocks/MediaPlayer/MediaPlayer";
@@ -12,11 +10,12 @@ import SignIn from "@/app/(root)/themes/_components/_blocks/SignIn/SignIn";
 import BigStat from "@/app/(root)/themes/_components/_blocks/BigStat/BigStat";
 import Tags from "@/app/(root)/themes/_components/_blocks/Tags/Tags";
 import FloatingFab from "@/app/(root)/themes/_components/_blocks/FloatingFab/FloatingFab";
+import BlocksSection from "@/app/(root)/themes/_components/BlocksSection/BlocksSection";
 
 const Main = () => {
   return (
     <section className="flex flex-col justify-between mx-auto container">
-      <section className="title flex flex-col justify-between mb-9">
+      <section className="title flex flex-col justify-between mb-3">
         <span className={"flex items-center gap-1 mb-3"}>
           <Typography
             variant={"headline"}
@@ -34,11 +33,7 @@ const Main = () => {
           Add your own personal touch to your application
         </Typography>
       </section>
-      <CustomTheme defaultTheme={theme} />
-      <section
-        id={"Blocks"}
-        className="grid xl:max-2xl:grid-cols-3 2xl:grid-rows-4 2xl:grid-flow-col gap-4 mt-4"
-      >
+      <BlocksSection>
         <div className="2xl:row-span-1">
           <CalendarView />
         </div>
@@ -90,7 +85,7 @@ const Main = () => {
         <div className="xl:max-2xl:col-span-2 2xl:hidden">
           <FloatingFab />
         </div>
-      </section>
+      </BlocksSection>
     </section>
   );
 };

@@ -42,7 +42,7 @@ export default defineConfig({
              "@andore-ui/list": resolve(__dirname, "../packages/List/src"),
              "@andore-ui/search": resolve(__dirname, "../packages/Search/src"),
              "@andore-ui/chip": resolve(__dirname, "../packages/Chip/src"),
-             "@material-tailwind-ui/bottom-sheet": resolve(__dirname, "../packages/BottomSheet/src"),
+             "@andore-ui/bottom-sheet": resolve(__dirname, "../packages/BottomSheet/src"),
         }
     }
 })

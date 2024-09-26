@@ -1,5 +1,5 @@
 {
-  "name": "@material-tailwind-ui/bottom-sheet",
+  "name": "@andore-ui/bottom-sheet",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   "module": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.4.0",

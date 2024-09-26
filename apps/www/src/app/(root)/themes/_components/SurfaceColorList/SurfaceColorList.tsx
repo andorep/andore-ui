@@ -31,7 +31,7 @@ const surfaceColors = [
 
 const SurfaceColorList = (props: SurfaceColorListProps) => {
   const { colors, onClick } = props;
-  const surface = colors.surface;
+  const surface = colors.surface ?? {};
   const handleClick =(name:string) => (event: React.MouseEvent<HTMLElement>, color: string) => {
     if (onClick) {
       onClick(event, name, color);
