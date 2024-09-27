@@ -15,7 +15,7 @@ import BlocksSection from "@/app/(root)/themes/_components/BlocksSection/BlocksS
 const Main = () => {
   return (
     <section className="flex flex-col justify-between mx-auto container">
-      <section className="title flex flex-col justify-between mb-3">
+      <section className="title flex flex-col justify-between mb-3 md:mb-9">
         <span className={"flex items-center gap-1 mb-3"}>
           <Typography
             variant={"headline"}

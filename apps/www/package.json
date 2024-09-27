@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@andore-ui/avatar": "workspace:*",
-    "@andore-ui/button": "workspace:*",
     "@andore-ui/bottom-sheet": "workspace:*",
+    "@andore-ui/button": "workspace:*",
     "@andore-ui/card": "workspace:*",
     "@andore-ui/chip": "workspace:*",
     "@andore-ui/divider": "workspace:*",
@@ -37,6 +37,7 @@
     "@types/mdx": "^2.0.13",
     "codehike": "^1.0.1",
     "highlight.js": "^11.10.0",
+    "lodash-es": "^4.17.21",
     "next": "14.2.10",
     "postcss-url": "^10.1.3",
     "prism-react-renderer": "^2.4.0",
@@ -53,6 +54,7 @@
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.16.5",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",

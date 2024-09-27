@@ -3,6 +3,8 @@
 import React from "react";
 import { ThemeType } from "@andore-ui/theme-plugin";
 import MobileCustomTheme from "@/app/(root)/themes/_components/MobileCustomTheme/MobileCustomTheme";
+import useWindowSize from "@/app/_hooks/useWindowSize";
+import DesktopCustomTheme from "@/app/(root)/themes/_components/DesktopCustomTheme/DesktopCustomTheme";
 
 interface CustomThemeProps {
   defaultTheme?: ThemeType;
@@ -11,9 +13,22 @@ interface CustomThemeProps {
 
 const CustomTheme = (props: CustomThemeProps) => {
   const { defaultTheme } = props;
+  const windowSize = useWindowSize();
+  const isSmallScreen = windowSize.width < 1200;
   return (
     <>
-       <MobileCustomTheme defaultTheme={defaultTheme}  blocksRef={props.blocksRef} />
+      {!isSmallScreen && (
+        <DesktopCustomTheme
+          defaultTheme={defaultTheme}
+          blocksRef={props.blocksRef}
+        />
+        )}
+      {isSmallScreen && (
+        <MobileCustomTheme
+          defaultTheme={defaultTheme}
+          blocksRef={props.blocksRef}
+        />
+      )}
     </>
   );
 };

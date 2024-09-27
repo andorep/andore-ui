@@ -15,7 +15,7 @@ const BlocksSection = (props: BlocksSectionProps) => {
       <section
         ref={ref}
         id={"Blocks"}
-        className="grid xl:max-2xl:grid-cols-3 2xl:grid-rows-4 2xl:grid-flow-col gap-4 mt-4"
+        className="grid xl:max-2xl:grid-cols-3 2xl:grid-rows-4 2xl:grid-flow-col gap-4 mt-4 custom-theme"
       >
         {children}
       </section>

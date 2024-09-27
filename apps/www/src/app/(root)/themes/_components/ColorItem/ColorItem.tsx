@@ -17,14 +17,14 @@ const ColorItem = (props: ColorItemProps) => {
     }
   }
   return (
-    <ListItem className={'w-max'}>
-      <Card className="w-10 h-10" onClick={handleClick}>
+    <ListItem className={'w-max rounded-full h-fit'}  onClick={handleClick}>
+      <Card className="w-5 h-5">
         <span
           className="w-full h-full block rounded-[inherit]"
           style={{ background: color }}
         />
       </Card>
-      <ListItemText supportingText={color}>
+      <ListItemText >
         <span className={"font-medium"}>{name}</span>
       </ListItemText>
     </ListItem>
