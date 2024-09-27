@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    @apply bg-white dark:bg-gray-950 transition-colors duration-200 ease-in-out;
+    @apply bg-surface-container-lowest dark:bg-surface-dark-container-lowest transition-colors duration-200 ease-in-out;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 
@@ -15,7 +18,7 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
-    @apply bg-white dark:bg-gray-950 transition-colors duration-200 ease-in-out;
+    @apply bg-surface-container-lowest dark:bg-surface-dark-container-lowest transition-colors duration-200 ease-in-out;
 
     background-image: linear-gradient(to bottom, theme(colors.white/90%), theme(colors.white/95%)), url('/dot8.png');
 
@@ -23,8 +26,8 @@ body {
 
 /* Dark mode styles */
 .dot-grid:is([data-mode="dark"] *) {
-    @apply bg-gray-950 dark:bg-gray-950 transition-colors duration-200 ease-in-out;
-    background-image: linear-gradient(to bottom, theme(colors.gray.950/90%), theme(colors.gray.950/95%)), url('/dot8-w.png');
+    @apply bg-surface-dark-container-lowest dark:bg-surface-dark-container-lowest transition-colors duration-200 ease-in-out;
+    background-image: linear-gradient(to bottom, theme(colors.surface.dark-container-lowest/90%), theme(colors.surface.dark-container-lowest/95%)), url('/dot8-w.png');
 }
 
 
@@ -38,6 +41,8 @@ body {
     @apply bg-primary dark:bg-primary-dark-DEFAULT transition-colors duration-200 ease-in-out;
     clip-path: path("M323.713 19.9735C345.875 43.5301 345.341 87.5499 361.361 123.48C377.115 159.409 409.69 187.249 417.967 219.609C425.977 251.97 409.957 289.089 376.314 297.893C342.404 306.697 290.871 287.186 248.15 300.987C205.429 315.025 171.786 362.376 139.211 370.705C106.37 378.795 74.3287 347.624 48.162 315.263C21.9953 282.665 1.70276 248.877 0.100715 215.088C-1.50133 181.062 16.1211 147.036 44.9579 128.714C73.7947 110.155 113.579 107.299 143.483 87.074C173.121 66.6107 192.613 28.7775 224.654 11.1695C256.961 -6.20045 301.552 -3.3451 323.713 19.9735Z");
     animation: 6s cubic-bezier(0.9, -0.03, 0.52, 0.96) -3s infinite morphBlob1;
+    transform: translateX(-140px);
+
 }
 
 @keyframes morphBlob1 {
@@ -61,12 +66,13 @@ body {
 .blob2 {
     z-index: -1;
     position: absolute;
-    width: 380px;
+    width: 500px;
     height: 500px;
     right: 1px;
     @apply bg-primary dark:bg-primary-dark-DEFAULT transition-colors duration-200 ease-in-out;
     clip-path: path("M348.911 0.399739C384.724 -4.37534 410.092 34.4222 435.46 74.4135C460.529 114.405 485.598 155.59 486.493 197.67C487.687 239.751 464.707 282.129 427.999 302.125C391.29 322.419 340.555 319.733 303.548 314.361C266.84 309.288 243.561 301.528 211.031 318.241C178.202 334.954 135.824 376.139 115.828 371.662C95.5338 367.185 97.6229 317.047 73.449 280.339C49.2752 243.63 -1.46 220.352 0.0322095 197.969C1.82286 175.585 55.5425 154.396 85.6852 127.835C116.126 101.572 122.692 70.2353 141.195 64.8633C159.699 59.4913 190.14 79.7854 228.341 66.3555C266.84 52.6272 312.8 4.87637 348.911 0.399739Z");
     animation: 6s cubic-bezier(0.9, -0.03, 0.52, 0.96) -3s infinite morphBlob2;
+    transform: translateX(200px);
 }
 
 @media (max-width: 500px) {

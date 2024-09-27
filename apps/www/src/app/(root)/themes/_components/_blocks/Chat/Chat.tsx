@@ -36,7 +36,7 @@ const Chat =  async () => {
             </div>
           </div>
           <div className={"Message flex flex-row justify-end"}>
-            <div className={"flex flex-col gap-2"}>
+            <div className={"flex flex-col gap-2 items-end"}>
               <Surface variant={"filled"} className={"*:p-2 w-fit"}>
                 <Typography variant={'body'} size={'sm'}>Hey, I&apos;m good. How about you?</Typography>
               </Surface>

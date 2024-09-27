@@ -4,9 +4,12 @@ import { Chip } from "@andore-ui/chip";
 import path from "node:path";
 import fs from "node:fs";
 
-
 const readCopyFile = async () => {
-  const filePath = path.join(process.cwd(), 'src/app/(root)/themes/_components/_blocks/Tags', "copy.txt");
+  const filePath = path.join(
+    process.cwd(),
+    "src/app/(root)/themes/_components/_blocks/Tags",
+    "copy.txt",
+  );
   const fileContent = fs.readFileSync(filePath, "utf8");
   return fileContent;
 };
@@ -14,9 +17,7 @@ const readCopyFile = async () => {
 const Tags = async () => {
   const copyText = await readCopyFile();
   return (
-    <Block
-      title={"People also searched for"}
-      copyText={copyText}>
+    <Block title={"People also searched for"} copyText={copyText}>
       <div className="columns-2 gap-1 mb-1">
         <Chip variant={"outlined"} className={"w-full"}>
           React
@@ -26,19 +27,38 @@ const Tags = async () => {
         </Chip>
       </div>
       <div className="columns-3 gap-1 mb-1">
-        <Chip variant={"outlined"} className={"w-full"}>
+        <Chip
+          variant={"outlined"}
+          className={
+            "w-[114px] leading-[31px] md:leading-[inherit] md:w-full *:overflow-ellipsis *:overflow-hidden *:whitespace-nowrap *:inline-block"
+          }
+        >
           Material Design
         </Chip>
-        <Chip variant={"outlined"} className={"w-full"} selected selectedIconDisabled>
+        <Chip
+          variant={"outlined"}
+          className={"w-full"}
+          selected
+          selectedIconDisabled
+        >
           andore/ui
         </Chip>
-        <Chip variant={"outlined"} className={"w-full"}>
+        <Chip
+          variant={"outlined"}
+          className={
+            "w-[114px] leading-[31px] md:leading-[inherit] md:w-full *:overflow-ellipsis *:overflow-hidden *:whitespace-nowrap *:inline-block"
+          }
+        >
           Material Tailwind
         </Chip>
       </div>
       <div className="columns-2 gap-1">
-        <Chip variant={"outlined"}  className={'w-full'}>Tailwind CSS</Chip>
-        <Chip variant={"outlined"}  className={'w-full'}>Next.js</Chip>
+        <Chip variant={"outlined"} className={"w-full"}>
+          Tailwind CSS
+        </Chip>
+        <Chip variant={"outlined"} className={"w-full"}>
+          Next.js
+        </Chip>
       </div>
     </Block>
   );

@@ -41,7 +41,7 @@ const Main = (props: MainProps) => {
           A collection of beautifully crafted react components
         </Typography>
       </section>
-      <section className="flex flex-col  justify-between mb-4">
+      <section className="flex flex-col  justify-between mb-4 relative">
         <div className="blob1"></div>
         <div className="blob2"></div>
         <ToggleButtonGroup density={-2}>

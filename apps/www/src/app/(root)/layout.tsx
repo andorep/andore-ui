@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import Header from "@/app/(root)/_components/Header/Header";
-import DotBackground from "@/app/(root)/_components/DotBackground/DotBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <DotBackground />
         <Header />
         <main>
           {children}

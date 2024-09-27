@@ -25,7 +25,7 @@ const themeTitles = {
 const themeDescriptions = {
   default: "The default theme",
   deku: "A theme to save the day",
-  miku: "A theme to learn about generals from the Sengoku Period",
+  miku: "A theme to learn about the Sengoku Period",
   rem: "A theme to slay magical beasts",
   zenitsu: "A theme to sleep while slaying demons",
 } as Record<string, string>;
@@ -40,6 +40,7 @@ const themeClasses = {
 
 const MobileCustomTheme = (props: MobileCustomThemeProps) => {
   const { blocksRef } = props;
+  const [theme, setTheme] = React.useState('default');
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleOpen = () => setIsOpen(true);
@@ -47,6 +48,7 @@ const MobileCustomTheme = (props: MobileCustomThemeProps) => {
 
   const handleThemeClick = (name: string) => () => {
     const themes = Object.values(themeClasses);
+    setTheme(name);
     blocksRef?.current?.classList.remove(...themes);
     if (name === "default") {
       handleClose();
@@ -57,7 +59,7 @@ const MobileCustomTheme = (props: MobileCustomThemeProps) => {
   };
 
   return (
-    <section className="flex flex-col w-full h-fit mb-3">
+    <section className={`flex flex-col w-full h-fit mb-3 ${themeClasses[theme]}`}>
       <span>
         <Button variant={"filled"} color={"primary"} onClick={handleOpen}>
           Customize
@@ -71,12 +73,17 @@ const MobileCustomTheme = (props: MobileCustomThemeProps) => {
           <List>
             {themes.map((theme) => (
               <ListItem key={theme} onClick={handleThemeClick(theme)}>
-                <Card className="w-10 h-10">
+                <Card className="w-10 h-10 min-w-10 min-h-10">
                   <span
                     className={`w-full h-full block rounded-[inherit] bg-primary ${themeClasses[theme]}`}
                   />
                 </Card>
-                <ListItemText supportingText={themeDescriptions[theme]}>
+                <ListItemText
+                  supportingText={themeDescriptions[theme]}
+                  className={
+                    "flex-grow overflow-hidden overflow-ellipsis whitespace-nowrap *:flex-grow *:overflow-hidden *:overflow-ellipsis *:whitespace-nowrap"
+                  }
+                >
                   {themeTitles[theme]}
                 </ListItemText>
               </ListItem>
