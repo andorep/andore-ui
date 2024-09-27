@@ -1,6 +1,6 @@
 {
   "name": "andore-ui",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "website:build": "pnpm --filter ./apps/www build",
     "website:export": "pnpm --filter ./apps/www export",
     "packages:build": "pnpm --filter ./packages/* build",
+    "packages:publish": "pnpm --filter ./packages/* publish --access public",
     "storybook:build": "pnpm --filter @andore-ui/stories run build",
     "create:package:radix": "node scripts/add-radix-package.js",
     "create:component:radix": "node scripts/add-radix-component.js",
