@@ -1,5 +1,6 @@
 {
   "name": "@andore-ui/button",
+  "description": "A collection of beautifully crafted react components using Material Design 3 specifications and TailwindCSS",
   "private": false,
   "version": "0.0.2",
   "license": "MIT",
