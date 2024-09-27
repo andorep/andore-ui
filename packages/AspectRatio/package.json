@@ -1,7 +1,10 @@
 {
   "name": "@andore-ui/aspect-ratio",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "license": "MIT",
+  "repository": "https://github.com/andreperegrina/andore-ui",
+  "homepage": "andreperegrina.github.io/andore-ui",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
