@@ -79,16 +79,17 @@ const Header = () => {
         <div className="right-side flex flex-row items-center gap-3">
           <Search placeholder={"Search documentation..."} size={"sm"} />
           <div className="right-side flex flex-row items-center">
-            <IconButton>
+            <IconButton aria-label={'Github Page'}>
               <a
                 href="https://github.com/andreperegrina/andore-ui"
                 target="_blank"
                 className={"text-surface-text dark:text-surface-dark-text"}
+                aria-label={'Visit Github Page for more information about the project'}
               >
                 <GithubIcon className={"w-6 h-6"} />
               </a>
             </IconButton>
-            <IconButton onClick={toggleTheme}>
+            <IconButton onClick={toggleTheme} aria-label={'Toggle Theme'}>
               {theme === "light" && <LightModeIcon className={"w-6 h-6"} />}
               {theme === "dark" && <DarkModeIcon className={"w-6 h-6"} />}
             </IconButton>

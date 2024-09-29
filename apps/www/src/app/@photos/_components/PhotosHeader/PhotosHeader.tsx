@@ -36,7 +36,7 @@ const PhotosHeader = () => {
                   <SettingsIcon className={"h-6 w-6"}/>
               </IconButton>
               <Avatar>
-                  <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite"/>
+                  <AvatarImage src={"./3d_avatar_13.png"} alt="Image of Colm Tuite"/>
               </Avatar>
           </div>
       </div>

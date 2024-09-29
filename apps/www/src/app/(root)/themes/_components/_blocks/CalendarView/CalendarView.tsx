@@ -29,10 +29,10 @@ const CalendarView = async () => {
           </Typography>
           <div className={"flex flex-row gap-1 mt-1"}>
             <Avatar className={"w-6 h-6"}>
-              <AvatarImage src={"./3d_avatar_14.png"} alt="Colm Tuite" />
+              <AvatarImage src={"./3d_avatar_14.png"} alt="Image of Colm Tuite" />
             </Avatar>
             <Avatar className={"w-6 h-6"}>
-              <AvatarImage src={"./3d_avatar_30.png"} alt="Colm Tuite" />
+              <AvatarImage src={"./3d_avatar_30.png"} alt="Image of Colm Tuite" />
             </Avatar>
           </div>
         </Surface>
@@ -59,13 +59,13 @@ const CalendarView = async () => {
           </Typography>
           <div className={"flex flex-row gap-1 mt-1"}>
             <Avatar className={"w-6 h-6"}>
-              <AvatarImage src={"./3d_avatar_6.png"} alt="Colm Tuite" />
+              <AvatarImage src={"./3d_avatar_6.png"} alt="Image of Colm Tuite" />
             </Avatar>
             <Avatar className={"w-6 h-6"}>
-              <AvatarImage src={"./3d_avatar_8.png"} alt="Colm Tuite" />
+              <AvatarImage src={"./3d_avatar_8.png"} alt="Image of Colm Tuite" />
             </Avatar>
             <Avatar className={"w-6 h-6"}>
-              <AvatarImage src={"./3d_avatar_10.png"} alt="Colm Tuite" />
+              <AvatarImage src={"./3d_avatar_10.png"} alt="Image of Colm Tuite" />
             </Avatar>
           </div>
         </Surface>

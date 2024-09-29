@@ -25,7 +25,7 @@ const Settings = async () => {
           <ListItemText supportingText={"Enabled two-factor authentication"}>
             <span className={"font-medium"}>2FA</span>
           </ListItemText>
-          <Switch>
+          <Switch aria-label={"2FA switch"}>
             <SwitchThumb />
           </Switch>
         </ListItem>
@@ -33,7 +33,7 @@ const Settings = async () => {
           <ListItemText supportingText={"Receive notifications"}>
             <span className={"font-medium"}>Notifications</span>
           </ListItemText>
-          <Switch>
+          <Switch aria-label={"Notifications switch"}>
             <SwitchThumb />
           </Switch>
         </ListItem>

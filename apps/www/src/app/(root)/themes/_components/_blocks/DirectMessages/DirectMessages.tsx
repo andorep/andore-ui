@@ -27,34 +27,34 @@ const DirectMessages = async () => {
       <List className={"-ml-2"}>
         <DirectMessageItem>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_14.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_14.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>Colm Tuite</ListItemText>
           <span className="bg-error dark:bg-error-dark text-white text-xs font-semibold w-2 h-2 rounded-full ml-auto" />
         </DirectMessageItem>
         <DirectMessageItem>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_30.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_30.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>Liam McNally</ListItemText>
           <span className="bg-error dark:bg-error-dark text-white text-xs font-semibold w-2 h-2 rounded-full ml-auto" />
         </DirectMessageItem>
         <DirectMessageItem>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_6.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_6.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>John Doe</ListItemText>
           <span className="bg-error dark:bg-error-dark text-white text-xs font-semibold w-2 h-2 rounded-full ml-auto" />
         </DirectMessageItem>
         <DirectMessageItem>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_10.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_10.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>Jane Doe</ListItemText>
         </DirectMessageItem>
         <DirectMessageItem>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_13.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>John Smith</ListItemText>
         </DirectMessageItem>

@@ -26,7 +26,7 @@ const LinearProgress = React.forwardRef<HTMLDivElement, LinearProgressProps>((pr
             className={classes}
         >
             {children}
-            {!children && <LinearProgressIndicator style={{transform: `translateX(-${100 - progress}%)`}}/>}
+            {!children && <LinearProgressIndicator style={{transform: `translateX(-${100 - progress}%)`}} aria-label={props['aria-label']} />}
         </RadixProgress>
     );
 });

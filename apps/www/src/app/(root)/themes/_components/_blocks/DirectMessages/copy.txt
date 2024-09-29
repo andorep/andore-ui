@@ -9,31 +9,31 @@ const DirectMessages = () => {
       <List>
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_14.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_14.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>Colm Tuite</ListItemText>
         </ListItem>
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_30.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_30.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>Liam McNally</ListItemText>
         </ListItem>
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
           <Avatar className={"w-6 h-6"}>
-            <AvatarImage src={"./3d_avatar_6.png"} alt="Colm Tuite" />
+            <AvatarImage src={"./3d_avatar_6.png"} alt="Image of Colm Tuite" />
           </Avatar>
           <ListItemText>John Doe</ListItemText>
         </ListItem>
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
             <Avatar className={"w-6 h-6"}>
-                <AvatarImage src={"./3d_avatar_10.png"} alt="Colm Tuite" />
+                <AvatarImage src={"./3d_avatar_10.png"} alt="Image of Colm Tuite" />
             </Avatar>
             <ListItemText>Jane Doe</ListItemText>
         </ListItem>
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
             <Avatar className={"w-6 h-6"}>
-                <AvatarImage src={"./3d_avatar_13.png"} alt="Colm Tuite" />
+                <AvatarImage src={"./3d_avatar_13.png"} alt="Image of Colm Tuite" />
             </Avatar>
             <ListItemText>John Smith</ListItemText>
         </ListItem>

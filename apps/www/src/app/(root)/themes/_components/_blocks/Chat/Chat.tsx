@@ -64,7 +64,7 @@ const Chat =  async () => {
         </div>
         <div className={"Input flex flex-row"}>
           <Search placeholder="Type a message" size={"sm"} />
-          <IconButton>
+          <IconButton aria-label="send">
             <SendIcon />
           </IconButton>
         </div>

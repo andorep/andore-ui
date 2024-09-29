@@ -37,7 +37,7 @@ const MediaPlayer = async () => {
           <CardMedia
             className="!rounded-full w-60 h-60 p-0 "
             alt="Healthy food"
-            src="https://images.unsplash.com/photo-1563204424-2b6268a06a6c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1563204424-2b6268a06a6c?q=80&w=240&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
         <div className={"flex flex-col justify-center flex-1 sm:flex-auto"}>
@@ -56,7 +56,7 @@ const MediaPlayer = async () => {
             className={"flex flex-col  justify-center gap-3 my-5"}
             disabledGutters
           >
-            <LinearProgress size={"sm"} value={30} />
+            <LinearProgress size={"sm"} value={30}  aria-label={"Music progress"} />
             <div className={"flex flex-row justify-between"}>
               <Typography variant={"body"} size={"sm"}>
                 1:30
@@ -70,13 +70,13 @@ const MediaPlayer = async () => {
             className={"flex flex-row items-center justify-center gap-3 mb-5"}
             disabledGutters
           >
-            <IconButton color={"primary"} variant={"filled"}>
+            <IconButton color={"primary"} variant={"filled"} aria-label={"Previous"}>
               <SkipPreviousIcon className={"w-10 h-10"} />
             </IconButton>
-            <IconButton color={"primary"} variant={"filled"}>
+            <IconButton color={"primary"} variant={"filled"} aria-label={"Play"}>
               <PlayIcon className={"w-16 h-16"} />
             </IconButton>
-            <IconButton color={"primary"} variant={"filled"}>
+            <IconButton color={"primary"} variant={"filled"} aria-label={"Next"}>
               <SkipNextIcon className={"w-10 h-10"} />
             </IconButton>
           </CardContent>

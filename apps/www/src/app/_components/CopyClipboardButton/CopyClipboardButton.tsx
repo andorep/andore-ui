@@ -33,7 +33,7 @@ const CopyClipboardButton = (props: CopyClipboardButtonProps) => {
   };
 
   return (
-    <IconButton color={"secondary"} onClick={handleCopy}>
+    <IconButton color={"secondary"} onClick={handleCopy} aria-label={"Copy code"}>
       <CopyAllIcon className={"w-5 h-5"} />
     </IconButton>
   );

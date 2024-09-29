@@ -16,7 +16,7 @@ export const Default: Story = {
             <Avatar>
                 <AvatarImage
                     src={AvatarSrc}
-                    alt="Colm Tuite"
+                    alt="Image of Colm Tuite"
                 />
             </Avatar>
         </>

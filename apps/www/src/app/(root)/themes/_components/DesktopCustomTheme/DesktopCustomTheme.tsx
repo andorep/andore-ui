@@ -14,7 +14,8 @@ import {
 import { IconButton } from "@andore-ui/icon-button";
 import ResetWhiteBalanceIcon from "@/app/_components/icons/ResetWhiteBalanceIcon";
 import { clone } from "@/app/_utils/object.util";
-import UploadFileIcon from "@/app/_components/icons/UploadFileIcon";
+import UploadThemeJSON from "@/app/(root)/themes/_components/UploadThemeJSON/UploadThemeJSON";
+import { transformColorsToCssVariables } from "@andore-ui/theme-plugin/src/utils/colors.utils";
 
 interface DesktopCustomThemeProps {
   defaultTheme?: ThemeType;
@@ -200,24 +201,54 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
     styleSheetRef.current!.innerHTML = themeCSS;
   };
 
+  const handleThemeLoaded = (themeColors: ThemeType) => {
+    const cssVariablesJSON = transformColorsToCssVariables(themeColors.colors);
+
+    // convert JSON to CSS text
+    let cssVariables = ".custom-theme {\n";
+    for (const [key, value] of Object.entries(cssVariablesJSON)) {
+      cssVariables += `  ${key}: ${value};\n`;
+    }
+    cssVariables += "}\n";
+
+    styleSheetRef.current!.innerHTML = cssVariables;
+
+    setTheme({
+      ...theme,
+      colors: {
+        ...theme?.colors,
+        ...themeColors.colors,
+      },
+    });
+  };
+
   return (
     <section className="hidden md:flex flex-col w-full h-fit p-4 rounded bg-surface-container-lowest dark:bg-surface-dark-container-lowest border-outline-variant border-solid border custom-theme">
-      <div className={"flex flex-row items-center gap-4"}>
-        <Typography variant={"title"} size={"sm"} className={"mb-4"}>
-          Theme
-        </Typography>
-        <IconButton onClick={handleResetTheme} className={"-ml-2 -mt-4"}>
-          <UploadFileIcon />
-        </IconButton>
-        {hasThemeChanged && (
-          <IconButton
-            onClick={handleResetTheme}
-            className={"-ml-4 -mt-4"}
-            color={"secondary"}
-          >
-            <ResetWhiteBalanceIcon />
-          </IconButton>
-        )}
+      <div className={"flex flex-row justify-between"}>
+        <div className={"flex flex-row items-center gap-4"}>
+          <Typography variant={"title"} size={"sm"} className={"mb-4"}>
+            Theme
+          </Typography>
+          <UploadThemeJSON onLoaded={handleThemeLoaded} />
+          {hasThemeChanged && (
+            <IconButton
+              onClick={handleResetTheme}
+              className={"-ml-4 -mt-4"}
+              color={"secondary"}
+            >
+              <ResetWhiteBalanceIcon />
+            </IconButton>
+          )}
+        </div>
+        <a
+          target={"_blank"}
+          aria-label={"Material Theme Builder"}
+          href={"https://material-foundation.github.io/material-theme-builder/"}
+        >
+          <Typography variant={"body"} size={"sm"} className={"underline"}>
+            Material Theme Builder
+          </Typography>
+        </a>
       </div>
       <div className={"flex flex-row  overflow-auto gap-4"}>
         <PrimaryColorList colors={colors} onClick={handleClick} />
