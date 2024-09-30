@@ -31,6 +31,7 @@
     "@andore-ui/theme-plugin": "workspace:*",
     "@andore-ui/toggle-button": "workspace:*",
     "@andore-ui/typography": "workspace:*",
+    "@andore-ui/tooltip": "workspace:*",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.11",

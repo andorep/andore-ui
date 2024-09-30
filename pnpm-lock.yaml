@@ -67,6 +67,9 @@ importers:
       '@andore-ui/toggle-button':
         specifier: workspace:*
         version: link:../../packages/ToggleButton
+      '@andore-ui/tooltip':
+        specifier: workspace:*
+        version: link:../../packages/Tooltip
       '@andore-ui/typography':
         specifier: workspace:*
         version: link:../../packages/Typography

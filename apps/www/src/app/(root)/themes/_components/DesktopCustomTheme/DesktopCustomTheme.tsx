@@ -16,6 +16,8 @@ import ResetWhiteBalanceIcon from "@/app/_components/icons/ResetWhiteBalanceIcon
 import { clone } from "@/app/_utils/object.util";
 import UploadThemeJSON from "@/app/(root)/themes/_components/UploadThemeJSON/UploadThemeJSON";
 import { transformColorsToCssVariables } from "@andore-ui/theme-plugin/src/utils/colors.utils";
+import DownloadTheme from "@/app/(root)/themes/_components/DownloadTheme/DownloadTheme";
+import { Tooltip } from "@andore-ui/tooltip";
 
 interface DesktopCustomThemeProps {
   defaultTheme?: ThemeType;
@@ -230,14 +232,23 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
             Theme
           </Typography>
           <UploadThemeJSON onLoaded={handleThemeLoaded} />
+          <DownloadTheme theme={theme} />
           {hasThemeChanged && (
-            <IconButton
-              onClick={handleResetTheme}
-              className={"-ml-4 -mt-4"}
-              color={"secondary"}
+            <Tooltip
+              title="Reset theme"
+              placement={"top"}
+              offset={15}
+              delay={200}
+              delayClose={0}
             >
-              <ResetWhiteBalanceIcon />
-            </IconButton>
+              <IconButton
+                onClick={handleResetTheme}
+                className={"-ml-4 -mt-4"}
+                color={"secondary"}
+              >
+                <ResetWhiteBalanceIcon />
+              </IconButton>
+            </Tooltip>
           )}
         </div>
         <a

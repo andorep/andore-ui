@@ -6,6 +6,7 @@ import {
   ThemeType,
 } from "@andore-ui/theme-plugin";
 import { isValidMaterialDesignThemeBuilderJSON } from "@andore-ui/theme-plugin/src";
+import {Tooltip} from "@andore-ui/tooltip";
 
 interface UploadThemeJsonProps {
   onLoaded: (theme: ThemeType) => void;
@@ -24,8 +25,8 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
         try {
           if (event.target?.result) {
             const content = JSON.parse(event.target.result as string);
-            if(!isValidMaterialDesignThemeBuilderJSON(content)) {
-                return;
+            if (!isValidMaterialDesignThemeBuilderJSON(content)) {
+              return;
             }
             const theme = generateThemeFromMaterialThemeBuilder(content);
             onLoaded({
@@ -33,7 +34,7 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
             });
           }
         } catch (error) {
-            alert("Invalid JSON file.");
+          alert("Invalid JSON file.");
         }
       };
       reader.readAsText(file);
@@ -55,9 +56,15 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
         onChange={handleFileChange}
         className={"hidden"}
       />
-      <IconButton onClick={handleOpenFile} className={"-ml-2 -mt-4"} aria-label={"Upload JSON file"}>
-        <UploadFileIcon />
-      </IconButton>
+      <Tooltip title="Upload custom theme" placement={'top'} offset={15} delay={200} delayClose={0}>
+        <IconButton
+          onClick={handleOpenFile}
+          className={"-ml-2 -mt-4"}
+          aria-label={"Upload JSON file"}
+        >
+          <UploadFileIcon />
+        </IconButton>
+      </Tooltip>
     </>
   );
 };

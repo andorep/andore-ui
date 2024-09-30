@@ -3,6 +3,8 @@
 import React from "react";
 import { IconButton } from "@andore-ui/icon-button/src";
 import CopyAllIcon from "@/app/_components/icons/CopyAllIcon";
+import { copyToClipboard } from "@/app/_utils/html.uitil";
+import {Tooltip} from "@andore-ui/tooltip";
 
 interface CopyClipboardButtonProps {
   text: string;
@@ -10,32 +12,36 @@ interface CopyClipboardButtonProps {
 
 const CopyClipboardButton = (props: CopyClipboardButtonProps) => {
   const { text } = props;
+  const [temporaryTooltipText, setTemporaryTooltipText] = React.useState<string | undefined>(undefined);
   const handleCopy = async () => {
-    if (navigator.clipboard) {
-      await navigator.clipboard.writeText(text).catch((err) => {
-        console.error("Unable to copy", err);
-      });
-    } else {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      textArea.style.position = "fixed"; // Prevent scrolling to bottom of page in Microsoft Edge.
-      textArea.style.opacity = "0"; // Make it invisible.
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      try {
-        document.execCommand("copy");
-      } catch (err) {
-        console.error("Unable to copy", err);
-      }
-      document.body.removeChild(textArea);
+    try {
+      await copyToClipboard(text);
+        setTemporaryTooltipText("Copied into clipboard 😉");
+    } catch (error) {
+      console.error("Failed to copy to clipboard");
     }
   };
 
+  const handleTooltipClose = () => {
+    setTemporaryTooltipText(undefined);
+  };
   return (
-    <IconButton color={"secondary"} onClick={handleCopy} aria-label={"Copy code"}>
-      <CopyAllIcon className={"w-5 h-5"} />
-    </IconButton>
+    <Tooltip
+      title={temporaryTooltipText || "Copy code"}
+      placement={"top"}
+      offset={15}
+      delay={200}
+      delayClose={0}
+      onOpenChange={handleTooltipClose}
+    >
+      <IconButton
+        color={"secondary"}
+        onClick={handleCopy}
+        aria-label={"Copy code"}
+      >
+        <CopyAllIcon className={"w-5 h-5"} />
+      </IconButton>
+    </Tooltip>
   );
 };
 
