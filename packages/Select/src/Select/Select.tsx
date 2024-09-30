@@ -37,7 +37,8 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>((props, forwardedRe
         ...rest
     } = props;
 
-    const selectId = id || useId();
+    const autoId = useId();
+    const selectId = id || autoId;
     const labeledId = `${selectId}-label`;
     const supportTextId = `${selectId}-support-text`;
 

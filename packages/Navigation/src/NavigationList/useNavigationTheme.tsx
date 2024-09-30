@@ -13,4 +13,5 @@ export const NavigationThemeContext = React.createContext<NavigationContextValue
 
 const useNavigationTheme = () => React.useContext(NavigationThemeContext);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default useNavigationTheme;

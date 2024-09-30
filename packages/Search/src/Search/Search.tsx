@@ -40,7 +40,8 @@ const Search = React.forwardRef<HTMLDivElement, SearchProps>(
       ...rest
     } = props;
 
-    const inputId = id || useId();
+    const autoId = useId();
+    const inputId = id || autoId;
     const labeledId = `${inputId}-label`;
     const supportTextId = `${inputId}-support-text`;
 

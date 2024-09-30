@@ -5,11 +5,11 @@ import {
   mapColorsToCssVariables,
   transformColorsToCssVariables,
 } from "../utils/colors.utils";
-import {Theme, Colors } from "../theme/theme.types";
+import {ThemeType, ThemeColors } from "../types";
 
 interface PluginOptions {
   enabledCssVariables?: boolean;
-  theme?:Theme;
+  theme?:ThemeType;
 }
 
 const plugin = (options: PluginOptions = {}) => {
@@ -25,7 +25,7 @@ const plugin = (options: PluginOptions = {}) => {
   }
   let themeColors = colors;
   if (enabledCssVariables) {
-    themeColors = mapColorsToCssVariables(colors) as Colors;
+    themeColors = mapColorsToCssVariables(colors) as ThemeColors;
   }
 
   return tailwindPlugin(

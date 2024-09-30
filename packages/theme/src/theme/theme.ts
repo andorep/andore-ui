@@ -1,4 +1,4 @@
-import {Theme} from "./theme.types";
+import {ThemeType} from "../types";
 import {motion} from "./motion";
 import colors from "tailwindcss/colors";
 
@@ -20,7 +20,7 @@ import colors from "tailwindcss/colors";
  */
 
 /** @type {import('tailwindcss').Config} */
-export const theme: Theme = {
+export const theme: ThemeType = {
     spacing: {
         '4.5': '1.1rem',
     },

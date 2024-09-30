@@ -58,6 +58,8 @@ export const Group: Story = {
 };
 
 export const GroupDensity: Story = {
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
@@ -81,10 +83,12 @@ export const GroupDensity: Story = {
         )
     },
     args: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: -1
     },
     argTypes: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: densityControl
     }
@@ -112,6 +116,7 @@ const DirectionsCarIcon = () => (
 );
 
 export const WithStartIcon: Story = {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
@@ -136,10 +141,12 @@ export const WithStartIcon: Story = {
         )
     },
     args: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: 0
     },
     argTypes: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: densityControl
     }
@@ -154,6 +161,7 @@ const HeartIcon = () => (
 );
 
 export const CustomCheckedIcon: Story = {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({density}) => {
         const [arraySelected, setArraySelected] = React.useState([false, false, false]);
@@ -177,10 +185,12 @@ export const CustomCheckedIcon: Story = {
         )
     },
     args: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: 0
     },
     argTypes: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         density: densityControl
     }

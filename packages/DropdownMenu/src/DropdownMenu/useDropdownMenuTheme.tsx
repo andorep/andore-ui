@@ -11,4 +11,5 @@ export const DropdownMenuThemeContext = React.createContext<DropdownMenuContextV
 
 const useDropdownMenuTheme = () => React.useContext(DropdownMenuThemeContext);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default useDropdownMenuTheme;

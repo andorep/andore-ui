@@ -1,6 +1,6 @@
 import React from "react";
 import { List } from "@andore-ui/list";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType } from "@andore-ui/theme";
 import ColorItem from "@/app/(root)/themes/_components/ColorItem/ColorItem";
 import { Typography } from "@andore-ui/typography";
 

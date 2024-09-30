@@ -12,4 +12,5 @@ export const AccordionThemeContext = React.createContext<AccordionContextValue>(
 
 const useAccordionTheme = () => React.useContext(AccordionThemeContext);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default useAccordionTheme;

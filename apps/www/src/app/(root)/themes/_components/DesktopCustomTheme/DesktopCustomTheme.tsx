@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType, transformColorsToCssVariables } from "@andore-ui/theme";
 import PrimaryColorList from "@/app/(root)/themes/_components/PrimaryColorList/PrimaryColorList";
 import SurfaceColorList from "@/app/(root)/themes/_components/SurfaceColorList/SurfaceColorList";
 import OutlinedColorList from "@/app/(root)/themes/_components/OutlinedColorList/OutlinedColorList";
@@ -15,7 +15,6 @@ import { IconButton } from "@andore-ui/icon-button";
 import ResetWhiteBalanceIcon from "@/app/_components/icons/ResetWhiteBalanceIcon";
 import { clone } from "@/app/_utils/object.util";
 import UploadThemeJSON from "@/app/(root)/themes/_components/UploadThemeJSON/UploadThemeJSON";
-import { transformColorsToCssVariables } from "@andore-ui/theme-plugin/src/utils/colors.utils";
 import DownloadTheme from "@/app/(root)/themes/_components/DownloadTheme/DownloadTheme";
 import { Tooltip } from "@andore-ui/tooltip";
 

@@ -1,6 +1,6 @@
 import colors from "tailwindcss/colors";
 
-export interface Color {
+export interface ThemeCoreColor {
   DEFAULT: string;
   container: string;
   text: string;
@@ -12,12 +12,12 @@ export interface Color {
 }
 
 export interface BaseColors {
-  primary?: Color;
-  secondary?: Color;
-  info?: Color;
-  success?: Color;
-  warning?: Color;
-  error?: Color;
+  primary?: ThemeCoreColor;
+  secondary?: ThemeCoreColor;
+  info?: ThemeCoreColor;
+  success?: ThemeCoreColor;
+  warning?: ThemeCoreColor;
+  error?: ThemeCoreColor;
   outline?: {
     DEFAULT: string;
     variant: string;
@@ -62,12 +62,12 @@ export interface BaseColors {
   black?: string;
 }
 
-export interface Colors extends BaseColors {
+export interface ThemeColors extends BaseColors {
   [key: string]: unknown;
 }
 
 export interface BaseTheme {
-  colors: Colors;
+  colors: ThemeColors;
   borderRadius?: Record<string, string>;
   boxShadow?: Record<string, string>;
   transitionTimingFunction?: Record<string, string>;
@@ -80,7 +80,7 @@ export interface BaseTheme {
   transitionProperty?: Record<string, string>;
 }
 
-export interface Theme extends BaseTheme {}
+export interface ThemeType extends BaseTheme {}
 
 // create type from tailwind colors
 export type TailwindColor = keyof typeof colors;

@@ -58,6 +58,7 @@ const FolderIcon = () => (
 );
 
 export const Default: Story = {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({condensed, variant, iconOnly}) => {
         const [active, setActive] = React.useState(0);

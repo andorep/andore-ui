@@ -8,7 +8,7 @@ export default defineConfig({
     resolve: {
         alias: {
             "@andore-ui/accordion": resolve(__dirname, "../packages/Accordion/src"),
-            "@andore-ui/theme-plugin": resolve(__dirname, "../packages/plugin/src"),
+            "@andore-ui/theme": resolve(__dirname, "../packages/plugin/src"),
             "@andore-ui/surface": resolve(__dirname, "../packages/Surface/src"),
             "@andore-ui/alert-dialog": resolve(__dirname, "../packages/AlertDialog/src"),
             "@andore-ui/aspect-ratio": resolve(__dirname, "../packages/AspectRatio/src"),

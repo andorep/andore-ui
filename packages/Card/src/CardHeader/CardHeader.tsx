@@ -10,7 +10,6 @@ import {
 
 const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>((props, forwardedRef) => {
     const {
-        children,
         className,
         title,
         subtitle,

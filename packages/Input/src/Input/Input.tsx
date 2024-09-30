@@ -4,7 +4,7 @@ import { InputProps } from './Input.types';
 import { InputBaseClassName } from './Input.classes';
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>((props, forwardedRef) => {
-    const { children, className, ...rest } = props;
+    const { className, ...rest } = props;
     const classes = twMerge(InputBaseClassName, className);
     return (
       <input {...rest} ref={forwardedRef} className={classes} />

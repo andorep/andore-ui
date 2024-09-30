@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { theme } from "@andore-ui/theme-plugin";
+import { theme } from "@andore-ui/theme";
 import CustomTheme from "@/app/(root)/themes/_components/CustomTheme/CustomTheme";
 
 interface BlocksSectionProps extends React.HTMLAttributes<HTMLDivElement> {}

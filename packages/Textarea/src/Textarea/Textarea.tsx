@@ -33,7 +33,8 @@ const Textarea = React.forwardRef<HTMLDivElement, TextareaProps>((props, forward
         ...rest
     } = props;
 
-    const inputId = id || useId();
+    const autoId = useId();
+    const inputId = id || autoId;
     const labeledId = `${inputId}-label`;
     const supportTextId = `${inputId}-support-text`;
 
@@ -71,6 +72,7 @@ const Textarea = React.forwardRef<HTMLDivElement, TextareaProps>((props, forward
                         aria-labelledby={`${labeledId} ${supportTextId}`}
                         className={inputClasses}
                         placeholder={placeholderValue}
+                        onChange={onChange}
                         {...rest}
                     />
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType } from "@andore-ui/theme";
 import { IconButton } from "@andore-ui/icon-button";
 import DownloadIcon from "@/app/_components/icons/DownloadIcon";
 import { copyToClipboard } from "@/app/_utils/html.uitil";

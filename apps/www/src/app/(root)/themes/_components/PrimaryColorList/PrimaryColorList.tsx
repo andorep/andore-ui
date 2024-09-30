@@ -1,9 +1,8 @@
 import React from "react";
 import { List } from "@andore-ui/list";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType, ThemeCoreColor } from "@andore-ui/theme";
 import ColorItem from "@/app/(root)/themes/_components/ColorItem/ColorItem";
 import { Typography } from "@andore-ui/typography";
-import { PrimaryColor } from "@andore-ui/theme-plugin/src";
 
 interface PrimaryColorListProps {
   colors: ThemeType["colors"];
@@ -25,15 +24,16 @@ const primaryColors = [
 
 const PrimaryColorList = (props: PrimaryColorListProps) => {
   const { colors, onClick } = props;
-  const handleClick =(name:string) => (event: React.MouseEvent<HTMLElement>, color: string) => {
-    if (onClick) {
-      onClick(event, name, color);
-    }
-  }
+  const handleClick =
+    (name: string) => (event: React.MouseEvent<HTMLElement>, color: string) => {
+      if (onClick) {
+        onClick(event, name, color);
+      }
+    };
   return primaryColors.map((color) => {
-    const colorValue = colors[color] as PrimaryColor;
+    const colorValue = colors[color] as ThemeCoreColor;
     return (
-      <div className={'w-fit h-fit flex flex-col gap-2'} key={color}>
+      <div className={"w-fit h-fit flex flex-col gap-2"} key={color}>
         <Typography variant={"body"} size={"sm"} className={"font-semibold"}>
           {color.charAt(0).toUpperCase() + color.slice(1)}
         </Typography>

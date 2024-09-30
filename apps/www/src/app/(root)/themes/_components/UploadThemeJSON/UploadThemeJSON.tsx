@@ -4,8 +4,8 @@ import { IconButton } from "@andore-ui/icon-button";
 import {
   generateThemeFromMaterialThemeBuilder,
   ThemeType,
-} from "@andore-ui/theme-plugin";
-import { isValidMaterialDesignThemeBuilderJSON } from "@andore-ui/theme-plugin/src";
+  isValidMaterialDesignThemeBuilderJSON
+} from "@andore-ui/theme";
 import {Tooltip} from "@andore-ui/tooltip";
 
 interface UploadThemeJsonProps {

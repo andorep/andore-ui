@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType } from "@andore-ui/theme";
 import MobileCustomTheme from "@/app/(root)/themes/_components/MobileCustomTheme/MobileCustomTheme";
 import useWindowSize from "@/app/_hooks/useWindowSize";
 import DesktopCustomTheme from "@/app/(root)/themes/_components/DesktopCustomTheme/DesktopCustomTheme";

@@ -1,5 +1,5 @@
-import {Colors} from "../theme/theme.types";
-import {MaterialDesignTheme, MaterialDesignThemeBuilderJSON} from "../types/material-design";
+import {ThemeColors} from "../types";
+import {MaterialDesignTheme, MaterialDesignThemeBuilderJSON} from "../types";
 
 
 export const generateThemeFromMaterialThemeBuilder = (
@@ -76,7 +76,7 @@ export const generateThemeFromMaterialThemeBuilder = (
             "dark-container": dark.errorContainer,
             "dark-container-text": dark.onErrorContainer,
         },
-    } as Colors;
+    } as ThemeColors;
 };
 
 const requiredColors: (keyof MaterialDesignTheme)[]  = [

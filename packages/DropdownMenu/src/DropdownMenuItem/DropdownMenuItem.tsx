@@ -7,7 +7,7 @@ import {
 } from './DropdownMenuItem.classes';
 
 const DropdownMenuItem = React.forwardRef<HTMLDivElement, DropdownMenuItemProps>((props, forwardedRef) => {
-    const {className, children, trailing, ...rest} = props;
+    const {className, children, ...rest} = props;
     const classes = twMerge(DropdownMenuItemBaseClassName, className);
     return (
         <RadixDropdownMenuItem

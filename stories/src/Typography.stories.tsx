@@ -68,6 +68,8 @@ export const Default: Story = {
 };
 
 export const Variant: Story = {
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({variant, size}) => (
         <div style={{display: 'grid', gap: '0.5rem'}}>
@@ -87,6 +89,8 @@ export const Variant: Story = {
 };
 
 export const Color: Story = {
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({color,size, variant}) => (
         <div style={{display: 'grid', gap: '0.5rem'}}>

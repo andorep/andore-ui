@@ -1,5 +1,7 @@
 import type {Meta, StoryObj} from "@storybook/react";
 import {Avatar, AvatarImage, AvatarFallback} from "@andore-ui/avatar";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import AvatarSrc from '../assets/3d_avatar_13.png';
 

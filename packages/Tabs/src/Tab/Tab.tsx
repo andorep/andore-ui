@@ -25,6 +25,8 @@ const Tab = React.forwardRef<HTMLButtonElement, TabProps>((props, forwardedRef) 
     const iconClasses = twMerge(TabIconClassName);
 
     const badgeDotClasses = badge == 1 ? TabBadgeDotClassName : "";
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const badgeSingleDigitClasses = badge < 10 ? TabBadgeSingleDigitClassName : "";
     const badgeClasses = twMerge(TabBadgeClassName, badgeSingleDigitClasses, badgeDotClasses);
@@ -36,6 +38,8 @@ const Tab = React.forwardRef<HTMLButtonElement, TabProps>((props, forwardedRef) 
     const isBadgeEmpty = badge === 0 || badge == null;
 
     let badgeText = badge?.toString() || '';
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     if (badge > 999) {
         badgeText = '999+';

@@ -12,11 +12,11 @@ const LinearProgress = React.forwardRef<HTMLDivElement, LinearProgressProps>((pr
     let progress = value;
     if (progress == null) {
         progress = 0
-    };
+    }
     let maxLinearProgress = max;
     if(maxLinearProgress == null && value !=null){
         maxLinearProgress = 100
-    };
+    }
     return (
         <RadixProgress
             {...rest}

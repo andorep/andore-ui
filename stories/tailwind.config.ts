@@ -1,4 +1,4 @@
-import { AndoreUIThemePlugin } from "@andore-ui/theme-plugin";
+import { AndoreUIThemePlugin } from "@andore-ui/theme";
 import { Config } from "tailwindcss";
 
 /** @type {import('tailwindcss').Config} */

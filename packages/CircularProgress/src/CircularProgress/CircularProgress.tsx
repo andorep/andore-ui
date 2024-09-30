@@ -5,7 +5,7 @@ import {CircularProgressBaseClassName} from './CircularProgress.classes';
 
 
 const CircularProgress = React.forwardRef<SVGSVGElement, CircularProgressProps>((props, forwardedRef) => {
-    const {children, className, ...rest} = props;
+    const {className, ...rest} = props;
     const classes = twMerge(CircularProgressBaseClassName, className);
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" {...rest}

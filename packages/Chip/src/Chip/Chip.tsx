@@ -37,7 +37,6 @@ const Chip = React.forwardRef<HTMLButtonElement, ChipProps>((props, ref) => {
   const {
     children,
     className,
-    color = "primary",
     variant = "elevated",
     startIcon,
     endIcon,

@@ -7,7 +7,7 @@ import {
 } from './DropdownMenuSubTrigger.classes';
 
 const DropdownMenuSubTrigger = React.forwardRef<HTMLDivElement, DropdownMenuSubTriggerProps>((props, forwardedRef) => {
-    const {className, children, trailing, ...rest} = props;
+    const {className, children, ...rest} = props;
     const classes = twMerge(DropdownMenuSubTriggerBaseClassName, className);
     return (
         <RadixDropdownMenuSubTrigger

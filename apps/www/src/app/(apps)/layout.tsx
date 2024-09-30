@@ -5,6 +5,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: "andore/ui Chat App",
   description: "andore/ui is a collection of components built with Tailwind CSS and Material Design 3.",

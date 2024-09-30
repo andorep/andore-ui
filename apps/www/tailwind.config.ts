@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import { AndoreUIThemePlugin } from "@andore-ui/theme-plugin";
+import { andoreui } from "@andore-ui/theme";
 
 const config: Config = {
   darkMode: ["class", '[data-mode="dark"]'],
@@ -10,7 +10,7 @@ const config: Config = {
     "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [
-    AndoreUIThemePlugin({
+    andoreui({
       enabledCssVariables: true,
     })
   ],

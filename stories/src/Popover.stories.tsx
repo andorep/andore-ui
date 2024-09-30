@@ -3,6 +3,8 @@ import type {Meta, StoryObj} from "@storybook/react";
 import {Popover, PopoverHeader, PopoverContent, PopoverActions, Placement} from "@andore-ui/popover";
 import {Button} from "@andore-ui/button";
 import {Typography} from "@andore-ui/typography";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import DogSrc from '../assets/husky.jpg';
 

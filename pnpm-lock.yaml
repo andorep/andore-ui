@@ -61,9 +61,9 @@ importers:
       '@andore-ui/text-field':
         specifier: workspace:*
         version: link:../../packages/TextField
-      '@andore-ui/theme-plugin':
+      '@andore-ui/theme':
         specifier: workspace:*
-        version: link:../../packages/plugin
+        version: link:../../packages/theme
       '@andore-ui/toggle-button':
         specifier: workspace:*
         version: link:../../packages/ToggleButton
@@ -2070,7 +2070,7 @@ importers:
         specifier: ^3.9.1
         version: 3.9.1(@types/node@22.5.4)(rollup@4.21.3)(typescript@5.6.2)(vite@5.4.4(@types/node@22.5.4)(terser@5.32.0))
 
-  packages/plugin:
+  packages/theme:
     dependencies:
       react:
         specifier: ^18.3.1
@@ -2214,9 +2214,9 @@ importers:
       '@andore-ui/textarea':
         specifier: workspace:*
         version: link:../packages/Textarea
-      '@andore-ui/theme-plugin':
+      '@andore-ui/theme':
         specifier: workspace:*
-        version: link:../packages/plugin
+        version: link:../packages/theme
       '@andore-ui/toggle-button':
         specifier: workspace:*
         version: link:../packages/ToggleButton

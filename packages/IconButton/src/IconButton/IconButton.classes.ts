@@ -275,7 +275,6 @@ export const IconButtonContentVariantMapClassName: Record<IconButtonVariant, Rec
             " text-error hover:bg-error/[0.07] active:bg-error/[0.15] dark:text-error-dark-DEFAULT dark:bg-error-dark-DEFAULT/[0.07] dark:hover:bg-error-dark-DEFAULT/10 dark:active:bg-error-dark-DEFAULT/[0.15]",
         ),
     },
-    //@ts-ignore
     outlined: {
         primary: twMerge(
             IconButtonContentOutlinedClassName,
@@ -302,7 +301,6 @@ export const IconButtonContentVariantMapClassName: Record<IconButtonVariant, Rec
             " text-error hover:bg-error/[0.07] active:bg-error/[0.15] dark:text-error-dark-DEFAULT dark:border-error-dark-DEFAULT dark:hover:bg-error-dark-DEFAULT/10 dark:active:bg-error-dark-DEFAULT/[0.15]",
         ),
     },
-    //@ts-ignore
     standard: {
         primary: twMerge(
             IconButtonContentStandardClassName,

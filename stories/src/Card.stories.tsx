@@ -11,6 +11,8 @@ import {
     CardVariant
 } from "@andore-ui/card";
 import {IconButton} from "@andore-ui/icon-button";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import AvatarSrc from '../assets/3d_avatar_13.png';
 import { Typography } from "@andore-ui/typography";
@@ -101,6 +103,7 @@ export const DisabledDragImage: Story = {
 };
 
 export const DisabledGutters: Story = {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     render: ({variant, disabledGutters}) => (
         <div style={{display: 'grid', gap: '0.5rem', width: '300px'}}>
@@ -112,11 +115,13 @@ export const DisabledGutters: Story = {
         </div>
     ),
     args: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         disabledGutters: true,
         variant: 'elevated',
     },
     argTypes: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         disabledGutters: guttersControl,
         variant: variantControl,

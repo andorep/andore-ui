@@ -48,10 +48,10 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       className,
     );
 
-    let contentStatesClassName = disabledStates
+    const contentStatesClassName = disabledStates
       ? ""
       : CardContentBaseStatesClassName;
-    let classesContent = twMerge(
+    const classesContent = twMerge(
       CardContentBaseClassName,
       contentStatesClassName,
     );
@@ -75,7 +75,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           onDragStart(event);
         }
       },
-      [onDragStart],
+      [onDragStart, disabledDragImage],
     );
 
     const handleDragEnd = useCallback(

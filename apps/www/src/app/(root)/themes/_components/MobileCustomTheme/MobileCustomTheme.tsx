@@ -5,7 +5,7 @@ import { Button } from "@andore-ui/button";
 import { BottomSheet } from "@andore-ui/bottom-sheet";
 import { List, ListItem, ListItemText } from "@andore-ui/list";
 import { Card } from "@andore-ui/card";
-import { ThemeType } from "@andore-ui/theme-plugin";
+import { ThemeType } from "@andore-ui/theme";
 
 interface MobileCustomThemeProps {
   defaultTheme?: ThemeType;
