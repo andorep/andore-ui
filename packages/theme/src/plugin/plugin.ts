@@ -1,10 +1,10 @@
-// index.js
 import tailwindPlugin from "tailwindcss/plugin";
 import defaultTheme from "../theme";
 import {
+  extendColors,
   mapColorsToCssVariables,
   transformColorsToCssVariables,
-} from "../utils/colors.utils";
+} from "../utils";
 import {ThemeType, ThemeColors } from "../types";
 
 interface PluginOptions {
@@ -18,10 +18,7 @@ const plugin = (options: PluginOptions = {}) => {
 
   let colors = defaultTheme.colors;
   if(theme?.colors){
-    colors = {
-        ...colors,
-        ...theme.colors
-    }
+    colors = extendColors(colors, theme.colors);
   }
   let themeColors = colors;
   if (enabledCssVariables) {
@@ -39,8 +36,6 @@ const plugin = (options: PluginOptions = {}) => {
     },
     {
       theme: {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         extend: {
           ...defaultTheme,
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment

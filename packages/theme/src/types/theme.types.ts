@@ -11,6 +11,47 @@ export interface ThemeCoreColor {
   "dark-container-text": string;
 }
 
+export interface ThemeSurfaceColor {
+  scrim?: string;
+  inverse?: string;
+  "inverse-text"?: string;
+  "inverse-primary"?: string;
+  "dark-inverse"?: string;
+  "dark-inverse-text"?: string;
+  "dark-inverse-primary"?: string;
+  dim?: string;
+  DEFAULT?: string;
+  bright?: string;
+  text?: string;
+  variant?: string;
+  "text-variant"?: string;
+  "container-lowest"?: string;
+  "container-low"?: string;
+  container?: string;
+  "container-high"?: string;
+  "container-highest"?: string;
+  disabled?: string;
+  "dark-scrim"?: string;
+  "dark-dim"?: string;
+  "dark-DEFAULT"?: string;
+  "dark-bright"?: string;
+  "dark-container-lowest"?: string;
+  "dark-container-low"?: string;
+  "dark-container"?: string;
+  "dark-container-high"?: string;
+  "dark-container-highest"?: string;
+  "dark-text"?: string;
+  "dark-variant"?: string;
+  "dark-text-variant"?: string;
+}
+
+export interface ThemeOutlineColor {
+  DEFAULT: string;
+  variant: string;
+  dark: string;
+  "dark-variant": string;
+}
+
 export interface BaseColors {
   primary?: ThemeCoreColor;
   secondary?: ThemeCoreColor;
@@ -18,45 +59,8 @@ export interface BaseColors {
   success?: ThemeCoreColor;
   warning?: ThemeCoreColor;
   error?: ThemeCoreColor;
-  outline?: {
-    DEFAULT: string;
-    variant: string;
-    dark: string;
-    "dark-variant": string;
-  };
-  surface?: {
-    scrim?: string;
-    inverse?: string;
-    "inverse-text"?: string;
-    "inverse-primary"?: string;
-    "dark-inverse"?: string;
-    "dark-inverse-text"?: string;
-    "dark-inverse-primary"?: string;
-    dim?: string;
-    DEFAULT?: string;
-    bright?: string;
-    text?: string;
-    variant?: string;
-    "text-variant"?: string;
-    "container-lowest"?: string;
-    "container-low"?: string;
-    container?: string;
-    "container-high"?: string;
-    "container-highest"?: string;
-    disabled?: string;
-    "dark-scrim"?: string;
-    "dark-dim"?: string;
-    "dark-DEFAULT"?: string;
-    "dark-bright"?: string;
-    "dark-container-lowest"?: string;
-    "dark-container-low"?: string;
-    "dark-container"?: string;
-    "dark-container-high"?: string;
-    "dark-container-highest"?: string;
-    "dark-text"?: string;
-    "dark-variant"?: string;
-    "dark-text-variant"?: string;
-  };
+  outline?: ThemeOutlineColor;
+  surface?: ThemeSurfaceColor;
   gray?: Record<string, string>;
   white?: string;
   black?: string;
@@ -85,4 +89,15 @@ export interface ThemeType extends BaseTheme {}
 // create type from tailwind colors
 export type TailwindColor = keyof typeof colors;
 
-export type TailwindTonal = '50' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '950';
+export type TailwindTonal =
+  | "50"
+  | "100"
+  | "200"
+  | "300"
+  | "400"
+  | "500"
+  | "600"
+  | "700"
+  | "800"
+  | "900"
+  | "950";
