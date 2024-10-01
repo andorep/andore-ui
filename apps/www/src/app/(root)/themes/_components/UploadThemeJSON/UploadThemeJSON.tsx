@@ -4,9 +4,10 @@ import { IconButton } from "@andore-ui/icon-button";
 import {
   generateThemeFromMaterialThemeBuilder,
   ThemeType,
-  isValidMaterialDesignThemeBuilderJSON
+  isValidMaterialDesignThemeBuilderJSON,
 } from "@andore-ui/theme";
-import {Tooltip} from "@andore-ui/tooltip";
+import { Tooltip } from "@andore-ui/tooltip";
+import { useSnackbar } from "@andore-ui/snackbar";
 
 interface UploadThemeJsonProps {
   onLoaded: (theme: ThemeType) => void;
@@ -14,6 +15,7 @@ interface UploadThemeJsonProps {
 
 const UploadThemeJson = (props: UploadThemeJsonProps) => {
   const { onLoaded } = props;
+  const { showSnackbar } = useSnackbar();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,14 +34,23 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
             onLoaded({
               colors: theme,
             });
+            showSnackbar({
+              description: "Theme loaded successfully",
+            });
           }
         } catch (error) {
-          alert("Invalid JSON file.");
+          showSnackbar({
+            description: "Error loading theme",
+            color: "error",
+          });
         }
       };
       reader.readAsText(file);
     } else {
-      alert("Please select a valid JSON file.");
+      showSnackbar({
+        description: "Invalid file type",
+        color: "error",
+      });
     }
   };
 
@@ -56,7 +67,13 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
         onChange={handleFileChange}
         className={"hidden"}
       />
-      <Tooltip title="Upload custom theme" placement={'top'} offset={15} delay={200} delayClose={0}>
+      <Tooltip
+        title="Upload custom theme"
+        placement={"top"}
+        offset={15}
+        delay={200}
+        delayClose={0}
+      >
         <IconButton
           onClick={handleOpenFile}
           className={"-ml-2 -mt-4"}

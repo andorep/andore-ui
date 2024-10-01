@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 
 export interface SnackbarState {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  color?: "success" | "error" | "warning" | "info";
 }
 
 export interface SnackbarProviderProps {

@@ -1,8 +1,12 @@
 {
   "name": "@andore-ui/$SNAKE-COMPONENT",
+  "description": "A collection of beautifully crafted react components using Material Design 3 specifications and TailwindCSS",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "repository": "https://github.com/andreperegrina/andore-ui",
+  "homepage": "andreperegrina.github.io/andore-ui",
   "scripts": {
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"

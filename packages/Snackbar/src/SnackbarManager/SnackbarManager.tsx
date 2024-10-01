@@ -5,10 +5,8 @@ import SnackbarTitle from "../SnackbarTitle";
 import SnackbarDescription from "../SnackbarDescription";
 import { SnackbarContext, SnackbarState } from "./useSnackbar";
 
-
-
 const SnackbarManager = (props: SnackbarManagerProps) => {
-  const { children, onlyOne, ...rest } = props;
+  const { children, onlyOne = true, ...rest } = props;
   const [snackbars, setSnackbars] = React.useState<SnackbarState[]>([]);
 
   const showSnackbar = (snackbar: SnackbarState) => {
@@ -23,23 +21,18 @@ const SnackbarManager = (props: SnackbarManagerProps) => {
     if (!open) {
       setSnackbars(snackbars.slice(1));
     }
-  }
+  };
 
   return (
     <SnackbarContext.Provider value={{ showSnackbar }}>
       {children}
       {snackbars.map((snackbar, index) => (
-          <Snackbar
-            key={index}
-            open={true}
-            onOpenChange={onOpenChange}
-            {...rest}
-          >
-            {snackbar.title && <SnackbarTitle>{snackbar.title}</SnackbarTitle>}
-            {snackbar.description && (
-              <SnackbarDescription>{snackbar.description}</SnackbarDescription>
-            )}
-          </Snackbar>
+        <Snackbar key={index} open={true} onOpenChange={onOpenChange} {...rest} color={snackbar.color}>
+          {snackbar.title && <SnackbarTitle>{snackbar.title}</SnackbarTitle>}
+          {snackbar.description && (
+            <SnackbarDescription>{snackbar.description}</SnackbarDescription>
+          )}
+        </Snackbar>
       ))}
     </SnackbarContext.Provider>
   );

@@ -3,6 +3,7 @@
 import React from "react";
 import { theme } from "@andore-ui/theme";
 import CustomTheme from "@/app/(root)/themes/_components/CustomTheme/CustomTheme";
+import {SnackbarManager} from "@andore-ui/snackbar";
 
 interface BlocksSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -10,7 +11,7 @@ const BlocksSection = (props: BlocksSectionProps) => {
   const { children } = props;
   const ref = React.useRef(null);
   return (
-    <>
+    <SnackbarManager>
       <CustomTheme defaultTheme={theme} blocksRef={ref} />
       <section
         ref={ref}
@@ -19,7 +20,7 @@ const BlocksSection = (props: BlocksSectionProps) => {
       >
         {children}
       </section>
-    </>
+    </SnackbarManager>
   );
 };
 

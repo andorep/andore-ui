@@ -9,6 +9,7 @@ import { SnackbarProps } from "./Snackbar.types";
 import {
   SnackbarActionsContainerBaseClassName,
   SnackbarBaseClassName,
+  SnackbarBaseColorClassNameMap,
   SnackbarTextContainerBaseClassName,
   SnackbarViewPortClassName,
 } from "./Snackbar.classes";
@@ -27,10 +28,12 @@ const Snackbar = React.forwardRef<HTMLLIElement, SnackbarProps>(
       actionText,
       onAction,
       onClose,
+      color,
       ...rest
     } = props;
 
-    const classes = twMerge(SnackbarBaseClassName, className);
+    const colorClasses = color ? SnackbarBaseColorClassNameMap[color] : "";
+    const classes = twMerge(SnackbarBaseClassName, colorClasses, className);
 
     const viewportClasses = twMerge(SnackbarViewPortClassName);
 
