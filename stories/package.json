@@ -43,7 +43,8 @@
     "@andore-ui/list": "workspace:*",
     "@andore-ui/search": "workspace:*",
     "@andore-ui/chip": "workspace:*",
-    "@andore-ui/bottom-sheet": "workspace:*"
+    "@andore-ui/bottom-sheet": "workspace:*",
+    "@andore-ui/snackbar": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
@@ -75,4 +76,3 @@
     "vite": "^5.3.4"
   }
 }
-

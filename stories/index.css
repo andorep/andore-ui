@@ -20,3 +20,16 @@ body{
         background-image: radial-gradient(circle, theme('colors.neutral.800') 1px, transparent 1px);
     }
 }
+
+@keyframes expand {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px; /* Adjust this value */
+    }
+}
+
+.element.expanded {
+    animation: expand 0.5s ease-in-out forwards;
+}

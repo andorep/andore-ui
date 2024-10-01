@@ -104,8 +104,23 @@ export const theme: ThemeType = {
         slideRightAndFade: `slideRightAndFade ${motion.duration.medium4} ${motion.easing.emphasized.timingFunction}`,
         progressIndeterminate: `progressIndeterminate ${motion.duration.extraLong4} ${motion.easing.emphasizedAccelerate.timingFunction} infinite`,
         circularProgressIndeterminate: `spin ${motion.duration.extraLong4} linear infinite`,
+        snackbarHide: `snackbarHide ${motion.duration.short3} ${motion.easing.emphasized.timingFunction}`,
+        snackbarShow: `snackbarShow ${motion.duration.short3} ${motion.easing.emphasized.timingFunction}`,
+        snackbarSwipeOut: `snackbarSwipeOut ${motion.duration.short3} ${motion.easing.emphasized.timingFunction}`,
     },
     keyframes: {
+        snackbarHide: {
+            from: { opacity: '1' },
+            to: { opacity: '0' },
+        },
+        snackbarShow: {
+            from: {transform: "translateY(100%)"},
+            to: {transform: "translateY(0)"},
+        },
+        snackbarSwipeOut: {
+            from: {transform: "translateX(0)"},
+            to: {transform: "translateX(100%)"},
+        },
         overlayShow: {
             from: {opacity: "0"},
             to: {opacity: "1"},
