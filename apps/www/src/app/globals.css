@@ -110,13 +110,22 @@ body {
         @apply border-outline-variant dark:border-outline-dark-variant;
     }
 
+    > .language-js {
+        @apply mt-0 border border-outline-variant dark:border-outline-dark-variant;
+        @apply rounded;
+        @apply bg-neutral-100 dark:bg-neutral-900;
+        @apply p-4;
+        @apply overflow-auto h-fit;
+    }
+
     .rehype-code-title + pre {
         @apply mt-0 border border-outline-variant dark:border-outline-dark-variant;
         @apply rounded-t-none rounded-b;
         @apply bg-neutral-100 dark:bg-neutral-900;
         @apply p-4;
-        @apply overflow-auto h-full;
+        @apply overflow-auto h-fit;
     }
+
 
     .prose .anchor {
         @apply absolute invisible no-underline delay-[50ms] transition-all -ml-10 pr-2 cursor-pointer;

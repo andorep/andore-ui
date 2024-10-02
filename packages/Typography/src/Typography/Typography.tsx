@@ -41,10 +41,11 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
             variant = "body",
             size = "md",
             color,
+            component,
             ...rest
         } = props;
 
-        const Element = variantMap[variant][size];
+        const Element = component ?? variantMap[variant][size];
 
         const classVariant = TypographyMapClassName[variant][size];
 

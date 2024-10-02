@@ -11,4 +11,5 @@ export interface TypographyProps
     variant?: TypographyVariants;
     size?: TypographySizes;
     color?: TypographyColors;
+    component?: React.ElementType;
 }
