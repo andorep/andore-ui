@@ -1,0 +1,144 @@
+import SchematicButton from "./SchematicButton";
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import ColorItem from "../../_components/ColorItem/ColorItem";
+
+# Colors
+
+List of color tokens available for customization.
+
+---
+## Modify colors
+
+If you want to customize the colors of the theme, you have to override color tokens using in the theme system.
+To do that, you can use the **theme.colors** tailwind configuration file.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({
+            theme: {
+                colors: {
+                    primary: {
+                        DEFAULT: '#65558F',
+                    }
+                }
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br/>
+
+## How does it work?
+
+The theme system uses the color tokens to apply the colors to the components. When you override a color token, the theme system will apply the new color to the components that use that token.
+
+<br/>
+
+For example, let's take this component and modify color:
+
+<br/>
+
+<ChangeThemePanel theme={'colors'}>
+    <SchematicButton/>
+</ChangeThemePanel>
+
+<br/>
+
+## Color tokens
+
+The following table lists all the color tokens available in the theme system.
+
+<br/>
+
+| Token Name                       | Description                                         | Default Value                                                 |
+|----------------------------------|-----------------------------------------------------|---------------------------------------------------------------|
+| `primary.DEFAULT`                | Primary color used in the theme.                    | <ColorItem color="#65558F" name="#65558F" className="-ml-4"/> |
+| `primary.text`                   | Primary text color.                                 | <ColorItem color="#FFFFFF" name="#FFFFFF" className="-ml-4"/> |
+| `primary.container`              | Primary container background color.                 | <ColorItem color="#EADDFF" name="#EADDFF" className="-ml-4"/> |
+| `primary.container-text`         | Primary container text color.                       | <ColorItem color="#21005D" name="#21005D" className="-ml-4"/> |
+| `primary.dark-DEFAULT`           | Primary color in dark mode.                         | <ColorItem color="#D0BCFE" name="#D0BCFE" className="-ml-4"/> |
+| `primary.dark-text`              | Primary text color in dark mode.                    | <ColorItem color="#381E72" name="#381E72" className="-ml-4"/> |
+| `primary.dark-container`         | Primary container background color in dark mode.    | <ColorItem color="#4F378B" name="#4F378B" className="-ml-4"/> |
+| `primary.dark-container-text`    | Primary container text color in dark mode.          | <ColorItem color="#EADDFF" name="#EADDFF" className="-ml-4"/> |
+| `secondary.DEFAULT`              | Secondary color used in the theme.                  | <ColorItem color="#635B70" name="#635B70" className="-ml-4"/> |
+| `secondary.text`                 | Secondary text color.                               | <ColorItem color="#FFFFFF" name="#FFFFFF" className="-ml-4"/> |
+| `secondary.container`            | Secondary container background color.               | <ColorItem color="#E9DEF8" name="#E9DEF8" className="-ml-4"/> |
+| `secondary.container-text`       | Secondary container text color.                     | <ColorItem color="#1F182B" name="#1F182B" className="-ml-4"/> |
+| `secondary.dark-DEFAULT`         | Secondary color in dark mode.                       | <ColorItem color="#CDC2DB" name="#CDC2DB" className="-ml-4"/> |
+| `secondary.dark-text`            | Secondary text color in dark mode.                  | <ColorItem color="#342D40" name="#342D40" className="-ml-4"/> |
+| `secondary.dark-container`       | Secondary container background color in dark mode.  | <ColorItem color="#4B4358" name="#4B4358" className="-ml-4"/> |
+| `secondary.dark-container-text`  | Secondary container text color in dark mode.        | <ColorItem color="#E9DEF8" name="#E9DEF8" className="-ml-4"/> |
+| `info.DEFAULT`                   | Info color used in the theme.                       | <ColorItem color="#4c5c92" name="#4c5c92" className="-ml-4"/> |
+| `info.text`                      | Info text color.                                    | <ColorItem color="#ffffff" name="#ffffff" className="-ml-4"/> |
+| `info.container`                 | Info container background color.                    | <ColorItem color="#dce1ff" name="#dce1ff" className="-ml-4"/> |
+| `info.container-text`            | Info container text color.                          | <ColorItem color="#02174b" name="#02174b" className="-ml-4"/> |
+| `info.dark-DEFAULT`              | Info color in dark mode.                            | <ColorItem color="#b5c4ff" name="#b5c4ff" className="-ml-4"/> |
+| `info.dark-text`                 | Info text color in dark mode.                       | <ColorItem color="#1c2d61" name="#1c2d61" className="-ml-4"/> |
+| `info.dark-container`            | Info container background color in dark mode.       | <ColorItem color="#344479" name="#344479" className="-ml-4"/> |
+| `info.dark-container-text`       | Info container text color in dark mode.             | <ColorItem color="#dce1ff" name="#dce1ff" className="-ml-4"/> |
+| `success.DEFAULT`                | Success color used in the theme.                    | <ColorItem color="#00696b" name="#00696b" className="-ml-4"/> |
+| `success.text`                   | Success text color.                                 | <ColorItem color="#ffffff" name="#ffffff" className="-ml-4"/> |
+| `success.container`              | Success container background color.                 | <ColorItem color="#9cf1f2" name="#9cf1f2" className="-ml-4"/> |
+| `success.container-text`         | Success container text color.                       | <ColorItem color="#002020" name="#002020" className="-ml-4"/> |
+| `success.dark-DEFAULT`           | Success color in dark mode.                         | <ColorItem color="#80d4d5" name="#80d4d5" className="-ml-4"/> |
+| `success.dark-text`              | Success text color in dark mode.                    | <ColorItem color="#003737" name="#003737" className="-ml-4"/> |
+| `success.dark-container`         | Success container background color in dark mode.    | <ColorItem color="#004f50" name="#004f50" className="-ml-4"/> |
+| `success.dark-container-text`    | Success container text color in dark mode.          | <ColorItem color="#9cf1f2" name="#9cf1f2" className="-ml-4"/> |
+| `warning.DEFAULT`                | Warning color used in the theme.                    | <ColorItem color="#7c580d" name="#7c580d" className="-ml-4"/> |
+| `warning.text`                   | Warning text color.                                 | <ColorItem color="#ffffff" name="#ffffff" className="-ml-4"/> |
+| `warning.container`              | Warning container background color.                 | <ColorItem color="#ffdeab" name="#ffdeab" className="-ml-4"/> |
+| `warning.container-text`         | Warning container text color.                       | <ColorItem color="#271900" name="#271900" className="-ml-4"/> |
+| `warning.dark-DEFAULT`           | Warning color in dark mode.                         | <ColorItem color="#efbf6d" name="#efbf6d" className="-ml-4"/> |
+| `warning.dark-text`              | Warning text color in dark mode.                    | <ColorItem color="#422c00" name="#422c00" className="-ml-4"/> |
+| `warning.dark-container`         | Warning container background color in dark mode.    | <ColorItem color="#5f4100" name="#5f4100" className="-ml-4"/> |
+| `warning.dark-container-text`    | Warning container text color in dark mode.          | <ColorItem color="#ffdeab" name="#ffdeab" className="-ml-4"/> |
+| `error.DEFAULT`                  | Error color used in the theme.                      | <ColorItem color="#BA1A1A" name="#BA1A1A" className="-ml-4"/> |
+| `error.text`                     | Error text color.                                   | <ColorItem color="#FFFFFF" name="#FFFFFF" className="-ml-4"/> |
+| `error.container`                | Error container background color.                   | <ColorItem color="#FFDAD6" name="#FFDAD6" className="-ml-4"/> |
+| `error.container-text`           | Error container text color.                         | <ColorItem color="#410002" name="#410002" className="-ml-4"/> |
+| `error.dark-DEFAULT`             | Error color in dark mode.                           | <ColorItem color="#FFB4AB" name="#FFB4AB" className="-ml-4"/> |
+| `error.dark-text`                | Error text color in dark mode.                      | <ColorItem color="#690005" name="#690005" className="-ml-4"/> |
+| `error.dark-container`           | Error container background color in dark mode.      | <ColorItem color="#93000A" name="#93000A" className="-ml-4"/> |
+| `error.dark-container-text`      | Error container text color in dark mode.            | <ColorItem color="#FFDAD6" name="#FFDAD6" className="-ml-4"/> |
+| `outline.DEFAULT`                | Default outline color.                              | <ColorItem color="#7A757F" name="#7A757F" className="-ml-4"/> |
+| `outline.variant`                | Outline variant color.                              | <ColorItem color="#CBC4CF" name="#CBC4CF" className="-ml-4"/> |
+| `outline.dark`                   | Outline color in dark mode.                         | <ColorItem color="#948F99" name="#948F99" className="-ml-4"/> |
+| `outline.dark-variant`           | Outline variant color in dark mode.                 | <ColorItem color="#49454E" name="#49454E" className="-ml-4"/> |
+| `surface.DEFAULT`                | Default surface background color.                   | <ColorItem color="#FEF7FF" name="#FEF7FF" className="-ml-4"/> |
+| `surface.text`                   | Default surface text color.                         | <ColorItem color="#1D1B20" name="#1D1B20" className="-ml-4"/> |
+| `surface.variant`                | Surface variant background color.                   | <ColorItem color="#E7E0EB" name="#E7E0EB" className="-ml-4"/> |
+| `surface.text-variant`           | Surface variant text color.                         | <ColorItem color="#49454E" name="#49454E" className="-ml-4"/> |
+| `surface.dim`                    | Dim surface color.                                  | <ColorItem color="#DED8E0" name="#DED8E0" className="-ml-4"/> |
+| `surface.bright`                 | Bright surface color.                               | <ColorItem color="#FEF7FF" name="#FEF7FF" className="-ml-4"/> |
+| `surface.container-lowest`       | Lowest level surface container background color.    | <ColorItem color="#FFFFFF" name="#FFFFFF" className="-ml-4"/> |
+| `surface.container-low`          | Low-level surface container background color.       | <ColorItem color="#F8F1FA" name="#F8F1FA" className="-ml-4"/> |
+| `surface.container`              | Default surface container background color.         | <ColorItem color="#F2ECF4" name="#F2ECF4" className="-ml-4"/> |
+| `surface.container-high`         | High-level surface container background color.      | <ColorItem color="#EDE6EE" name="#EDE6EE" className="-ml-4"/> |
+| `surface.container-highest`      | Highest level surface container background color.   | <ColorItem color="#E7E0E8" name="#E7E0E8" className="-ml-4"/> |
+| `surface.scrim`                  | Scrim color.                                        | <ColorItem color="#000000" name="#000000" className="-ml-4"/> |
+| `surface.inverse`                | Inverse surface color.                              | <ColorItem color="#322F35" name="#322F35" className="-ml-4"/> |
+| `surface.inverse-text`           | Inverse surface text color.                         | <ColorItem color="#F5EFF7" name="#F5EFF7" className="-ml-4"/> |
+| `surface.inverse-primary`        | Inverse primary surface color.                      | <ColorItem color="#D3BCFD" name="#D3BCFD" className="-ml-4"/> |
+| `surface.dark-DEFAULT`           | Default surface color in dark mode.                 | <ColorItem color="#151218" name="#151218" className="-ml-4"/> |
+| `surface.dark-text`              | Default surface text color in dark mode.            | <ColorItem color="#E7E0E8" name="#E7E0E8" className="-ml-4"/> |
+| `surface.dark-variant`           | Surface variant background color in dark mode.      | <ColorItem color="#49454E" name="#49454E" className="-ml-4"/> |
+| `surface.dark-text-variant`      | Surface variant text color in dark mode.            | <ColorItem color="#CBC4CF" name="#CBC4CF" className="-ml-4"/> |
+| `surface.dark-dim`               | Dim surface color in dark mode.                     | <ColorItem color="#151218" name="#151218" className="-ml-4"/> |
+| `surface.dark-bright`            | Bright surface color in dark mode.                  | <ColorItem color="#3B383E" name="#3B383E" className="-ml-4"/> |
+| `surface.dark-container-lowest`  | Lowest level surface container color in dark mode.  | <ColorItem color="#0F0D13" name="#0F0D13" className="-ml-4"/> |
+| `surface.dark-container-low`     | Low-level surface container color in dark mode.     | <ColorItem color="#1D1B20" name="#1D1B20" className="-ml-4"/> |
+| `surface.dark-container`         | Default surface container color in dark mode.       | <ColorItem color="#211F24" name="#211F24" className="-ml-4"/> |
+| `surface.dark-container-high`    | High-level surface container color in dark mode.    | <ColorItem color="#2C292F" name="#2C292F" className="-ml-4"/> |
+| `surface.dark-container-highest` | Highest level surface container color in dark mode. | <ColorItem color="#36343A" name="#36343A" className="-ml-4"/> |
+| `surface.dark-scrim`             | Scrim color in dark mode.                           | <ColorItem color="#000000" name="#000000" className="-ml-4"/> |
+| `surface.dark-inverse`           | Inverse surface color in dark mode.                 | <ColorItem color="#E7E0E8" name="#E7E0E8" className="-ml-4"/> |
+| `surface.dark-inverse-text`      | Inverse surface text color in dark mode.            | <ColorItem color="#322F35" name="#322F35" className="-ml-4"/> |
+| `surface.dark-inverse-primary`   | Inverse primary surface color in dark mode.         | <ColorItem color="#68548E" name="#68548E" className="-ml-4"/> |

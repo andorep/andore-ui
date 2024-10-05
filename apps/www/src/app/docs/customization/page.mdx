@@ -1,0 +1,104 @@
+import Link from "next/link";
+
+# Theming
+
+Using tailwindcss with the theme package for theming.
+
+<br/>
+
+To maintain a consistent look and feel across the application, this project uses the <span className="underline">[Material Design](https://material.io/design)</span>as the design system.
+This is achieved by using <span className="underline">[Tailwind CSS](https://tailwindcss.com)</span> as the utility-first CSS framework for generating a consistent design system that can be easily customized.
+
+---
+
+## How to customize the theme
+
+By default, the theme is set to the default Material Design theme. To customize the theme, you can modify the **tailwind.config.js** and pass in the custom theme object to the **andoreui()** function.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+  ...,
+  plugins: [
+    require('@andore/tailwindcss')({
+      theme: {
+        colors: {
+          primary:{
+            DEFAULT: '#FF0000',
+          }
+        },
+      },
+    }),
+  ],
+};
+```
+</div>
+
+This example **will override only the primary color** of the theme.
+
+<br/>
+
+## theme property
+
+As we saw in the previous example, the theme object is passed to the **andoreui()** function. You can customize the following properties of the theme:
+
+<br/>
+
+- <Link href={'/docs/animation'} className='underline'>animation</Link>:  The animations of the theme.
+- <Link href={'/docs/border-radius'} className='underline'>borderRadius</Link>:  The border radius scale of the theme.
+- <Link href={'/docs/box-shadow'} className='underline'>boxShadow</Link>:  The box shadow scale of the theme.
+- <Link href={'/docs/colors'} className='underline'>colors</Link>:  The color palette of the theme.
+- <Link href={'/docs/font-family'} className='underline'>fontFamily</Link>:  The font family of the theme.
+- <Link href={'/docs/spacing'} className='underline'>spacing</Link>:  The spacing scale of the theme.
+- <Link href={'/docs/transition-duration'} className='underline'>transitionDuration</Link>:  The transition duration scale of the theme.
+- <Link href={'/docs/transition-property'} className='underline'>transitionProperty</Link>:  The transition property of the theme.
+- <Link href={'/docs/transition-timing-function'} className='underline'>transitionTimingFunction</Link>:  The transition timing function of the theme.
+
+<br/>
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    plugins: [
+        require('@andore/tailwindcss')({
+            theme:{
+                colors: {
+                    primary:{
+                        DEFAULT: '#FF0000',
+                    },
+                    secondary:{
+                        DEFAULT: '#00FF00',
+                    },
+                },
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br/>
+
+## enabledCssVariables property
+
+By default, the *andoreui* plugin does not generate CSS variables for the theme. If you want to enable CSS variables for the theme, you can set the **enabledCssVariables** property to *true*.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+  ...,
+  plugins: [
+    require('@andore/tailwindcss')({
+      enabledCssVariables: true,
+    }),
+  ],
+};
+```
+</div>
+
+<br/>
+This will generate CSS variables for the theme colors. For example, the primary default color will be available as a CSS variable named **--aui-primary**.
+
+
+All colors will be available as CSS variables prefixed with **--aui-[color]-**.

@@ -1,0 +1,35 @@
+import React from "react";
+import Block from "@/app/themes/_components/_blocks/Block/Block";
+import { List, ListItem, ListItemText } from "@andore-ui/list";
+import { Switch, SwitchThumb } from "@andore-ui/switch";
+
+const Settings = () => {
+  return (
+    <Block
+      title={"Settings"}
+      subtitle={"Manage your preferences"}
+      className={"lg:min-w-[400px]"}
+    >
+      <List>
+        <ListItem className={"p-0"}>
+          <ListItemText supportingText={"Enabled two-factor authentication"}>
+            <span className={"font-medium"}>2FA</span>
+          </ListItemText>
+          <Switch>
+            <SwitchThumb />
+          </Switch>
+        </ListItem>
+        <ListItem className={"p-0"}>
+          <ListItemText supportingText={"Receive notifications"}>
+            <span className={"font-medium"}>Notifications</span>
+          </ListItemText>
+          <Switch>
+            <SwitchThumb />
+          </Switch>
+        </ListItem>
+      </List>
+    </Block>
+  );
+};
+
+export default Settings;

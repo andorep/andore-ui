@@ -10,10 +10,23 @@ const config: Config = {
     "./src/mdx-components.tsx",
     "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
   ],
+  theme: {
+    extend: {
+      animation: {
+        floatingElement: "3s ease-in-out infinite floatingElement",
+      },
+      keyframes: {
+        floatingElement: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+      },
+    },
+  },
   plugins: [
     andoreui({
       enabledCssVariables: true,
-    })
+    }),
   ],
 };
 export default config;

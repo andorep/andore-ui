@@ -1,0 +1,72 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import PackageManagerTabPanel from "../../../_components/PackageManagerTabPanel/PackageManagerTabPanel";
+
+# Installation
+
+How to install the library.
+
+---
+
+## Before you start
+
+Before you start, you need to have already installed the following:
+<br/>
+
+- [React 18](react.dev) or higher
+- [TailwindCSS 3](https://tailwindcss.com) or higher
+
+<br/>
+
+## How to install
+
+To start using the library, you need to install it first. You can do that by following the instructions below
+
+<br/>
+
+### Install the theme
+
+Let's start by installing the theme package:
+
+<PackageManagerTabs command="@andore-ui/theme"/>
+
+<br/>
+
+### Configure Tailwind to use the theme
+
+Next, you need to configure tailwind to use the theme, and add the components to the content array, so that tailwind can scan the components for classes.
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({}),
+    ],
+};
+```
+</div>
+
+<br/>
+
+### Start using the components!
+
+Now you can start using the components in your project!
+
+For example, let's import the **Button** component and use it in your project:
+
+
+<PackageManagerTabs command="@andore-ui/button"/>
+
+<div className="code-block mt-4">
+```jsx:App.js
+import { Button } from '@andore-ui/button';
+
+function App() {
+    return (
+        <Button>Click me!</Button>
+    );
+}
+```
+</div>

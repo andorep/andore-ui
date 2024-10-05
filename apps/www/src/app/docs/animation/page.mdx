@@ -1,0 +1,77 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicAccordion from "./SchematicAccordion";
+
+# Animation
+
+Setup custom animations for your app.
+
+---
+## Modify animations
+
+You can modify the current animations by changing the **animations** property or by using the **keyframes** property.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({
+            theme: {
+                animations: {
+                    "accordion-open": `accordion-open 0.3s ease-in-out`,
+                }
+            }
+            keyframes: {
+                "accordion-open": {
+                    from: {height: "0"},
+                    to: {height: "var(--radix-accordion-content-height)"},
+                },
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br />
+
+## How does it work?
+
+The **animations** property is used to define the animation name and the duration of the animation. The **keyframes** property is used to define the animation keyframes.
+
+<br/>
+
+For example, let's modify the animation of this component:
+
+<br/>
+
+<ChangeThemePanel theme={'animation'} disabledFloating className={'overflow-hidden'} >
+    <SchematicAccordion  />
+</ChangeThemePanel>
+
+<br/>
+
+## Animation tokens
+
+The following table lists the available animation tokens:
+
+<br/>
+
+| Animation Name                | Description                                                                                 |
+|-------------------------------|---------------------------------------------------------------------------------------------|
+| `accordion-open`              | Animation used for when an accordion is open                                                |
+| `accordion-closed`            | Animation used for when an accordion is closed                                              |
+| `overlayShow`                 | Animation used for showing an overlay                                                       |
+| `contentShow`                 | Animation used for showing content                                                          |
+| `slideDownAndFade`            | Animation used for sliding down and fading                                                  |
+| `slideLeftAndFade`            | Animation used for sliding left and fading                                                  |
+| `slideUpAndFade`              | Animation used for sliding up and fading                                                    |
+| `slideRightAndFade`           | Animation used for sliding right and fading                                                 |
+| `progressIndeterminate`       | Animation used for indeterminate progress with infinite loop                                |
+| `circularProgressIndeterminate` | Animation used for circular indeterminate progress with infinite loop                       |
+| `snackbarHide`                | Animation used for hiding a snackbar                                                        |
+| `snackbarShow`                | Animation used for showing a snackbar                                                       |
+| `snackbarSwipeOut`            | Animation used for swiping out a snackbar                                                   |

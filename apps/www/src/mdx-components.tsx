@@ -1,3 +1,4 @@
+import { Chip } from "@andore-ui/chip";
 import { Divider } from "@andore-ui/divider";
 import { Typography } from "@andore-ui/typography";
 import type { MDXComponents } from "mdx/types";
@@ -72,7 +73,44 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </a>
     ),
+    code: ({ children }) => {
+      if (!(typeof children === "string")) {
+        return <code>{children}</code>;
+      }
+      return (
+        <Chip variant={"outlined"} selected={true} selectedIcon={null}>
+          {children}
+        </Chip>
+      );
+    },
     hr: () => <Divider className={"!my-12"} />,
+    table: ({ children }) => (
+      <table
+        className={
+          "w-full rounded border-separate border-spacing-0 border-solid border border-outline-variant dark:border-outline-dark-variant text-surface-text dark:text-surface-dark-text"
+        }
+      >
+        {children}
+      </table>
+    ),
+    th: ({ children }) => (
+      <th
+        className={
+          "p-2 text-left border-b border-outline-variant dark:border-outline-dark-variant [&:nth-child(n+3)]:hidden sm:[&:nth-child(n+3)]:table-cell"
+        }
+      >
+        {children}
+      </th>
+    ),
+    td: ({ children }) => (
+      <td
+        className={
+          "p-2 border-b border-outline-variant dark:border-outline-dark-variant [&:nth-child(n+3)]:hidden sm:[&:nth-child(n+3)]:table-cell"
+        }
+      >
+        {children}
+      </td>
+    ),
     ...components,
   };
 }

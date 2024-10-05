@@ -1,11 +1,12 @@
 import createMDX from "@next/mdx";
 import rehypePrismTitles from "rehype-code-titles";
 import rehypePrism from "rehype-prism-plus";
+import remarkGfm from "remark-gfm";
 
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
-  output: "export",
+  output: isProd ? "export" : undefined,
   basePath: isProd ? "/andore-ui" : "",
   assetPrefix: isProd ? "/andore-ui" : "",
   // Configure `pageExtensions` to include markdown and MDX files
@@ -17,7 +18,7 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   options: {
     remarkPlugins: [],
-    rehypePlugins: [rehypePrismTitles, rehypePrism],
+    rehypePlugins: [rehypePrismTitles, rehypePrism, remarkGfm],
   },
   // Apply the configuration for all files, including pages
   // This ensures that it applies not only for imports but also for pages.

@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Getting Started",
+    "pages": [
+      "introduction",
+      "installation",
+      "design-system"
+    ]
+  },
+  {
+    "title": "Theming",
+    "pages": [
+      "customization",
+      "animation",
+      "border-radius",
+      "box-shadow",
+      "colors",
+      "dark-mode",
+      "font-family",
+      "spacing",
+      "transition-duration",
+      "transition-property",
+      "transition-timing-function"
+    ]
+  },
+  {
+    "title": "Components",
+    "pages": [
+      "accordion",
+      "alert-dialog",
+      "aspect-ratio",
+      "avatar",
+      "bottom-sheet",
+      "button",
+      "card",
+      "checkbox",
+      "chip",
+      "circular-progress",
+      "dialog",
+      "divider",
+      "dropdown-menu",
+      "fab",
+      "icon-button",
+      "input",
+      "label",
+      "linear-progress",
+      "list",
+      "navigation",
+      "popover",
+      "radio",
+      "search",
+      "select",
+      "slider",
+      "snackbar",
+      "surface",
+      "switch",
+      "tabs",
+      "textarea",
+      "text-field",
+      "toggle-button",
+      "tooltip",
+      "typography"
+    ]
+  }
+]

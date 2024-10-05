@@ -1,0 +1,17 @@
+.theme-slow {
+    .data-\[state\=closed\]\:animate-accordion-closed[data-state="closed"] {
+        animation: accordion-closed 700ms ease;
+    }
+    .data-\[state\=open\]\:animate-accordion-open[data-state="open"] {
+        animation: accordion-open 700ms ease;
+    }
+}
+
+.theme-fast {
+    .data-\[state\=closed\]\:animate-accordion-closed[data-state="closed"] {
+        animation: accordion-closed 100ms ease;
+    }
+    .data-\[state\=open\]\:animate-accordion-open[data-state="open"] {
+        animation: accordion-open 100ms ease;
+    }
+}
