@@ -18,7 +18,7 @@ const CopyClipboardButton = (props: CopyClipboardButtonProps) => {
       await copyToClipboard(text);
         setTemporaryTooltipText("Copied into clipboard 😉");
     } catch (error) {
-      console.error("Failed to copy to clipboard");
+      console.error(error);
     }
   };
 

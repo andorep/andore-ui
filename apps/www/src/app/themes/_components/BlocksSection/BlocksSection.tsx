@@ -5,9 +5,8 @@ import { theme } from "@andore-ui/theme";
 import CustomTheme from "@/app/themes/_components/CustomTheme/CustomTheme";
 import {SnackbarManager} from "@andore-ui/snackbar";
 
-interface BlocksSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const BlocksSection = (props: BlocksSectionProps) => {
+const BlocksSection = (props: React.HTMLAttributes<HTMLDivElement>) => {
   const { children } = props;
   const ref = React.useRef(null);
   return (

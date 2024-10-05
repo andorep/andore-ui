@@ -39,6 +39,7 @@ const UploadThemeJson = (props: UploadThemeJsonProps) => {
             });
           }
         } catch (error) {
+          console.error(error);
           showSnackbar({
             description: "Error loading theme",
             color: "error",

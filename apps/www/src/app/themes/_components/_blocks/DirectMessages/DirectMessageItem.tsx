@@ -2,11 +2,7 @@
 import React, {PropsWithChildren} from 'react';
 import { ListItem } from "@andore-ui/list";
 
-interface DirectMessageItemProps extends PropsWithChildren {
-
-}
-
-const DirectMessageItem = (props: DirectMessageItemProps) => {
+const DirectMessageItem = (props: PropsWithChildren) => {
     const {children} = props;
     return (
         <ListItem onClick={() => {}} className={"p-2 rounded h-fit"}>
