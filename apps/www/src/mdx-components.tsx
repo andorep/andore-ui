@@ -2,6 +2,7 @@ import { Chip } from "@andore-ui/chip";
 import { Divider } from "@andore-ui/divider";
 import { Typography } from "@andore-ui/typography";
 import type { MDXComponents } from "mdx/types";
+import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -66,12 +67,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </Typography>
     ),
     a: ({ children, href }) => (
-      <a
-        href={href}
+      <Link
+        href={href as string}
         className="text-secondary dark:text-secondary-dark-DEFAULT"
       >
         {children}
-      </a>
+      </Link>
     ),
     code: ({ children }) => {
       if (!(typeof children === "string")) {

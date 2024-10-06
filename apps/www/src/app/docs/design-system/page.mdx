@@ -1,0 +1,52 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicButton from "./SchematicButton";
+
+
+# Design System
+
+Understand how the design system works
+
+---
+
+## Why use a design system?
+
+A design system is a collection of standards, principles, and guidelines that help you build a consistent user experience.
+This library provides a set of components that follow the <span class="underline">[Material Design](https://material.io/design)</span> system, which is a design system created by Google.
+
+<br/>
+
+## Why should you care?
+
+Using a design system inside your project or library not only helps you build a consistent user experience
+but also end up with responsive that can be change easily by levering the theme system.
+
+<br/>
+
+
+## How does it work?
+
+The way this design system works is by utilizing tokens that define the styles of the whole library.
+These tokens are used by the components to define their styles, and **by changing the value of these tokens**, you can change the styles of the components.
+
+<br/>
+
+For example, let's modify let's see this button right here:
+
+<br/>
+
+<ChangeThemePanel theme={'colors'} >
+    <SchematicButton />
+</ChangeThemePanel>
+
+<br/>
+
+## Design system tokens
+
+All of the tokens used by the design system are based on the <span class="underline">[Material Design](https://material.io/design)</span> system,
+so you can refer to the Material Design documentation to understand how these tokens work.
+<br/>
+In the other hand, you can also refer to the <span class="underline">[Theming](/docs/customization)</span> section to understand how to modify these tokens.
+
+<br/>
+
+**IMPORTANT**: This is not an official implementation of the Material Design system, and is not developed by Google.
