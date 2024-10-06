@@ -20,7 +20,6 @@ const PaintIcon = () => (
 
 const SchematicBoxShadowButton = () => {
   const arrowBackgroundRef = useRef(null);
-  const arrowTextRef = useRef(null);
 
   const {
     refs: refsBackground,
