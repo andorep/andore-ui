@@ -18,13 +18,6 @@
     }
 }
 
-.theme-default {
-    --aui-border-radius: 0.5rem;
-
-    .rounded {
-    }
-}
-
 
 .theme-sharp {
     --aui-border-radius: 2px;
@@ -65,6 +58,7 @@
     }
 }
 
+
 .theme-glow {
     .shadow-md {
         box-shadow: theme(colors.info.container-text/50%) 1px 10px 20px, theme(colors.info.container-text/30%) 0 0 0 3px;
@@ -77,3 +71,50 @@
         box-shadow: theme(colors.info.dark-DEFAULT/50%) 1px 10px 20px, theme(colors.info.dark-DEFAULT/30%) 0 0 0 3px;
     }
 }
+
+
+.theme-compact {
+    .px-4 {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .py-2 {
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}
+
+.theme-spacious {
+    .px-4 {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .py-2 {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.theme-forest {
+    --aui-primary-dark-container: 124 155 115;
+    --aui-primary-dark-container-text: 240 244 224;
+    --aui-primary-dark-shadow-md: 0 255 127;
+    .shadow-md{
+        box-shadow: 0 0 15px rgba(0,255,127,0.6),0 0 30px rgba(34,139,34,0.4);
+    }
+}
+
+.theme-default {
+    --aui-border-radius: 0.5rem;
+    --aui-primary-dark-shadow-md: 0 0 0;
+    .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+

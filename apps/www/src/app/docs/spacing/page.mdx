@@ -1,0 +1,63 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicList from "./SchematicList";
+
+# Spacing
+
+How to use the spacing system in Andore UI.
+
+---
+## Modify spacing
+
+If you want to customize the spacing of the theme, you have to override spacing tokens using in the theme system.
+To do that, you can use the **theme.spacing** tailwind configuration file.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({
+            theme: {
+                spacing: {
+                    '4.5': '1.1rem',
+                }
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br/>
+
+## How does it work?
+
+The theme system uses the spacing tokens to define the spacing of the components. The spacing tokens are used to define the padding, margin, and other spacing properties of the components.
+
+<br/>
+
+For example, let's take this component and see how the spacing tokens are used in the theme system:
+
+<br/>
+
+<ChangeThemePanel theme={'spacing'}>
+    <SchematicList/>
+</ChangeThemePanel>
+
+<br/>
+
+## Spacing tokens
+
+The spacing tokens are default <span className='underline'>[tailwindcss](https://tailwindcss.com/docs/customizing-spacing)</span> spacing values.
+The only extra token is **4.5** which is equal to **1.1rem**.
+
+<br/>
+
+| Token | Value  |
+|-------|--------|
+| `4.5` | 1.1rem |
+
+**NOTE:** Check the <span className='underline'>[tailwindcss](https://tailwindcss.com/docs/customizing-spacing)</span> documentation for more information about the spacing values.

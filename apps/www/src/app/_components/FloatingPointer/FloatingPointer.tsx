@@ -38,7 +38,8 @@ const containerClasses = twMerge(
 
 const FloatingPointer = React.forwardRef<HTMLDivElement, FloatingPointerProps>(
   (props, ref) => {
-    const { children, style, arrowRef, middlewareData, placement } = props;
+    const { children, style, arrowRef, middlewareData, placement, className } =
+      props;
 
     const arrowStyle = {
       position: "absolute",
@@ -56,8 +57,10 @@ const FloatingPointer = React.forwardRef<HTMLDivElement, FloatingPointerProps>(
       top: undefined,
     };
 
+    const rootClasses = twMerge(containerClasses, className);
+
     return (
-      <div ref={ref} style={style} className={containerClasses}>
+      <div ref={ref} style={style} className={rootClasses}>
         {children}
         <div
           data-placement={placement}

@@ -1,0 +1,74 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicDarkModeButton from "./SchematicDarkModeButton";
+
+
+# Dark Mode
+
+How to customize the dark mode theme of the components.
+
+---
+
+## Modify dark mode theme
+
+You can modify the dark mode theme of the components by changing the any of the previews properties discussed in the previous sections
+by only adding the **dark-** prefix to the property name.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+  ...,
+  content: [
+    "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [
+    require('@andore-ui/theme')({
+      theme: {
+        primary: {
+          "dark-DEFAULT": "#381E72",
+          "dark-text": "#D0BCFE",
+        },
+        shadow: {
+          "dark-md": "0 4px 6px -1px rgba(56, 30, 114, 0.1), 0 2px 4px -1px rgba(56, 30, 114, 0.06)",
+        },
+      }
+    }),
+  ],
+};
+```
+</div>
+
+<br/>
+
+
+## How does it work?
+
+The theme system uses the prefix **dark-** to apply the colors, box shadows, and other properties when user has dark mode enabled.
+
+<br/>
+
+For example, let's modify the dark colors of the following component:
+
+<br/>
+<div data-mode="dark" className="w-full h-fit">
+    <ChangeThemePanel theme={'dark-mode'}>
+        <SchematicDarkModeButton/>
+    </ChangeThemePanel>
+</div>
+
+<br/>
+
+## Dark mode tokens
+
+All the color tokens that can be modified have a **dark-** prefix that can be used to modify the dark mode theme.
+
+<br/>
+For naming some examples:
+
+<br/>
+
+- **dark-primary-DEFAULT**: The primary color of the dark mode.
+- **dark-shadow-md**: The shadow color of the dark mode.
+
+<br/>
+
+**IMPORTANT**: The dark mode prefix is only applied to the colors and shadows, the other properties are the same for both light and dark mode.
