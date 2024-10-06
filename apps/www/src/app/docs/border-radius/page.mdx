@@ -1,0 +1,69 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicRadiusButton from "./SchematicRadiusButton";
+
+
+# Border Radius
+
+Understand how to use the `border-radius` property to modify the component's
+
+---
+
+## Modify border radius
+
+You can modify the current border radius by changing the **borderRadius** property.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({
+            theme: {
+                borderRadius: {
+                    "none": "0",
+                    "sm": "0.25rem",
+                    "lg": "0.75rem",
+                }
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br/>
+
+
+## How does it work?
+
+The theme system uses the **borderRadius** property to define the border radius of the components.
+All components depend on the this property to define the border radius, if we change the value of this property, all components will be affected.
+
+<br/>
+
+For example, let's modify the border radius of this component:
+
+<br/>
+
+<ChangeThemePanel theme={'border-radius'} >
+    <SchematicRadiusButton />
+</ChangeThemePanel>
+
+<br/>
+
+## Border radius tokens
+
+The following table lists all the border radius tokens available in the theme system.
+
+<br/>
+
+| Token     | Value   |
+|-----------|---------|
+| `sm`      | 0.25rem |
+| `DEFAULT` | 0.5rem  |
+| `md`      | 0.75rem |
+| `lg`      | 1rem    |
+| `xl`      | 1.75rem |

@@ -6,16 +6,12 @@ import { twMerge } from "tailwind-merge";
 
 const themes = {
   animation: ["Default", "Slow", "Fast"],
-  "border-radius": [],
-  "box-shadow": [],
+  "border-radius": ['Default', 'Sharp', 'Smooth'],
+  "box-shadow": ['Default', 'Echo', 'Glow'],
   colors: ["Default", "Miku", "Zenitsu"],
   customization: [],
   "dark-mode": [],
-  "font-family": [],
   spacing: [],
-  "transition-duration": [],
-  "transition-property": [],
-  "transition-timing-function": [],
 };
 
 const changeThemePanelClasses = twMerge(
@@ -37,11 +33,7 @@ interface ChangeThemePanelProps extends PropsWithChildren {
     | "colors"
     | "customization"
     | "dark-mode"
-    | "font-family"
     | "spacing"
-    | "transition-duration"
-    | "transition-property"
-    | "transition-timing-function";
 }
 
 const ChangeThemePanel = (props: ChangeThemePanelProps) => {

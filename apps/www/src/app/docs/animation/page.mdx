@@ -23,18 +23,19 @@ module.exports = {
                 animations: {
                     "accordion-open": `accordion-open 0.3s ease-in-out`,
                 }
-            }
-            keyframes: {
-                "accordion-open": {
-                    from: {height: "0"},
-                    to: {height: "var(--radix-accordion-content-height)"},
-                },
+                keyframes: {
+                    "accordion-open": {
+                        from: {height: "0"},
+                        to: {height: "var(--radix-accordion-content-height)"},
+                    },
+                }
             }
         }),
     ],
 };
 ```
 </div>
+
 
 <br />
 
@@ -60,18 +61,18 @@ The following table lists the available animation tokens:
 
 <br/>
 
-| Animation Name                | Description                                                                                 |
-|-------------------------------|---------------------------------------------------------------------------------------------|
-| `accordion-open`              | Animation used for when an accordion is open                                                |
-| `accordion-closed`            | Animation used for when an accordion is closed                                              |
-| `overlayShow`                 | Animation used for showing an overlay                                                       |
-| `contentShow`                 | Animation used for showing content                                                          |
-| `slideDownAndFade`            | Animation used for sliding down and fading                                                  |
-| `slideLeftAndFade`            | Animation used for sliding left and fading                                                  |
-| `slideUpAndFade`              | Animation used for sliding up and fading                                                    |
-| `slideRightAndFade`           | Animation used for sliding right and fading                                                 |
-| `progressIndeterminate`       | Animation used for indeterminate progress with infinite loop                                |
-| `circularProgressIndeterminate` | Animation used for circular indeterminate progress with infinite loop                       |
-| `snackbarHide`                | Animation used for hiding a snackbar                                                        |
-| `snackbarShow`                | Animation used for showing a snackbar                                                       |
-| `snackbarSwipeOut`            | Animation used for swiping out a snackbar                                                   |
+| Token Name                      | Description                                                           |
+|---------------------------------|-----------------------------------------------------------------------|
+| `accordion-open`                | Animation used for when an accordion is open                          |
+| `accordion-closed`              | Animation used for when an accordion is closed                        |
+| `overlayShow`                   | Animation used for showing an overlay                                 |
+| `contentShow`                   | Animation used for showing content                                    |
+| `slideDownAndFade`              | Animation used for sliding down and fading                            |
+| `slideLeftAndFade`              | Animation used for sliding left and fading                            |
+| `slideUpAndFade`                | Animation used for sliding up and fading                              |
+| `slideRightAndFade`             | Animation used for sliding right and fading                           |
+| `progressIndeterminate`         | Animation used for indeterminate progress with infinite loop          |
+| `circularProgressIndeterminate` | Animation used for circular indeterminate progress with infinite loop |
+| `snackbarHide`                  | Animation used for hiding a snackbar                                  |
+| `snackbarShow`                  | Animation used for showing a snackbar                                 |
+| `snackbarSwipeOut`              | Animation used for swiping out a snackbar                             |

@@ -15,12 +15,8 @@
       "border-radius",
       "box-shadow",
       "colors",
-      "dark-mode",
-      "font-family",
       "spacing",
-      "transition-duration",
-      "transition-property",
-      "transition-timing-function"
+      "dark-mode"
     ]
   },
   {

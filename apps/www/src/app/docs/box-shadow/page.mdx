@@ -1,0 +1,76 @@
+import ChangeThemePanel from "../../_components/ChangeThemePanel/ChangeThemePanel";
+import SchematicBoxShadowButton from "./SchematicBoxShadowButton";
+
+
+# Box shadow
+
+Understand how to use the **boxShadow** property to modify the component's
+
+---
+
+## Modify box shadow
+
+You can modify the current box shadow by changing the **boxShadow** property.
+
+<div className="code-block mt-4">
+```js:tailwind.config.js
+module.exports = {
+    ...,
+    content: [
+        "./node_modules/@andore-ui/**/*.{js,ts,jsx,tsx}",
+    ],
+    plugins: [
+        require('@andore-ui/theme')({
+            theme: {
+                boxShadow: {
+                    sm: " 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)",
+                    DEFAULT: "0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)",
+                }
+            }
+        }),
+    ],
+};
+```
+</div>
+
+<br/>
+
+
+## How does it work?
+
+The theme system uses the **boxShadow** property to define the box shadow of the components.
+All components depend on the this property to define the box shadow, if we change the value of this property, all components will be affected.
+
+<br/>
+
+For example, let's modify the box shadow of this component:
+
+<br/>
+
+<ChangeThemePanel theme={'box-shadow'} >
+    <SchematicBoxShadowButton />
+</ChangeThemePanel>
+
+<br/>
+
+## Box shadow tokens
+
+The following table lists all the box shadow tokens available in the theme system.
+
+<br/>
+
+| Token Name   | Description       |
+|--------------|-------------------|
+| sm           | Light elevation 1 |
+| DEFAULT      | Light elevation 2 |
+| md           | Light elevation 3 |
+| lg           | Light elevation 4 |
+| xl           | Light elevation 5 |
+| none         | No shadow         |
+| dark         | Dark elevation 1  |
+| dark-sm      | Dark elevation 1  |
+| dark-DEFAULT | Dark elevation 2  |
+| dark-md      | Dark elevation 3  |
+| dark-lg      | Dark elevation 4  |
+| dark-xl      | Dark elevation 5  |
+| dark-none    | No shadow         |
