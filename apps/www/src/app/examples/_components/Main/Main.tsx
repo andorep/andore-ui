@@ -4,6 +4,9 @@ import AppContainer from "@/app/examples/_components/AppContainer/AppContainer";
 import PhotosAppCode from "@/app/@photos/code.md";
 import ChatAppCode from "@/app/@chat/code.md";
 import MailAppCode from "@/app/@mail/code.md";
+import Photos from "@/app/@photos/page";
+import Chat from "@/app/@chat/page";
+import Mail from "@/app/@mail/page";
 
 const Main = () => {
   return (
@@ -27,9 +30,9 @@ const Main = () => {
               </Typography>
           </section>
           <section className="flex flex-col  justify-between mb-4 gap-12">
-              <AppContainer name={"photos"} code={<PhotosAppCode  />}/>
-              <AppContainer name={"chat"} code={<ChatAppCode  />}/>
-              <AppContainer name={"mail"} code={<MailAppCode  />}/>
+              <AppContainer app={<Photos/>} code={<PhotosAppCode  />}/>
+              <AppContainer app={<Chat/>} code={<ChatAppCode  />}/>
+              <AppContainer app={<Mail/>} code={<MailAppCode  />}/>
           </section>
       </section>
   );

@@ -9,12 +9,12 @@ import PreviewIcon from "@/app/_components/icons/PreviewIcon";
 import CodeIcon from "@/app/_components/icons/CodeIcon";
 
 interface AppContainerProps {
-  name?: string;
   code?: React.ReactNode;
+  app?: React.ReactNode;
 }
 
 const AppContainer = (props: AppContainerProps) => {
-  const { name, code } = props;
+  const { code, app } = props;
   const [selected, setSelected] = React.useState(0);
   return (
     <section className="flex flex-col gap-4">
@@ -34,13 +34,9 @@ const AppContainer = (props: AppContainerProps) => {
           Code
         </ToggleButton>
       </ToggleButtonGroup>
-      {selected == 0 && (
-        <iframe className={`w-full h-[600px] rounded`} src={`./${name}`} />
-      )}
+      {selected == 0 && <div className={"w-full h-[600px] rounded"}>{app}</div>}
       {selected == 1 && (
-          <div className={'code-block h-[600px] flex flex-col'}>
-            {code}
-          </div>
+        <div className={"code-block h-[600px] flex flex-col"}>{code}</div>
       )}
     </section>
   );
