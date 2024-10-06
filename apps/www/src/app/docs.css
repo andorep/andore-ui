@@ -95,6 +95,12 @@
     }
 }
 
+/* Dark mode styles */
+.theme-forest:is([data-mode="dark"] *) {
+    .shadow-md {
+        box-shadow: 0 0 15px rgba(0,255,127,0.6),0 0 30px rgba(34,139,34,0.4);
+    }
+}
 .theme-forest {
     --aui-primary-dark-container: 124 155 115;
     --aui-primary-dark-container-text: 240 244 224;
