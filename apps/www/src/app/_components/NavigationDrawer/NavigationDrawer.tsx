@@ -4,7 +4,6 @@ import { PagesData } from "@/app/_data/pages.data";
 import Link from "next/link";
 import { Typography } from "@andore-ui/typography";
 import { usePathname } from "next/navigation";
-import MenuIcon from "@/app/_components/icons/MenuIcon";
 import AppIcon from "@/app/_components/AppIcon/AppIcon";
 
 interface NavigationDrawerProps {
