@@ -28,6 +28,7 @@ const NavigationDrawer = (props: NavigationDrawerProps) => {
           <Link
             href="/"
             className={`font-semibold text-surface-text dark:text-surface-dark-text`}
+            onClick={onClose}
           >
             andore/ui
           </Link>
@@ -37,6 +38,7 @@ const NavigationDrawer = (props: NavigationDrawerProps) => {
             <Link
               href={"/docs"}
               className={"group"}
+              onClick={onClose}
             >
               <Typography
                 variant={"body"}
@@ -54,6 +56,7 @@ const NavigationDrawer = (props: NavigationDrawerProps) => {
               href={"/examples"}
               className={"group"}
               data-active={pathname === "/examples"}
+              onClick={onClose}
             >
               <Typography
                 variant={"body"}
@@ -71,6 +74,7 @@ const NavigationDrawer = (props: NavigationDrawerProps) => {
               href={"/themes"}
               className={"group"}
               data-active={pathname === "/themes"}
+              onClick={onClose}
             >
               <Typography
                 variant={"body"}
@@ -107,6 +111,7 @@ const NavigationDrawer = (props: NavigationDrawerProps) => {
                       href={urlValue}
                       className={"group"}
                       data-active={pathname === urlValue}
+                      onClick={onClose}
                     >
                       <Typography
                         variant={"body"}
