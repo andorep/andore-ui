@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'andore/ui',
+    description: 'andore/ui is a collection of components built with Tailwind CSS and Material Design 3.',
+    creator: '@andreperegrina',
+    images: ['https://andreperegrina.github.io/andore-ui/og-image-large.png'],
+  },
 };
 
 export default function RootLayout({
