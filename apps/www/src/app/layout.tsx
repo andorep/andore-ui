@@ -10,6 +10,27 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "andore/ui",
   description: "andore/ui is a collection of components built with Tailwind CSS and Material Design 3.",
+  openGraph: {
+    title:  "andore/ui",
+    description: "andore/ui is a collection of components built with Tailwind CSS and Material Design 3.",
+    url: "https://andreperegrina.github.io/andore-ui",
+    siteName: "andore/ui",
+    images: [
+      {
+        url: 'https://andreperegrina.github.io/andore-ui/og-image-small.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://andreperegrina.github.io/andore-ui/og-image-large.png',
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
