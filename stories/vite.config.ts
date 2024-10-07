@@ -43,6 +43,7 @@ export default defineConfig({
              "@andore-ui/search": resolve(__dirname, "../packages/Search/src"),
              "@andore-ui/chip": resolve(__dirname, "../packages/Chip/src"),
              "@andore-ui/bottom-sheet": resolve(__dirname, "../packages/BottomSheet/src"),
+             "@andore-ui/drawer": resolve(__dirname, "../packages/Drawer/src"),
         }
     }
 })

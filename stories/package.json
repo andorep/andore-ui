@@ -44,7 +44,8 @@
     "@andore-ui/search": "workspace:*",
     "@andore-ui/chip": "workspace:*",
     "@andore-ui/bottom-sheet": "workspace:*",
-    "@andore-ui/snackbar": "workspace:*"
+    "@andore-ui/snackbar": "workspace:*",
+    "@andore-ui/drawer": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
