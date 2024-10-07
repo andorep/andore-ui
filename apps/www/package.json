@@ -17,6 +17,7 @@
     "@andore-ui/button": "workspace:*",
     "@andore-ui/card": "workspace:*",
     "@andore-ui/chip": "workspace:*",
+    "@andore-ui/drawer": "workspace:*",
     "@andore-ui/divider": "workspace:*",
     "@andore-ui/fab": "workspace:*",
     "@andore-ui/icon-button": "workspace:*",

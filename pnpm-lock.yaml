@@ -31,6 +31,9 @@ importers:
       '@andore-ui/divider':
         specifier: workspace:*
         version: link:../../packages/Divider
+      '@andore-ui/drawer':
+        specifier: workspace:*
+        version: link:../../packages/Drawer
       '@andore-ui/fab':
         specifier: workspace:*
         version: link:../../packages/Fab
