@@ -23,7 +23,8 @@ const NavigationList = (props: NavigationListProps) => {
           const name = nameList
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
-          const urlValue = url == "introduction" ? "/docs" : `/docs/${url}`;
+          const relativePath = page.path != null ? page.path : "";
+          const urlValue = url == "introduction" ? "/docs" : `/docs${relativePath}/${url}`;
           return (
             <li key={urlValue}>
               <Link

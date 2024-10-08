@@ -1,0 +1,40 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Card
+
+Cards are use to display single topic of information that can be actionable. Also it can be used to display a collection of information separating them in different cards.
+
+<ComponentSources component="card"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/card"/>
+
+<br/>
+
+## Import
+
+<ImportComponentTabs
+    components="Card"
+    library="card"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview" className={'h-[600px]'}>
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code"  className={'h-[600px]'}>
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

@@ -1,0 +1,38 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Accordion
+
+A collapsible component that allows you to show or hide content.
+
+<ComponentSources component="accordion"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/accordion"/>
+
+<br/>
+
+## Import
+
+<ImportComponentTabs components="Accordion, AccordionItem, AccordionHeader, AccordionContent" library="accordion"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview">
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code">
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

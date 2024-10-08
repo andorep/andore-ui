@@ -4,6 +4,7 @@ import {cache} from "react";
 
 export interface PagesData {
     title: string;
+    path: string;
     pages: string[];
 }
 

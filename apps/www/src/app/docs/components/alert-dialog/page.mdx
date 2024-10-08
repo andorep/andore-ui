@@ -1,0 +1,40 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Alert Dialog
+
+A dialog that interrupt pauses the user's workflow to display information that must be acknowledged or responded to.
+
+<ComponentSources component="alert-dialog"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/alert-dialog"/>
+
+<br/>
+
+## Import
+
+<ImportComponentTabs
+    components="AlertDialog, AlertDialogAction, AlertDialogActionContent, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogOverlay, AlertDialogPortal, AlertDialogTitle, AlertDialogTrigger"
+    library="alert-dialog"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview">
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code">
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

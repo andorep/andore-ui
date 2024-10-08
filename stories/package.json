@@ -28,9 +28,6 @@
     "@andore-ui/theme": "workspace:*",
     "@andore-ui/toggle-button": "workspace:*",
     "@andore-ui/typography": "workspace:*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.4.0",
     "@andore-ui/card": "workspace:*",
     "@andore-ui/switch": "workspace:*",
     "@andore-ui/tooltip": "workspace:*",
@@ -45,7 +42,10 @@
     "@andore-ui/chip": "workspace:*",
     "@andore-ui/bottom-sheet": "workspace:*",
     "@andore-ui/snackbar": "workspace:*",
-    "@andore-ui/drawer": "workspace:*"
+    "@andore-ui/drawer": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",

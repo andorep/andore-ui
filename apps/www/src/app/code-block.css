@@ -9,7 +9,12 @@
         @apply rounded;
         @apply bg-neutral-100 dark:bg-neutral-900;
         @apply p-4;
-        @apply overflow-auto h-fit;
+        @apply overflow-auto h-full;
+    }
+    > .language-js {
+        > code{
+            @apply h-full;
+        }
     }
 
     .rehype-code-title + pre {
@@ -17,7 +22,8 @@
         @apply rounded-t-none rounded-b;
         @apply bg-neutral-100 dark:bg-neutral-900;
         @apply p-4;
-        @apply overflow-auto h-fit;
+        @apply overflow-auto h-full;
+        height: calc(100% - 46px);
     }
 
 

@@ -21,10 +21,10 @@
   },
   {
     "title": "Components",
+    "path": "/components",
     "pages": [
       "accordion",
       "alert-dialog",
-      "aspect-ratio",
       "avatar",
       "bottom-sheet",
       "button",
