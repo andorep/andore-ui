@@ -61,6 +61,11 @@ const SharedIcon = () => (
   </svg>
 );
 
+const image =
+  process.env.NODE_ENV === "development"
+    ? "/3d_avatar_13.png"
+    : "./3d_avatar_13.png";
+
 const Preview = () => {
   return (
     <div
@@ -74,7 +79,7 @@ const Preview = () => {
         <CardHeader
           title="Card title"
           subtitle="Card subtitle"
-          avatar={<CardAvatar src={"/3d_avatar_13.png"} alt="Avatar" />}
+          avatar={<CardAvatar src={image} alt="Avatar" />}
           action={
             <CardIconButton>
               <MoreIcon />

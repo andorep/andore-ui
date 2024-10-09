@@ -30,7 +30,7 @@ const Preview = () => {
                       Edit profile
                   </DialogTitle>
                   <DialogDescription>
-                      Make changes to your profile here. Click save when you're done.
+                      Make changes to your profile here. Click save when you&#39;re done.
                   </DialogDescription>
                   <fieldset className="mb-[15px] flex items-center gap-5">
                       <TextField id="name" defaultValue="Pedro Duarte" label="Name" />
