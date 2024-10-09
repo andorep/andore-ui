@@ -1,0 +1,41 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Dialog
+
+A dialog is a type of modal window that appears in front of app content to provide critical information or ask for a decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action has been taken.
+
+<ComponentSources component="dialog"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/dialog"/>
+
+<br/>
+
+## Import
+
+
+<ImportComponentTabs
+    components="Dialog, DialogClose, DialogCloseButton, DialogContent, DialogDescription, DialogOverlay, DialogPortal, DialogTitle, DialogTrigger"
+    library="dialog"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview">
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code" >
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

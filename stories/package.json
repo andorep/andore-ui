@@ -25,6 +25,7 @@
     "@andore-ui/linear-progress": "workspace:*",
     "@andore-ui/radio": "workspace:*",
     "@andore-ui/surface": "workspace:*",
+    "@andore-ui/select": "workspace:*",
     "@andore-ui/theme": "workspace:*",
     "@andore-ui/toggle-button": "workspace:*",
     "@andore-ui/typography": "workspace:*",

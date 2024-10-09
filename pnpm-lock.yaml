@@ -82,6 +82,9 @@ importers:
       '@andore-ui/search':
         specifier: workspace:*
         version: link:../../packages/Search
+      '@andore-ui/select':
+        specifier: workspace:*
+        version: link:../../packages/Select
       '@andore-ui/snackbar':
         specifier: workspace:*
         version: link:../../packages/Snackbar
@@ -2363,6 +2366,9 @@ importers:
       '@andore-ui/search':
         specifier: workspace:*
         version: link:../packages/Search
+      '@andore-ui/select':
+        specifier: workspace:*
+        version: link:../packages/Select
       '@andore-ui/snackbar':
         specifier: workspace:*
         version: link:../packages/Snackbar

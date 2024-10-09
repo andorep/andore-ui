@@ -1,0 +1,40 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Textarea
+An input field that allows users to enter multiple lines of text.
+
+<ComponentSources component="textarea"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/textarea"/>
+
+<br/>
+
+## Import
+
+
+<ImportComponentTabs
+    components="Textarea"
+    library="textarea"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview">
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code" >
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

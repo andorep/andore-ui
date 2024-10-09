@@ -1,0 +1,40 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Typography
+A collection of text styles that can be used to create a consistent look and feel across the application.
+
+<ComponentSources component="typography"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/typography"/>
+
+<br/>
+
+## Import
+
+
+<ImportComponentTabs
+    components="Typography"
+    library="typography"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview" className={'h-[500px]'}>
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code" className={'h-[500px]'}>
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

@@ -1,0 +1,40 @@
+import PackageManagerTabs from "../../../_components/PackageManagerTabs/PackageManagerTabs";
+import ImportComponentTabs from "../../../_components/ImportComponentTabs/ImportComponentTabs";
+import ComponentPreviewTabs from "../../../_components/ComponentPreviewTabs/ComponentPreviewTabs";
+import ComponentPreviewTabPanel from "../../../_components/ComponentPreviewTabPanel/ComponentPreviewTabPanel";
+import Code from "./code.md";
+import Preview from "./Preview";
+import ComponentSources from "../../../_components/ComponentSources/ComponentSources";
+
+# Select
+A select component is a form control that provides a way to present a list of options to the user in a way that takes up less space than a radio button group or checkbox group.
+
+<ComponentSources component="select"/>
+
+---
+
+## Installation
+
+<PackageManagerTabs command="@andore-ui/select"/>
+
+<br/>
+
+## Import
+
+
+<ImportComponentTabs
+    components="Select"
+    library="select"/>
+
+<br/>
+
+## Usage
+
+<ComponentPreviewTabs>
+    <ComponentPreviewTabPanel value="preview">
+        <Preview/>
+    </ComponentPreviewTabPanel>
+    <ComponentPreviewTabPanel value="code" >
+        <Code/>
+    </ComponentPreviewTabPanel>
+</ComponentPreviewTabs>

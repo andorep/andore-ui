@@ -41,6 +41,7 @@
     "@andore-ui/navigation": "workspace:*",
     "@andore-ui/list": "workspace:*",
     "@andore-ui/search": "workspace:*",
+    "@andore-ui/select": "workspace:*",
     "@andore-ui/chip": "workspace:*",
     "@andore-ui/bottom-sheet": "workspace:*",
     "@andore-ui/snackbar": "workspace:*",
