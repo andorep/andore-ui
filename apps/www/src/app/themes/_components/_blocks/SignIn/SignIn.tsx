@@ -29,10 +29,10 @@ const SignIn = async () => {
         </Typography>
       </div>
       <div className="flex flex-row gap-4">
-        <Button variant={"outlined"} startIcon={<GoogleIcon />} className={'flex-1'}>
+        <Button variant={"outlined"} startIcon={<GoogleIcon className={'w-4 h-4'} />} className={'flex-1'}>
           Google
         </Button>
-        <Button variant={"outlined"} startIcon={<GithubIcon />} className={'flex-1'}>
+        <Button variant={"outlined"} startIcon={<GithubIcon className={'w-4 h-4'} />} className={'flex-1'}>
           Github
         </Button>
       </div>

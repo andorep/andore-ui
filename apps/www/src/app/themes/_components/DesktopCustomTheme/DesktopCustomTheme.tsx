@@ -1,22 +1,19 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { twMerge } from "tailwind-merge";
 import { ThemeType, transformColorsToCssVariables } from "@andore-ui/theme";
-import PrimaryColorList from "@/app/themes/_components/PrimaryColorList/PrimaryColorList";
-import SurfaceColorList from "@/app/themes/_components/SurfaceColorList/SurfaceColorList";
-import OutlinedColorList from "@/app/themes/_components/OutlinedColorList/OutlinedColorList";
 import { Typography } from "@andore-ui/typography";
 import PopoverChangeColor from "@/app/themes/_components/PopoverChangeColor/PopoverChangeColor";
-import {
-  transformHexToRgb,
-  transformThemeColorIntoCssVariable,
-} from "@/app/_utils/css.util";
 import { IconButton } from "@andore-ui/icon-button";
 import ResetWhiteBalanceIcon from "@/app/_components/icons/ResetWhiteBalanceIcon";
 import { clone } from "@/app/_utils/object.util";
-import UploadThemeJSON from "@/app/themes/_components/UploadThemeJSON/UploadThemeJSON";
 import DownloadTheme from "@/app/themes/_components/DownloadTheme/DownloadTheme";
 import { Tooltip } from "@andore-ui/tooltip";
+import { generateColorScheme } from "@/app/_utils/material.util";
+import ColorItem from "@/app/_components/ColorItem/ColorItem";
+import { Divider } from "@andore-ui/divider";
+import PersonRaisedHandIcon from "@/app/_components/icons/PersonRaisedHandIcon";
 
 interface DesktopCustomThemeProps {
   defaultTheme?: ThemeType;
@@ -123,6 +120,15 @@ const themeCSS = `
 }
 `;
 
+const rootClasses = twMerge(
+  "sticky top-20 z-50",
+  "hidden lg:flex flex-col ",
+  "p-4 rounded-md",
+  "w-fit h-fit",
+  "bg-surface-container-lowest dark:bg-surface-dark-container-lowest border-outline-variant",
+  "border-solid border dark:border-outline-dark-variant custom-theme",
+);
+
 const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
   const { defaultTheme } = props;
   const [theme, setTheme] = React.useState<ThemeType | undefined>(() => {
@@ -130,12 +136,16 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
   });
   const [hasThemeChanged, setHasThemeChanged] = React.useState(false);
   const styleSheetRef = React.useRef<HTMLStyleElement | null>(null);
-  const [colorSelected, setColorSelected] = React.useState<
-    { color: string; name: string } | undefined
+  const [colorSeed, setColorSeed] = React.useState<string>(
+    theme?.colors?.primary?.DEFAULT ?? "#FFFFFF",
+  );
+  const [anchorElUpload, setAnchorElUpload] = React.useState<
+    HTMLElement | undefined
   >();
-  const [anchorEl, setAnchorEl] = React.useState<HTMLElement | undefined>();
 
-  const colors = theme?.colors || ({} as ThemeType["colors"]);
+  const [tooltipHelpMessage, setTooltipHelpMessage] = React.useState<string>(
+    "Change source color to generate a new theme",
+  );
 
   useEffect(() => {
     styleSheetRef.current = document.createElement("style");
@@ -149,60 +159,18 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
     };
   }, []);
 
-  const handleClick = (
-    event: React.MouseEvent<HTMLElement>,
-    name: string,
-    color: string,
-  ) => {
-    setAnchorEl(event.currentTarget);
-    setColorSelected({ color, name });
-  };
-
-  const handleClose = (color: string) => {
-    const path = colorSelected?.name.split(".");
-    if (colorSelected?.color === color) {
-      setAnchorEl(undefined);
-      setColorSelected(undefined);
-      return;
-    }
-    const newTheme = { ...theme } as ThemeType;
-    let currentTheme = newTheme.colors;
-    if (currentTheme == null) {
-      return;
-    }
-    for (let i = 0; i < path!.length - 1; i++) {
-      if (currentTheme == null) {
-        return;
-      }
-      currentTheme = currentTheme[path![i]] as ThemeType["colors"];
-    }
-    currentTheme[path![path!.length - 1]] = color;
-    const cssVariable = transformThemeColorIntoCssVariable(
-      colorSelected?.name ?? "",
-    );
-    const rgbColor = transformHexToRgb(color);
-    let currentCss = styleSheetRef.current?.innerHTML;
-    // replace old color with new color
-    currentCss = currentCss?.replace(
-      new RegExp(`${cssVariable}:.*;`, "g"),
-      `${cssVariable}: ${rgbColor};`,
-    );
-
-    styleSheetRef.current!.innerHTML = currentCss!;
-
-    setHasThemeChanged(true);
-    setTheme(newTheme);
-    setAnchorEl(undefined);
-    setColorSelected(undefined);
-  };
-
   const handleResetTheme = () => {
     setTheme(clone(defaultTheme) as ThemeType);
     setHasThemeChanged(false);
+    setColorSeed(defaultTheme?.colors?.primary?.DEFAULT ?? "#FFFFFF");
     styleSheetRef.current!.innerHTML = themeCSS;
   };
 
-  const handleThemeLoaded = (themeColors: ThemeType) => {
+  const handleThemeLoaded = (color: string) => {
+    const themeFromSeed = generateColorScheme(color);
+    const themeColors = {
+      colors: themeFromSeed,
+    };
     const cssVariablesJSON = transformColorsToCssVariables(themeColors.colors);
 
     // convert JSON to CSS text
@@ -221,55 +189,124 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
         ...themeColors.colors,
       },
     });
+    setAnchorElUpload(undefined);
+    setColorSeed(color);
+    setHasThemeChanged(true);
+  };
+
+  const handleClosePopover = () => {
+    setAnchorElUpload(undefined);
+  };
+
+  const handleClickSeed = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElUpload(event.currentTarget);
+  };
+
+  const handleClickHelp = () => {
+    setTooltipHelpMessage("Go away! This doesn't do anything!");
+    window.setTimeout(() => {
+      setTooltipHelpMessage("Change seed color to generate a new theme");
+    }, 3000);
   };
 
   return (
-    <section className="hidden md:flex flex-col w-full h-fit p-4 rounded bg-surface-container-lowest dark:bg-surface-dark-container-lowest border-outline-variant border-solid border dark:border-outline-dark-variant custom-theme">
-      <div className={"flex flex-row justify-between"}>
-        <div className={"flex flex-row items-center gap-4"}>
-          <Typography variant={"title"} size={"sm"} className={"mb-4"}>
-            Theme
-          </Typography>
-          <UploadThemeJSON onLoaded={handleThemeLoaded} />
-          <DownloadTheme theme={theme} />
-          {hasThemeChanged && (
-            <Tooltip
-              title="Reset theme"
-              placement={"top"}
-              offset={15}
-              delay={200}
-              delayClose={0}
+    <section className={rootClasses}>
+      <div className={"flex flex-row gap-1 justify-between"}>
+        <Typography variant={"title"} size={"sm"} className={"mb-4"}>
+          Theme
+        </Typography>
+        {hasThemeChanged && (
+          <Tooltip
+            title="Reset theme"
+            placement={"top"}
+            offset={15}
+            delay={200}
+            delayClose={0}
+          >
+            <IconButton
+              onClick={handleResetTheme}
+              className={"-mt-2 -mr-2"}
+              color={"secondary"}
             >
-              <IconButton
-                onClick={handleResetTheme}
-                className={"-ml-4 -mt-4"}
-                color={"secondary"}
-              >
-                <ResetWhiteBalanceIcon />
-              </IconButton>
-            </Tooltip>
-          )}
-        </div>
-        <a
-          target={"_blank"}
-          aria-label={"Material Theme Builder"}
-          href={"https://material-foundation.github.io/material-theme-builder/"}
-        >
-          <Typography variant={"body"} size={"sm"} className={"underline"}>
-            Material Theme Builder
-          </Typography>
-        </a>
+              <ResetWhiteBalanceIcon />
+            </IconButton>
+          </Tooltip>
+        )}
+        {!hasThemeChanged && (
+          <Tooltip
+            title={tooltipHelpMessage}
+            placement={"top"}
+            offset={15}
+            delay={200}
+            delayClose={0}
+            className={'z-[1000]'}
+          >
+            <IconButton
+              className={"-mt-2 -mr-2"}
+              color={"secondary"}
+              onClick={handleClickHelp}
+            >
+              <PersonRaisedHandIcon className={"w-5 h-5"} />
+            </IconButton>
+          </Tooltip>
+        )}
       </div>
-      <div className={"flex flex-row  overflow-auto gap-4"}>
-        <PrimaryColorList colors={colors} onClick={handleClick} />
-        <SurfaceColorList colors={colors} onClick={handleClick} />
-        <OutlinedColorList colors={colors} onClick={handleClick} />
+      <ColorItem
+        className={"w-full p-1"}
+        color={colorSeed}
+        name={"Source"}
+        onClick={handleClickSeed}
+      />
+      <Divider />
+      <div className={"flex flex-col gap-2 mb-2"}>
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.primary?.DEFAULT ?? "#FFFFFF"}
+          name={"Primary"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.secondary?.DEFAULT ?? "#FFFFFF"}
+          name={"Secondary"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.error?.DEFAULT ?? "#FFFFFF"}
+          name={"Error"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.surface?.DEFAULT ?? "#FFFFFF"}
+          name={"Surface"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.outline?.DEFAULT ?? "#FFFFFF"}
+          name={"Outline"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.info?.DEFAULT ?? "#FFFFFF"}
+          name={"Info"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.warning?.DEFAULT ?? "#FFFFFF"}
+          name={"Warning"}
+        />
+        <ColorItem
+          className={"w-full p-1"}
+          color={theme?.colors?.success?.DEFAULT ?? "#FFFFFF"}
+          name={"Success"}
+        />
       </div>
+      <DownloadTheme theme={theme} />
       <PopoverChangeColor
-        key={colorSelected?.name}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        defaultColor={colorSelected?.color}
+        key={colorSeed}
+        anchorEl={anchorElUpload}
+        onClose={handleClosePopover}
+        onApply={handleThemeLoaded}
+        defaultColor={colorSeed}
       />
     </section>
   );

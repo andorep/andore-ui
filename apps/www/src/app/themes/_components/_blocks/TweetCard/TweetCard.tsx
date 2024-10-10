@@ -43,7 +43,7 @@ const TweetCard = async () => {
       <div className="flex flex-row items-center gap-4 mt-4">
         <div className="flex items-center">
           <IconButton variant={'standard'} aria-label={'like'}>
-            <FavoriteFilledIcon/>
+            <FavoriteFilledIcon className={' w-6 h-6'}/>
           </IconButton>
           <Typography variant={"body"} size={"sm"} className="text-secondary dark:text-secondary-dark-DEFAULT">
             10
@@ -51,7 +51,7 @@ const TweetCard = async () => {
         </div>
         <div className="flex items-center">
           <IconButton variant={'standard'} aria-label={'retweet'}>
-            <RepeatIcon className={'fill-secondary'} />
+            <RepeatIcon className={'fill-secondary w-6 h-6'} />
           </IconButton>
           <Typography variant={"body"} size={"sm"} className="text-secondary dark:text-secondary-dark-DEFAULT">
             20

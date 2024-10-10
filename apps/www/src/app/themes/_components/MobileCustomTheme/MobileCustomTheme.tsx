@@ -59,7 +59,7 @@ const MobileCustomTheme = (props: MobileCustomThemeProps) => {
   };
 
   return (
-    <section className={`flex flex-col w-full h-fit mb-3 ${themeClasses[theme]}`}>
+    <section className={`flex lg:hidden flex-col w-full h-fit mb-3 ${themeClasses[theme]}`}>
       <span>
         <Button variant={"filled"} color={"primary"} onClick={handleOpen}>
           Customize

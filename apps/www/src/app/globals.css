@@ -11,6 +11,7 @@
 body {
     @apply bg-surface-container-lowest dark:bg-surface-dark-container-lowest transition-colors duration-200 ease-in-out;
     font-family: 'Noto Sans', sans-serif;
+    @apply flex flex-col min-h-screen;
 }
 
 

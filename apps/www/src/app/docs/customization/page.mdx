@@ -6,7 +6,7 @@ Using tailwindcss with the theme package for theming.
 
 <br/>
 
-To maintain a consistent look and feel across the application, this project uses the <span className="underline">[Material Design](https://material.io/design)</span>as the design system.
+To maintain a consistent look and feel across the application, this project uses <span className="underline">[Material Design](https://material.io/design)</span> as the design system.
 This is achieved by using <span className="underline">[Tailwind CSS](https://tailwindcss.com)</span> as the utility-first CSS framework for generating a consistent design system that can be easily customized.
 
 ---
@@ -20,7 +20,7 @@ By default, the theme is set to the default Material Design theme. To customize 
 module.exports = {
   ...,
   plugins: [
-    require('@andore/tailwindcss')({
+    require('@andore-ui/theme')({
       theme: {
         colors: {
           primary:{
@@ -57,7 +57,7 @@ As we saw in the previous example, the theme object is passed to the **andoreui(
 module.exports = {
     ...,
     plugins: [
-        require('@andore/tailwindcss')({
+        require('@andore-ui/theme')({
             theme:{
                 colors: {
                     primary:{
@@ -85,7 +85,7 @@ By default, the *andoreui* plugin does not generate CSS variables for the theme.
 module.exports = {
   ...,
   plugins: [
-    require('@andore/tailwindcss')({
+    require('@andore-ui/theme')({
       enabledCssVariables: true,
     }),
   ],

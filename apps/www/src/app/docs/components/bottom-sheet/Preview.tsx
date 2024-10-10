@@ -66,25 +66,25 @@ const Preview = () => {
             <Avatar>
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
-            John
+            <span className={'text-surface-text dark:text-surface-dark-text'}>John</span>
           </span>
           <span className={"flex flex-col items-center gap-2"}>
             <Avatar>
               <AvatarFallback>JD</AvatarFallback>
             </Avatar>
-            Jane
+            <span className={'text-surface-text dark:text-surface-dark-text'}>Jane</span>
           </span>
           <span className={"flex flex-col items-center gap-2"}>
             <Avatar>
               <AvatarFallback>LE</AvatarFallback>
             </Avatar>
-            Lee
+            <span className={'text-surface-text dark:text-surface-dark-text'}>Lee</span>
           </span>
           <span className={"flex flex-col items-center gap-2"}>
             <Avatar>
               <AvatarFallback>OP</AvatarFallback>
             </Avatar>
-            Oscar
+            <span className={'text-surface-text dark:text-surface-dark-text'}>Oscar</span>
           </span>
         </div>
       </BottomSheet>

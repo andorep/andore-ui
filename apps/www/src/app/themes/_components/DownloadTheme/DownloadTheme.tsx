@@ -1,9 +1,7 @@
 import React from "react";
 import { ThemeType } from "@andore-ui/theme";
-import { IconButton } from "@andore-ui/icon-button";
-import DownloadIcon from "@/app/_components/icons/DownloadIcon";
 import { copyToClipboard } from "@/app/_utils/html.uitil";
-import { Tooltip } from "@andore-ui/tooltip";
+import { Button } from "@andore-ui/button";
 
 interface DownloadThemeProps {
   theme?: ThemeType;
@@ -11,37 +9,29 @@ interface DownloadThemeProps {
 
 const DownloadTheme = (props: DownloadThemeProps) => {
   const { theme } = props;
-  const [temporaryTooltipText, setTemporaryTooltipText] = React.useState<string | undefined>(undefined);
+  const [buttonText, setButtonText] = React.useState("Copy theme");
 
   const handleDownload = async () => {
     if (!theme) {
       return;
     }
     await copyToClipboard(JSON.stringify(theme.colors, null, 2));
-    setTemporaryTooltipText("Copied into clipboard 😉");
+    setButtonText("Copied!");
+    setTimeout(() => {
+      setButtonText("Copy theme");
+    }, 2000);
   };
 
-  const handleTooltipClose = () => {
-    setTemporaryTooltipText(undefined);
-  };
 
   return (
-    <Tooltip
-      title={temporaryTooltipText || "Copy theme"}
-      placement={"top"}
-      offset={15}
-      delay={200}
-      delayClose={0}
-      onOpenChange={handleTooltipClose}
+    <Button
+        className={"!text-sm"}
+      variant={"text"}
+      onClick={handleDownload}
+      aria-label={"Copy JSON file"}
     >
-      <IconButton
-        onClick={handleDownload}
-        className={"-ml-4 -mt-4"}
-        aria-label={"Upload JSON file"}
-      >
-        <DownloadIcon />
-      </IconButton>
-    </Tooltip>
+      {buttonText}
+    </Button>
   );
 };
 
