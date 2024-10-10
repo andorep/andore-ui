@@ -337,6 +337,111 @@ importers:
 
   packages/AndoreUI:
     dependencies:
+      '@andore-ui/accordion':
+        specifier: workspace:*
+        version: link:../Accordion
+      '@andore-ui/alert-dialog':
+        specifier: workspace:*
+        version: link:../AlertDialog
+      '@andore-ui/aspect-ratio':
+        specifier: workspace:*
+        version: link:../AspectRatio
+      '@andore-ui/avatar':
+        specifier: workspace:*
+        version: link:../Avatar
+      '@andore-ui/bottom-sheet':
+        specifier: workspace:*
+        version: link:../BottomSheet
+      '@andore-ui/button':
+        specifier: workspace:*
+        version: link:../Button
+      '@andore-ui/card':
+        specifier: workspace:*
+        version: link:../Card
+      '@andore-ui/checkbox':
+        specifier: workspace:*
+        version: link:../Checkbox
+      '@andore-ui/chip':
+        specifier: workspace:*
+        version: link:../Chip
+      '@andore-ui/circular-progress':
+        specifier: workspace:*
+        version: link:../CircularProgress
+      '@andore-ui/dialog':
+        specifier: workspace:*
+        version: link:../Dialog
+      '@andore-ui/divider':
+        specifier: workspace:*
+        version: link:../Divider
+      '@andore-ui/drawer':
+        specifier: workspace:*
+        version: link:../Drawer
+      '@andore-ui/dropdown-menu':
+        specifier: workspace:*
+        version: link:../DropdownMenu
+      '@andore-ui/fab':
+        specifier: workspace:*
+        version: link:../Fab
+      '@andore-ui/icon-button':
+        specifier: workspace:*
+        version: link:../IconButton
+      '@andore-ui/input':
+        specifier: workspace:*
+        version: link:../Input
+      '@andore-ui/label':
+        specifier: workspace:*
+        version: link:../Label
+      '@andore-ui/linear-progress':
+        specifier: workspace:*
+        version: link:../LinearProgress
+      '@andore-ui/list':
+        specifier: workspace:*
+        version: link:../List
+      '@andore-ui/navigation':
+        specifier: workspace:*
+        version: link:../Navigation
+      '@andore-ui/popover':
+        specifier: workspace:*
+        version: link:../Popover
+      '@andore-ui/radio':
+        specifier: workspace:*
+        version: link:../Radio
+      '@andore-ui/search':
+        specifier: workspace:*
+        version: link:../Search
+      '@andore-ui/select':
+        specifier: workspace:*
+        version: link:../Select
+      '@andore-ui/snackbar':
+        specifier: workspace:*
+        version: link:../Snackbar
+      '@andore-ui/surface':
+        specifier: workspace:*
+        version: link:../Surface
+      '@andore-ui/switch':
+        specifier: workspace:*
+        version: link:../Switch
+      '@andore-ui/tabs':
+        specifier: workspace:*
+        version: link:../Tabs
+      '@andore-ui/text-field':
+        specifier: workspace:*
+        version: link:../TextField
+      '@andore-ui/textarea':
+        specifier: workspace:*
+        version: link:../Textarea
+      '@andore-ui/theme':
+        specifier: workspace:*
+        version: link:../theme
+      '@andore-ui/toggle-button':
+        specifier: workspace:*
+        version: link:../ToggleButton
+      '@andore-ui/tooltip':
+        specifier: workspace:*
+        version: link:../Tooltip
+      '@andore-ui/typography':
+        specifier: workspace:*
+        version: link:../Typography
       react:
         specifier: ^18.3.1
         version: 18.3.1

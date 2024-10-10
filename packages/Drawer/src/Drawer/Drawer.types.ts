@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import type { DialogProps } from "vaul";
 
-export interface Props {
+interface Props {
   title: string;
   className?: string;
   description: string;

@@ -257,7 +257,7 @@ export const ButtonTextClassNameMap: Record<ButtonColor, string> = {
     ),
 };
 
-export const VariantClassNameMap: Record<
+export const ButtonVariantClassNameMap: Record<
     ButtonVariant,
     Record<ButtonColor, string>
 > = {

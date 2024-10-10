@@ -5,7 +5,7 @@ import {
     ButtonBaseDisabledClassNameMap,
     ButtonBaseEndIconClassName, ButtonBaseSpanPaddingClassName,
     ButtonBaseStartIconClassName,
-    VariantClassNameMap,
+    ButtonVariantClassNameMap,
     VariantContentClassNameMap,
 } from "./Button.classes";
 
@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         if (props.disabled) {
             classes = twMerge(classes, ButtonBaseDisabledClassNameMap[variant]);
         } else {
-            const variantClassName = VariantClassNameMap[variant][color];
+            const variantClassName = ButtonVariantClassNameMap[variant][color];
             classes = twMerge(variantClassName, classes);
         }
 

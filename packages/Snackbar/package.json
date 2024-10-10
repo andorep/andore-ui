@@ -2,7 +2,7 @@
   "name": "@andore-ui/snackbar",
   "description": "A collection of beautifully crafted react components using Material Design 3 specifications and TailwindCSS",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
   "license": "MIT",
   "repository": "https://github.com/andorep/andore-ui",
