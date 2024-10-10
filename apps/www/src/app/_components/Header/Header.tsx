@@ -106,7 +106,7 @@ const Header = (props: HeaderProps) => {
             <div className="right-side flex flex-row items-center">
               <IconButton aria-label={"Github Page"}>
                 <a
-                  href="https://github.com/andreperegrina/andore-ui"
+                  href="https://github.com/andorep/andore-ui"
                   target="_blank"
                   className={"text-surface-text dark:text-surface-dark-text"}
                   aria-label={

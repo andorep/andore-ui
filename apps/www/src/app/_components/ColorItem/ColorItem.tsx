@@ -2,8 +2,6 @@
 
 import React from "react";
 import { ListItem, ListItemText } from "@andore-ui/list";
-import { Card } from "@andore-ui/card";
-import { Surface } from "@andore-ui/surface";
 
 interface ColorItemProps {
   color: string;

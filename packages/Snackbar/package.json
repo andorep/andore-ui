@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "type": "module",
   "license": "MIT",
-  "repository": "https://github.com/andreperegrina/andore-ui",
-  "homepage": "andreperegrina.github.io/andore-ui",
+  "repository": "https://github.com/andorep/andore-ui",
+  "homepage": "andorep.github.io/andore-ui",
   "scripts": {
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"

@@ -4,8 +4,8 @@
   "private": false,
   "version": "0.0.2",
   "license": "MIT",
-  "repository": "https://github.com/andreperegrina/andore-ui",
-  "homepage": "andreperegrina.github.io/andore-ui",
+  "repository": "https://github.com/andorep/andore-ui",
+  "homepage": "andorep.github.io/andore-ui",
   "type": "module",
   "scripts": {
     "build-all": "pnpm run -r build",
