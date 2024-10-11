@@ -14,6 +14,8 @@ import { generateColorScheme } from "@/app/_utils/material.util";
 import ColorItem from "@/app/_components/ColorItem/ColorItem";
 import { Divider } from "@andore-ui/divider";
 import PersonRaisedHandIcon from "@/app/_components/icons/PersonRaisedHandIcon";
+import PaletteIcon from "@/app/_components/icons/PaletteIcon";
+import { Button } from "@andore-ui/button";
 
 interface DesktopCustomThemeProps {
   defaultTheme?: ThemeType;
@@ -251,12 +253,9 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
           </Tooltip>
         )}
       </div>
-      <ColorItem
-        className={"w-full p-1"}
-        color={colorSeed}
-        name={"Source"}
-        onClick={handleClickSeed}
-      />
+      <Button className={'text-sm !p-1'} variant={'outlined'} startIcon={<PaletteIcon />} onClick={handleClickSeed}>
+        Pick a color
+      </Button>
       <Divider />
       <div className={"flex flex-col gap-2 mb-2"}>
         <ColorItem
@@ -300,6 +299,7 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
           name={"Success"}
         />
       </div>
+      <Divider />
       <DownloadTheme theme={theme} />
       <PopoverChangeColor
         key={colorSeed}

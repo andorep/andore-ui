@@ -25,7 +25,7 @@ const DownloadTheme = (props: DownloadThemeProps) => {
 
   return (
     <Button
-        className={"!text-sm"}
+        className={"!text-sm p-1"}
       variant={"text"}
       onClick={handleDownload}
       aria-label={"Copy JSON file"}
