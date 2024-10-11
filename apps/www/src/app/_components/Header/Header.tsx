@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import AppIcon from "@/app/_components/AppIcon/AppIcon";
 import GithubIcon from "@/app/_components/icons/GithubIcon";
-import { Search } from "@andore-ui/search";
 import { IconButton } from "@andore-ui/icon-button";
 import LightModeIcon from "@/app/_components/icons/LightModeIcon";
 import useTheme from "@/app//_hooks/useTheme";
