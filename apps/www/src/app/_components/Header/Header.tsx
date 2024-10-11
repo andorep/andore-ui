@@ -102,7 +102,6 @@ const Header = (props: HeaderProps) => {
             </nav>
           </div>
           <div className="right-side flex flex-row items-center gap-3">
-            <Search placeholder={"Search documentation..."} size={"sm"} />
             <div className="right-side flex flex-row items-center">
               <IconButton aria-label={"Github Page"}>
                 <a

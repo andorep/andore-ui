@@ -20,9 +20,11 @@ import { Button } from "@andore-ui/button";
 interface DesktopCustomThemeProps {
   defaultTheme?: ThemeType;
   blocksRef?: React.RefObject<HTMLDivElement>;
+  onChooseTheme?: () => void;
 }
 
 const themeCSS = `
+@screen lg {
 .custom-theme {
     --aui-gray-50: 249 250 251;
     --aui-gray-100: 243 244 246;
@@ -120,6 +122,7 @@ const themeCSS = `
     --aui-error-dark-container: 147 0 10;
     --aui-error-dark-container-text: 255 218 214;
 }
+}
 `;
 
 const rootClasses = twMerge(
@@ -132,7 +135,7 @@ const rootClasses = twMerge(
 );
 
 const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
-  const { defaultTheme } = props;
+  const { defaultTheme , onChooseTheme} = props;
   const [theme, setTheme] = React.useState<ThemeType | undefined>(() => {
     return clone(defaultTheme) as ThemeType;
   });
@@ -166,6 +169,9 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
     setHasThemeChanged(false);
     setColorSeed(defaultTheme?.colors?.primary?.DEFAULT ?? "#FFFFFF");
     styleSheetRef.current!.innerHTML = themeCSS;
+    if (onChooseTheme) {
+      onChooseTheme();
+    }
   };
 
   const handleThemeLoaded = (color: string) => {
@@ -194,6 +200,9 @@ const DesktopCustomTheme = (props: DesktopCustomThemeProps) => {
     setAnchorElUpload(undefined);
     setColorSeed(color);
     setHasThemeChanged(true);
+    if (onChooseTheme) {
+      onChooseTheme();
+    }
   };
 
   const handleClosePopover = () => {

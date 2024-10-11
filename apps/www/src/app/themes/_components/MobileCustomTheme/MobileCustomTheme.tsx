@@ -10,6 +10,7 @@ import { ThemeType } from "@andore-ui/theme";
 interface MobileCustomThemeProps {
   defaultTheme?: ThemeType;
   blocksRef?: React.RefObject<HTMLDivElement>;
+  onChooseTheme?: () => void;
 }
 
 const themes = ["default", "deku", "miku", "rem", "zenitsu"];
@@ -39,7 +40,7 @@ const themeClasses = {
 } as Record<string, string>;
 
 const MobileCustomTheme = (props: MobileCustomThemeProps) => {
-  const { blocksRef } = props;
+  const { blocksRef, onChooseTheme } = props;
   const [theme, setTheme] = React.useState('default');
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -56,6 +57,9 @@ const MobileCustomTheme = (props: MobileCustomThemeProps) => {
     }
     blocksRef?.current?.classList.add(themeClasses[name]);
     handleClose();
+    if (onChooseTheme) {
+        onChooseTheme();
+    }
   };
 
   return (
