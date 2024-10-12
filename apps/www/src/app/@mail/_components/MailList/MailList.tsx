@@ -12,9 +12,9 @@ const MailList = ({items}: MailListProps) => {
     return (
       <List divider>
         {items.map((item) => (
-          <ListItem key={item.id} onClick={() => console.log(item)}>
+          <ListItem  key={item.id} onClick={() => console.log(item)}>
             <span className={"w-52 text-surface-text dark:text-surface-dark-text"}>{item.from}</span>
-            <ListItemText className={'flex-row'}>
+            <ListItemText className={'flex-row hidden md:flex'}>
               {item.subject}:
                 &nbsp;
               <span className={"text-secondary dark:text-secondary-dark-DEFAULT"}>
